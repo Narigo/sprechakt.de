@@ -1,0 +1,14 @@
+name: Deploy a new version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    - name: Checkout
+      uses: actions/checkout@v3.0.2
+    - name: Build
+      run: |
+        echo "Would be building now."
