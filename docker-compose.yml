@@ -1,0 +1,12 @@
+volumes:
+  pnpm-cache:
+
+services:
+  app:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - pnpm-cache:/root/.pnpm-store
+    ports:
+      - "3000:3000"
