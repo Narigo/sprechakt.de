@@ -10,8 +10,17 @@ jobs:
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎
         uses: actions/checkout@v3.0.2
-      - name: Build
+      - name: Install dependencies 📦
         run: |
-          echo "Would be building now."
+          corepack enable
+          pnpm install
+      - name: Build 🛠
+        run: |
+          pnpm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build/
