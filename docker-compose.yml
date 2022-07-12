@@ -3,7 +3,9 @@ volumes:
 
 services:
   app:
-    image: node:18
+    build:
+      context: .
+      dockerfile: Dockerfile
     working_dir: /app
     volumes:
       - ./:/app
