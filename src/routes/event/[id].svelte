@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/stores';
-	import { getEventsById } from '$lib/getNextEvents';
+	import { getEventsById } from '$lib/events';
 
 	const id = $page.params.id;
 	const dates = getEventsById();

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import getNextEvents from '$lib/getNextEvents';
+	import { getNextEvents } from '$lib/events';
 
 	const dates = getNextEvents();
 </script>

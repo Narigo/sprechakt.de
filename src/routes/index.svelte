@@ -4,9 +4,10 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import getNextDates from '$lib/getNextDates';
-import EventSection from '$lib/index/EventSection.svelte';
-	const dates = getNextDates();
+	import { getNextEvents } from '$lib/events';
+	import EventSection from '$lib/index/EventSection.svelte';
+
+	const dates = getNextEvents();
 	const nextDate = dates[0];
 </script>
 

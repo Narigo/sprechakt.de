@@ -38,6 +38,6 @@ export function getEventsById(): { [id: string]: typeof dates[number] } {
 	}, {});
 }
 
-export default function getNextEvents() {
+export function getNextEvents() {
 	return dates;
 }
