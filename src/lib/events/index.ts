@@ -1,3 +1,5 @@
+import head from '$lib/head';
+
 const dates = [
 	{
 		id: '20220721',
@@ -39,5 +41,5 @@ export function getEventsById(): { [id: string]: typeof dates[number] } {
 }
 
 export function getNextEvents() {
-	return dates;
+	return head(dates, 5);
 }
