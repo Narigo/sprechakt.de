@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: pnpm run dev --host --port 3000
     working_dir: /app
     volumes:
       - ./:/app
