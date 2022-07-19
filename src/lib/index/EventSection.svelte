@@ -9,7 +9,9 @@
 	{#each dates as event}
 		<a href={`${base}/event/${event.id}`}>
 			<h3>{event.date}</h3>
-			<p>Slam!</p>
+			{#if event.shortDescription}
+				<p>{event.shortDescription}</p>
+			{/if}
 		</a>
 	{/each}
 </section>

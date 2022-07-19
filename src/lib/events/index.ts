@@ -6,6 +6,7 @@ const dates = [
 		date: '21.07.2022',
 		doorsOpen: '18:45',
 		start: '19:30',
+		shortDescription: 'Open Air Sommerslam in der Alten Kaserne - sofern es das Wetter zulässt!',
 		description:
 			'Nach einem kurzen Ausflug in die Welt des Themenslams sind wir am Donnerstag, 21. Juli, wieder mit unserem regulären Poetry Slam in der Alten Kaserne vor Ort. Wenn das Wetter passt, werden wir ihn sogar als Open Air veranstalten können. Wie immer buhlen ab 19.30 Uhr Texter:innen und Dichter:innen um eure Gunst, einen Büchergutschein und ein T-Shirt. Einlass ist ab 18.45 Uhr, der Eintritt ist frei, Spenden werden gerne gesehen. Sitzplatzreservierungen braucht ihr keine mehr, wer sich trotzdem einen Stuhl sichern möchte, kann uns gerne anschreiben unter sprechakt.landshut@gmx.de oder über unsere Social Media Kanäle https://www.facebook.com/Sprechakt (Facebook) und @sprechakt_landshut (Instagram). Es ist aber auch kein Problem, spontan vorbeizuschauen.',
 		extras:
@@ -16,6 +17,7 @@ const dates = [
 		date: '22.09.2022',
 		doorsOpen: '18:45',
 		start: '19:30',
+		shortDescription: '',
 		description: ''
 	},
 	{
@@ -23,6 +25,7 @@ const dates = [
 		date: '24.11.2022',
 		doorsOpen: '18:45',
 		start: '19:30',
+		shortDescription: '',
 		description: ''
 	},
 	{
@@ -30,6 +33,7 @@ const dates = [
 		date: '26.01.2023',
 		doorsOpen: '18:45',
 		start: '19:30',
+		shortDescription: '',
 		description: ''
 	}
 ];
