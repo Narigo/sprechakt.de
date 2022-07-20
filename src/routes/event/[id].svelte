@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { getEventsById } from '$lib/events';
+	import events from './index.json';
 
 	const id = $page.params.id;
-	const dates = getEventsById();
+	const dates = getEventsById(events);
 	const event = dates[id];
 </script>
 
