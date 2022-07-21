@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getNextEvents } from '$lib/events';
+	import type { SprechaktEvent } from '$lib/types';
 
-	const dates = getNextEvents();
+	export let events: SprechaktEvent[];
 </script>
 
 <section>
-	{#each dates as event}
+	{#each events as event}
 		<a href={`${base}/event/${event.id}`}>
 			<h3>{event.date}</h3>
 			{#if event.shortDescription}

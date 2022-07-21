@@ -5,9 +5,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getNextEvents } from '$lib/events';
+	import events from './event/index.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 
-	const dates = getNextEvents();
+	const dates = getNextEvents(events);
 	const nextDate = dates[0];
 </script>
 
@@ -24,7 +25,7 @@
 	</p>
 </section>
 
-<EventSection />
+<EventSection {events} />
 
 <style>
 	section {
