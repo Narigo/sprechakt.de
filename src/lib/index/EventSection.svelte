@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { getNextEvents } from '$lib/events';
 	import type { SprechaktEvent } from '$lib/types';
 
 	export let events: SprechaktEvent[];
