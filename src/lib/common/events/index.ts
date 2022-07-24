@@ -1,4 +1,4 @@
-import head from '$lib/head';
+import head from '$lib/common/head';
 import type { SprechaktEvent } from '$lib/types';
 
 export function getEventsById(dates: SprechaktEvent[]): { [id: string]: typeof dates[number] } {

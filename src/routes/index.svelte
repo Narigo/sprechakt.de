@@ -4,9 +4,10 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { getNextEvents } from '$lib/events';
+	import { getNextEvents } from '$lib/common/events';
 	import events from './event/index.json';
 	import EventSection from '$lib/index/EventSection.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
 	const dates = getNextEvents(events);
 	const nextDate = dates[0];
@@ -17,15 +18,17 @@
 	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
 </svelte:head>
 
-<section>
-	<h1>Sprechakt</h1>
-	<p>
-		Nächster Termin am {nextDate.date}.
-		<a href={`${base}/event/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
-	</p>
-</section>
+<PageWithNavigation>
+	<h1 slot="header">Sprechakt</h1>
+	<section>
+		<p>
+			Nächster Termin am {nextDate.date}.
+			<a href={`${base}/event/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
+		</p>
+	</section>
 
-<EventSection {events} />
+	<EventSection {events} />
+</PageWithNavigation>
 
 <style>
 	section {
@@ -33,7 +36,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 1;
 	}
 
 	h1 {

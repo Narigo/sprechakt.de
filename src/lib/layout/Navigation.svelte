@@ -1,0 +1,43 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+	import { page } from '$app/stores';
+	const currentUrl = $page.url.pathname;
+</script>
+
+<nav>
+	<li><a class:active={currentUrl === `${base}/`} href="{base}/">Slams</a></li>
+	<li><a class:active={currentUrl === `${base}/acts`} href="{base}/acts">Künstler:innen</a></li>
+	<li>
+		<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
+	</li>
+	<li>
+		<a class:active={currentUrl === `${base}/impressum`} href="{base}/impressum">Impressum</a>
+	</li>
+</nav>
+
+<style>
+	nav {
+		background-color: var(--primary-color);
+		color: var(--pure-white);
+		display: flex;
+		font-family: var(--font-heading);
+		gap: 1em;
+		justify-content: center;
+		padding: 1em;
+		text-transform: uppercase;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		color: var(--pure-white);
+		text-decoration: none;
+	}
+
+	.active {
+		font-weight: 800;
+		text-decoration: underline;
+	}
+</style>

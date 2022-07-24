@@ -5,13 +5,12 @@ specifiers:
   '@fontsource/fira-mono': ^4.5.0
   '@fontsource/montserrat': ^4.5.11
   '@playwright/test': ^1.22.4
-  '@sveltejs/adapter-static': 1.0.0-next.37
+  '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   '@types/cookie': ^0.5.1
   '@types/jest': ^28.1.6
   '@typescript-eslint/eslint-plugin': ^5.27.0
   '@typescript-eslint/parser': ^5.27.0
-  cookie: ^0.5.0
   eslint: ^8.20.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
@@ -26,15 +25,12 @@ specifiers:
   typescript: ^4.7.4
   vite: ^3.0.1
 
-dependencies:
-  '@fontsource/fira-mono': 4.5.8
-  cookie: 0.5.0
-
 devDependencies:
   '@fontsource/belleza': 4.5.8
+  '@fontsource/fira-mono': 4.5.8
   '@fontsource/montserrat': 4.5.11
   '@playwright/test': 1.23.2
-  '@sveltejs/adapter-static': 1.0.0-next.37
+  '@sveltejs/adapter-static': 1.0.0-next.38
   '@sveltejs/kit': 1.0.0-next.392_svelte@3.49.0+vite@3.0.1
   '@types/cookie': 0.5.1
   '@types/jest': 28.1.6
@@ -402,7 +398,7 @@ packages:
 
   /@fontsource/fira-mono/4.5.8:
     resolution: {integrity: sha512-sFuSPB/Km8B1fy3CH0NqO5Nb4GmVMzp3XFaw6MwK293xhm3OnB68QJawwTTjLewcrS78wOTAhTUB058qxurJoQ==}
-    dev: false
+    dev: true
 
   /@fontsource/montserrat/4.5.11:
     resolution: {integrity: sha512-XAYZmprnZDVSLIeEiB3evVG2JD+yoR9aT+I6LCOcwZFQ6ro9UPpopDncqoqwv+j5M0/UjyAP6ov70+L/fmP8Gg==}
@@ -745,8 +741,8 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.37:
-    resolution: {integrity: sha512-BDFkx4CGAd6pG4e3+zYjy/eM9UDbhkRgXqavUzCO5oT8xXao5TeprY1AIbdzjMTmFjsWdeSXE9TbIsT0iikpyQ==}
+  /@sveltejs/adapter-static/1.0.0-next.38:
+    resolution: {integrity: sha512-O1b264K62E3OrUnsFxMjKn3CUJF50fxGcW0rWk8fa5kjzskPsSyTxS3jnWNryFaVJ3oSUtx57m4qFW43S1910Q==}
     dependencies:
       tiny-glob: 0.2.9
     dev: true
@@ -1331,11 +1327,6 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
-
-  /cookie/0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
-    engines: {node: '>= 0.6'}
-    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}

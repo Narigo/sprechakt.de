@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { getEventsById } from '$lib/events';
+	import { getEventsById } from '$lib/common/events';
 	import events from './index.json';
 
 	const id = $page.params.id;
