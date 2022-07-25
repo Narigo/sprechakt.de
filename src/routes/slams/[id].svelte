@@ -10,7 +10,7 @@
 </script>
 
 <PageWithNavigation>
-	<h1 slot=""></h1>
+	<h1 slot="header">Slams</h1>
 	<section>
 		<h3>{event.date}</h3>
 		<p>{event.description}</p>
