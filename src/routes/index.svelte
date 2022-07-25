@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getNextEvents } from '$lib/common/events';
-	import events from './event/index.json';
+	import events from './slams/index.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
@@ -23,7 +23,7 @@
 	<section>
 		<p>
 			Nächster Termin am {nextDate.date}.
-			<a href={`${base}/event/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
+			<a href={`${base}/slams/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
 		</p>
 	</section>
 
