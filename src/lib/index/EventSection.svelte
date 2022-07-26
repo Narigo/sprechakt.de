@@ -7,7 +7,7 @@
 
 <section>
 	{#each events as event}
-		<a href={`${base}/event/${event.id}`}>
+		<a href={`${base}/slams/${event.id}`}>
 			<h3>{event.date}</h3>
 			{#if event.shortDescription}
 				<p>{event.shortDescription}</p>
