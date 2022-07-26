@@ -1,9 +1,7 @@
 export type SprechaktEvent = {
 	id: string;
+	name: string;
 	date: string;
-	doorsOpen: string;
-	start: string;
-	shortDescription: string;
-	description: string;
-	extras?: string;
+	shortDescription?: string;
+	description?: string;
 };

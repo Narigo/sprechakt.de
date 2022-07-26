@@ -14,8 +14,5 @@
 	<section>
 		<h3>{event.date}</h3>
 		<p>{event.description}</p>
-		{#if event.extras}
-			<p>{event.extras}</p>
-		{/if}
 	</section>
 </PageWithNavigation>
