@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import Airtable from 'airtable';
 import type { Attachment } from 'airtable';
@@ -13,6 +13,7 @@ import type { SprechaktAct, SprechaktEvent, SprechaktBlog } from '../../src/lib/
 const apiKey = process.env.AIRTABLE_API_KEY as string;
 const apiBase = process.env.AIRTABLE_API_BASE as string;
 const dirname = path.dirname(fileURLToPath(import.meta.url));
+const dbDirectory = path.resolve(dirname, '../../database');
 
 run()
 	.then(() => {
@@ -24,6 +25,7 @@ run()
 	});
 
 async function run() {
+	await mkdir(dbDirectory, { recursive: true });
 	const base = new Airtable({ apiKey }).base(apiBase);
 	const [slamDb, blogDb, actsDb] = await Promise.all([
 		getSlamsFromAirtable(base),
@@ -31,9 +33,9 @@ async function run() {
 		getActsFromAirtable(base)
 	]);
 	await Promise.all([
-		writeFile(path.resolve(dirname, '../../database/acts.json'), JSON.stringify(actsDb)),
-		writeFile(path.resolve(dirname, '../../database/blog.json'), JSON.stringify(blogDb)),
-		writeFile(path.resolve(dirname, '../../database/slams.json'), JSON.stringify(slamDb))
+		writeFile(path.resolve(dirname, `${dbDirectory}/acts.json`), JSON.stringify(actsDb)),
+		writeFile(path.resolve(dirname, `${dbDirectory}/blog.json`), JSON.stringify(blogDb)),
+		writeFile(path.resolve(dirname, `${dbDirectory}/slams.json`), JSON.stringify(slamDb))
 	]);
 }
 
