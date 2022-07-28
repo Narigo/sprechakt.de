@@ -39,7 +39,7 @@ async function run() {
 	]);
 }
 
-async function getDataFromAirtable<T, TFields extends FieldSet = any>({
+async function getDataFromAirtable<T, TFields extends FieldSet = FieldSet>({
 	base,
 	flatMapRecord,
 	selectOptions,
