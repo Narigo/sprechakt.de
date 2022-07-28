@@ -3,8 +3,8 @@
 </script>
 
 <script lang="ts">
-	import { base } from '$app/paths';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
+	import acts from '$data/acts.json';
 </script>
 
 <svelte:head>
@@ -21,4 +21,9 @@
 		Beim Sprechakt in Landshut sind schon einige Künstler:innen aufgetreten. Auf dieser Seite werden
 		wir diese vorstellen.
 	</p>
+	<ul>
+		{#each acts as act}
+			<li>{act.name}</li>
+		{/each}
+	</ul>
 </PageWithNavigation>

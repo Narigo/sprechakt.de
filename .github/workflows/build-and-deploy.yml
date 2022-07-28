@@ -16,6 +16,12 @@ jobs:
         run: |
           corepack enable
           pnpm install
+      - name: Retrieve latest data from airtable 📨
+        run: |
+          pnpm run update-db
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_API_BASE: ${{ secrets.AIRTABLE_API_BASE }}
       - name: Build 🛠
         run: |
           pnpm run build

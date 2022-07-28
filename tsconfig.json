@@ -5,6 +5,12 @@
 		"checkJs": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
+		"paths": {
+			"$data": ["database"],
+			"$data/*": ["database/*"],
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"]
+		},
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,

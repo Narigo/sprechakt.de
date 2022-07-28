@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getNextEvents } from '$lib/common/events';
-	import events from './slams/index.json';
+	import events from '$data/slams.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 

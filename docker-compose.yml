@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: pnpm run update-db
+    command: pnpm run dev --host --port 3000
     environment:
       - AIRTABLE_API_KEY=${AIRTABLE_API_KEY}
       - AIRTABLE_API_BASE=${AIRTABLE_API_BASE}
