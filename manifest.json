@@ -56,7 +56,7 @@
     "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.11/node_modules/@fontsource/montserrat/files/montserrat-all-400-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-092e0ca7.js",
+    "file": "_app/immutable/start-024c32bd.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -111,62 +111,62 @@
     ]
   },
   "src/routes/acts.svelte": {
-    "file": "_app/immutable/pages/acts.svelte-76555619.js",
+    "file": "_app/immutable/pages/acts.svelte-8a96aef8.js",
     "src": "src/routes/acts.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-35b5cefe.js",
+      "_PageWithNavigation-ef001209.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/historie.svelte": {
-    "file": "_app/immutable/pages/historie.svelte-e3e6d454.js",
+    "file": "_app/immutable/pages/historie.svelte-025268c5.js",
     "src": "src/routes/historie.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-35b5cefe.js",
+      "_PageWithNavigation-ef001209.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/impressum.svelte": {
-    "file": "_app/immutable/pages/impressum.svelte-09a52fc3.js",
+    "file": "_app/immutable/pages/impressum.svelte-2a9a3685.js",
     "src": "src/routes/impressum.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-35b5cefe.js",
+      "_PageWithNavigation-ef001209.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-d0091864.js",
+    "file": "_app/immutable/pages/index.svelte-981d607b.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
       "_paths-b9644fda.js",
-      "_slams-e9ef8459.js",
-      "_PageWithNavigation-35b5cefe.js"
+      "_slams-6d60db8f.js",
+      "_PageWithNavigation-ef001209.js"
     ],
     "css": [
-      "_app/immutable/assets/index-e99eaad8.css"
+      "_app/immutable/assets/index-27cd369d.css"
     ]
   },
   "src/routes/slams/[id].svelte": {
-    "file": "_app/immutable/pages/slams/_id_.svelte-eb1b6834.js",
+    "file": "_app/immutable/pages/slams/_id_.svelte-c34c0109.js",
     "src": "src/routes/slams/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-35b5cefe.js",
-      "_slams-e9ef8459.js",
+      "_PageWithNavigation-ef001209.js",
+      "_slams-6d60db8f.js",
       "_paths-b9644fda.js"
     ]
   },
@@ -176,29 +176,29 @@
   "_paths-b9644fda.js": {
     "file": "_app/immutable/chunks/paths-b9644fda.js"
   },
-  "_PageWithNavigation-35b5cefe.js": {
-    "file": "_app/immutable/chunks/PageWithNavigation-35b5cefe.js",
+  "_PageWithNavigation-ef001209.js": {
+    "file": "_app/immutable/chunks/PageWithNavigation-ef001209.js",
     "imports": [
       "_index-295045bc.js",
       "_paths-b9644fda.js"
     ],
     "css": [
-      "_app/immutable/assets/PageWithNavigation-ad531ead.css"
+      "_app/immutable/assets/PageWithNavigation-d3a9c7ed.css"
     ]
   },
-  "_slams-e9ef8459.js": {
-    "file": "_app/immutable/chunks/slams-e9ef8459.js"
+  "_slams-6d60db8f.js": {
+    "file": "_app/immutable/chunks/slams-6d60db8f.js"
   },
   "PageWithNavigation.css": {
-    "file": "_app/immutable/assets/PageWithNavigation-ad531ead.css",
+    "file": "_app/immutable/assets/PageWithNavigation-d3a9c7ed.css",
     "src": "PageWithNavigation.css"
-  },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-e99eaad8.css",
-    "src": "src/routes/index.css"
   },
   "src/routes/__layout.css": {
     "file": "_app/immutable/assets/__layout-4f9a96bd.css",
     "src": "src/routes/__layout.css"
+  },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-27cd369d.css",
+    "src": "src/routes/index.css"
   }
 }
