@@ -18,4 +18,5 @@
 			<img src={image.url} alt="Eindruck vom Event" />
 		{/each}
 	</section>
+	<a href="..">Zurück</a>
 </PageWithNavigation>

@@ -16,5 +16,6 @@
 
 	div {
 		flex: 1;
+		padding: 2em;
 	}
 </style>
