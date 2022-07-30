@@ -19,13 +19,15 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<h1 slot="header">Sprechakt</h1>
-	<section>
-		<p>
-			Nächster Termin am {nextDate.date}.
-			<a href={`${base}/slams/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
-		</p>
-	</section>
+	<div slot="header">
+		<h1>Sprechakt</h1>
+		<section>
+			<p>
+				Nächster Termin am {nextDate.date}.
+				<a href={`${base}/slams/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
+			</p>
+		</section>
+	</div>
 
 	<EventSection {events} />
 </PageWithNavigation>
