@@ -1,17 +1,29 @@
+@import '@fontsource/aileron';
+@import '@fontsource/aileron/100.css';
 @import '@fontsource/belleza';
 @import '@fontsource/fira-mono';
 @import '@fontsource/montserrat';
 
+@font-face {
+	font-family: 'Aileron Thin';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100;
+	src: url('node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff2') format('woff2'),
+		url('node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff') format('woff');
+}
+
 :root {
 	--font-mono: 'Fira Mono', monospace;
 	--font-heading: Belleza, Helvetica, Arial, Ubuntu, Roboto, -apple-system, sans-serif;
+	--font-subheading: 'Aileron Thin', Helvetica, Arial, Ubuntu, Roboto, -apple-system, sans-serif;
 	--font-body: Montserrat, -apple-system, sans-serif;
 	--pure-white: #ffffff;
-	--primary-color: #346667;
-	--secondary-color: #97b1b0;
-	--tertiary-color: #474643;
+	--primary-color: #336666;
+	--secondary-color: #97b0b0;
+	--tertiary-color: #fbfcfc;
 	--accent-color: #ff3e00;
-	--text-color: #121212;
+	--text-color: #000000;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 }

@@ -42,6 +42,10 @@
 		box-shadow: var(--text-color) 0 0 2em -1em;
 	}
 
+	h3 {
+		font-family: var(--font-subheading);
+	}
+
 	h3,
 	p {
 		margin: 0;

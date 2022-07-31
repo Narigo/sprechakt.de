@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/aileron': ^4.5.3
   '@fontsource/belleza': ^4.5.8
   '@fontsource/fira-mono': ^4.5.0
   '@fontsource/montserrat': ^4.5.11
@@ -29,12 +30,13 @@ specifiers:
   vite: ^3.0.1
 
 devDependencies:
+  '@fontsource/aileron': 4.5.3
   '@fontsource/belleza': 4.5.8
   '@fontsource/fira-mono': 4.5.8
   '@fontsource/montserrat': 4.5.11
   '@playwright/test': 1.23.2
   '@sveltejs/adapter-static': 1.0.0-next.38
-  '@sveltejs/kit': 1.0.0-next.395_svelte@3.49.0+vite@3.0.1
+  '@sveltejs/kit': 1.0.0-next.398_svelte@3.49.0+vite@3.0.1
   '@types/cookie': 0.5.1
   '@types/jest': 28.1.6
   '@types/node': 18.6.1
@@ -405,6 +407,10 @@ packages:
       - supports-color
     dev: true
 
+  /@fontsource/aileron/4.5.3:
+    resolution: {integrity: sha512-pFqJqwhvNSb5bkrMRCJ66eyxtosPtR0THTfti6l1sl9vBWs7kQlu0mzXPdqr9qyLy82OnzsQhBGYCBszbbiV/w==}
+    dev: true
+
   /@fontsource/belleza/4.5.8:
     resolution: {integrity: sha512-4IPAT5s5mcKJpyYHkxAOQOGhVroqb1Cj4iAcMeNcOJicbZircgH3D0flMMASnKVEXt7Ncgt8KThfhgOouxCx5A==}
     dev: true
@@ -767,8 +773,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.395_svelte@3.49.0+vite@3.0.1:
-    resolution: {integrity: sha512-o8sFZVxUNTwLPs2ZwrKSyZfbU/VIRq2NnaQQ9JcSzr0Bs+M09rrjTuSpFy0sXUCZkBh3oVWFgrVqABwEOEHoSQ==}
+  /@sveltejs/kit/1.0.0-next.398_svelte@3.49.0+vite@3.0.1:
+    resolution: {integrity: sha512-ONjHoRurnFUe+0lv0P9rZQpDuuJy4Cr/lDneoG+lkOR5/7gcvd03TlVdxLz1ZQAWPbgovm/PpshOvIUeC4n62A==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:

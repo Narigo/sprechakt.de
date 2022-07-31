@@ -16,6 +16,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@fontsource/aileron": "^4.5.3",
 		"@fontsource/belleza": "^4.5.8",
 		"@fontsource/fira-mono": "^4.5.0",
 		"@fontsource/montserrat": "^4.5.11",
