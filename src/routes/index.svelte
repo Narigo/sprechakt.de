@@ -33,6 +33,10 @@
 </PageWithNavigation>
 
 <style>
+	div {
+		background-image: url('$lib/index/sprechakt-bild.svg');
+	}
+
 	section {
 		display: flex;
 		flex-direction: column;
