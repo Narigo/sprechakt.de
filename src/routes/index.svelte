@@ -35,6 +35,9 @@
 <style>
 	div {
 		background-image: url('$lib/index/sprechakt-bild.svg');
+		background-position: right;
+		background-repeat: no-repeat;
+		min-height: 500px;
 	}
 
 	section {
