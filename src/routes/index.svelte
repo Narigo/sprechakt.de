@@ -37,7 +37,10 @@
 		background-image: url('$lib/index/sprechakt-bild.svg');
 		background-position: right;
 		background-repeat: no-repeat;
-		min-height: 500px;
+		background-size: contain;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 
 	section {

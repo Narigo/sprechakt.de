@@ -11,11 +11,11 @@
 	header {
 		display: flex;
 		flex-direction: column;
-		min-height: 25vh;
 	}
 
 	div {
 		flex: 1;
 		padding: 2em;
+		position: relative;
 	}
 </style>

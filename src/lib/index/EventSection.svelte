@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { getDate } from '$lib/common/events';
 	import type { SprechaktEvent } from '$lib/types';
 
 	export let events: SprechaktEvent[];
@@ -9,7 +10,7 @@
 	{#each events as event}
 		<a href={`${base}/slams/${event.id}`}
 			><div>
-				<h3>{event.date}</h3>
+				<h3>{getDate(event)}</h3>
 				{#if event.shortDescription}
 					<p>{event.shortDescription}</p>
 				{:else}

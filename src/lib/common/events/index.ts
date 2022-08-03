@@ -10,3 +10,8 @@ export function getEventsById(events: SprechaktEvent[]): { [id: string]: typeof 
 export function getNextEvents(events: SprechaktEvent[]) {
 	return head(events, 5);
 }
+
+export function getDate(event: SprechaktEvent): string {
+	const d = new Date(event.date);
+	return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
+}
