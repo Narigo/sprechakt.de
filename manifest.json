@@ -1,4 +1,16 @@
 {
+  "src/lib/index/sprechakt-bild.svg": {
+    "file": "_app/immutable/assets/sprechakt-bild-0405c611.svg",
+    "src": "src/lib/index/sprechakt-bild.svg"
+  },
+  "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/aileron-latin-400-normal-28fe877c.woff2",
+    "src": "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff2": {
+    "file": "_app/immutable/assets/aileron-latin-100-normal-934dce4c.woff2",
+    "src": "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff2"
+  },
   "node_modules/.pnpm/@fontsource+belleza@4.5.8/node_modules/@fontsource/belleza/files/belleza-latin-400-normal.woff2": {
     "file": "_app/immutable/assets/belleza-latin-400-normal-f25a74bc.woff2",
     "src": "node_modules/.pnpm/@fontsource+belleza@4.5.8/node_modules/@fontsource/belleza/files/belleza-latin-400-normal.woff2"
@@ -43,6 +55,14 @@
     "file": "_app/immutable/assets/montserrat-latin-400-normal-59d09721.woff2",
     "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.11/node_modules/@fontsource/montserrat/files/montserrat-latin-400-normal.woff2"
   },
+  "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-400-normal.woff": {
+    "file": "_app/immutable/assets/aileron-latin-400-normal-6d6ec731.woff",
+    "src": "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-400-normal.woff"
+  },
+  "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff": {
+    "file": "_app/immutable/assets/aileron-latin-100-normal-d67ed068.woff",
+    "src": "node_modules/.pnpm/@fontsource+aileron@4.5.3/node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff"
+  },
   "node_modules/.pnpm/@fontsource+belleza@4.5.8/node_modules/@fontsource/belleza/files/belleza-all-400-normal.woff": {
     "file": "_app/immutable/assets/belleza-all-400-normal-8d2d7701.woff",
     "src": "node_modules/.pnpm/@fontsource+belleza@4.5.8/node_modules/@fontsource/belleza/files/belleza-all-400-normal.woff"
@@ -56,7 +76,7 @@
     "src": "node_modules/.pnpm/@fontsource+montserrat@4.5.11/node_modules/@fontsource/montserrat/files/montserrat-all-400-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-028c3001.js",
+    "file": "_app/immutable/start-1616a1b5.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -82,9 +102,13 @@
       "_index-295045bc.js"
     ],
     "css": [
-      "_app/immutable/assets/__layout-4f9a96bd.css"
+      "_app/immutable/assets/__layout-a5fbc7ac.css"
     ],
     "assets": [
+      "_app/immutable/assets/aileron-latin-400-normal-28fe877c.woff2",
+      "_app/immutable/assets/aileron-latin-400-normal-6d6ec731.woff",
+      "_app/immutable/assets/aileron-latin-100-normal-934dce4c.woff2",
+      "_app/immutable/assets/aileron-latin-100-normal-d67ed068.woff",
       "_app/immutable/assets/belleza-all-400-normal-8d2d7701.woff",
       "_app/immutable/assets/belleza-latin-400-normal-f25a74bc.woff2",
       "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
@@ -111,62 +135,65 @@
     ]
   },
   "src/routes/acts.svelte": {
-    "file": "_app/immutable/pages/acts.svelte-b0ce7964.js",
+    "file": "_app/immutable/pages/acts.svelte-48502fcd.js",
     "src": "src/routes/acts.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-ef001209.js",
+      "_PageWithNavigation-b3ae125c.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/historie.svelte": {
-    "file": "_app/immutable/pages/historie.svelte-025268c5.js",
+    "file": "_app/immutable/pages/historie.svelte-e39c2653.js",
     "src": "src/routes/historie.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-ef001209.js",
+      "_PageWithNavigation-b3ae125c.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/impressum.svelte": {
-    "file": "_app/immutable/pages/impressum.svelte-2a9a3685.js",
+    "file": "_app/immutable/pages/impressum.svelte-994a8151.js",
     "src": "src/routes/impressum.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-ef001209.js",
+      "_PageWithNavigation-b3ae125c.js",
       "_paths-b9644fda.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-0c54cd35.js",
+    "file": "_app/immutable/pages/index.svelte-0ed52842.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
       "_paths-b9644fda.js",
-      "_slams-5f649ec9.js",
-      "_PageWithNavigation-ef001209.js"
+      "_slams-20a8c47f.js",
+      "_PageWithNavigation-b3ae125c.js"
     ],
     "css": [
-      "_app/immutable/assets/index-27cd369d.css"
+      "_app/immutable/assets/index-bd9f7ab5.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/sprechakt-bild-0405c611.svg"
     ]
   },
   "src/routes/slams/[id].svelte": {
-    "file": "_app/immutable/pages/slams/_id_.svelte-8d00922c.js",
+    "file": "_app/immutable/pages/slams/_id_.svelte-19a736dd.js",
     "src": "src/routes/slams/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-295045bc.js",
-      "_PageWithNavigation-ef001209.js",
-      "_slams-5f649ec9.js",
+      "_PageWithNavigation-b3ae125c.js",
+      "_slams-20a8c47f.js",
       "_paths-b9644fda.js"
     ]
   },
@@ -176,29 +203,29 @@
   "_paths-b9644fda.js": {
     "file": "_app/immutable/chunks/paths-b9644fda.js"
   },
-  "_PageWithNavigation-ef001209.js": {
-    "file": "_app/immutable/chunks/PageWithNavigation-ef001209.js",
+  "_PageWithNavigation-b3ae125c.js": {
+    "file": "_app/immutable/chunks/PageWithNavigation-b3ae125c.js",
     "imports": [
       "_index-295045bc.js",
       "_paths-b9644fda.js"
     ],
     "css": [
-      "_app/immutable/assets/PageWithNavigation-d3a9c7ed.css"
+      "_app/immutable/assets/PageWithNavigation-0936070a.css"
     ]
   },
-  "_slams-5f649ec9.js": {
-    "file": "_app/immutable/chunks/slams-5f649ec9.js"
+  "_slams-20a8c47f.js": {
+    "file": "_app/immutable/chunks/slams-20a8c47f.js"
   },
   "src/routes/__layout.css": {
-    "file": "_app/immutable/assets/__layout-4f9a96bd.css",
+    "file": "_app/immutable/assets/__layout-a5fbc7ac.css",
     "src": "src/routes/__layout.css"
   },
   "PageWithNavigation.css": {
-    "file": "_app/immutable/assets/PageWithNavigation-d3a9c7ed.css",
+    "file": "_app/immutable/assets/PageWithNavigation-0936070a.css",
     "src": "PageWithNavigation.css"
   },
   "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-27cd369d.css",
+    "file": "_app/immutable/assets/index-bd9f7ab5.css",
     "src": "src/routes/index.css"
   }
 }
