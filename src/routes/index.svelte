@@ -4,13 +4,13 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { getNextEvents } from '$lib/common/events';
-	import events from '$data/slams.json';
+	import { getDate, getNextEvents } from '$lib/common/events';
+	import slamsDb from '$data/slams.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
-	const dates = getNextEvents(events);
-	const nextDate = dates[0];
+	const events = getNextEvents(slamsDb);
+	const nextEvent = events[0];
 </script>
 
 <svelte:head>
@@ -23,8 +23,8 @@
 		<h1>Sprechakt</h1>
 		<section>
 			<p>
-				Nächster Termin am {nextDate.date}.
-				<a href={`${base}/slams/${nextDate.id}`}>Mehr Informationen zum nächsten Event</a>
+				Nächster Termin am {getDate(nextEvent)}.
+				<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
 			</p>
 		</section>
 	</div>
