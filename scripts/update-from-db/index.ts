@@ -135,11 +135,11 @@ async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechaktEvent[
 			return [
 				{
 					id: record.getId(),
-					date: record.get('Date') as string,
-					name: record.get('Name') as string,
+					date: record.get('Date')?.toLocaleString() as string,
+					name: record.get('Name')?.toLocaleString() as string,
 					images: record.get('Images') as readonly Attachment[],
-					description: record.get('Description') as string,
-					shortDescription: record.get('ShortDescription') as string
+					description: record.get('Description')?.toLocaleString(),
+					shortDescription: record.get('ShortDescription')?.toLocaleString()
 				}
 			];
 		}
