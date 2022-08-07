@@ -9,9 +9,10 @@ export type SprechaktAct = {
 	twitter?: string;
 	youTube?: string;
 };
+
 export type SprechaktBlog = {
 	id: string;
-	author: string;
+	author: string[];
 	body: string;
 	shortDescription: string;
 	status: string;

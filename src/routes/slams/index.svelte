@@ -5,15 +5,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getDate, getNextEvents } from '$lib/common/events';
-	import { getFirstPosts } from '$lib/common/posts';
-	import blogDb from '$data/blog.json';
 	import slamsDb from '$data/slams.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
-	import BlogSection from '$lib/index/BlogSection.svelte';
 
 	const events = getNextEvents(slamsDb);
-	const posts = getFirstPosts(blogDb);
 	const nextEvent = events[0];
 </script>
 
@@ -23,31 +19,21 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<div class="header" slot="header">
+	<div slot="header">
 		<h1>Sprechakt</h1>
 		<section>
 			<p>
-				Nächster Termin am {getDate(nextEvent)}.
+				Nächstesr Termin am {getDate(nextEvent)}.
 				<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
 			</p>
 		</section>
 	</div>
 
-	<div class="content">
-		<section>
-			<h2>Neueste Nachrichten</h2>
-			<BlogSection {posts} />
-		</section>
-
-		<section>
-			<h2>Die nächsten Events</h2>
-			<EventSection {events} />
-		</section>
-	</div>
+	<EventSection {events} />
 </PageWithNavigation>
 
 <style>
-	.header {
+	div {
 		background-image: url('$lib/index/sprechakt-bild.svg');
 		background-position: right;
 		background-repeat: no-repeat;
@@ -57,15 +43,7 @@
 		height: 100%;
 	}
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		gap: 4em;
-		height: 100%;
-		width: 100%;
-	}
-
-	.header section {
+	section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
