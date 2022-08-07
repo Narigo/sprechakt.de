@@ -12,7 +12,7 @@ export type SprechaktAct = {
 
 export type SprechaktBlog = {
 	id: string;
-	author: string[];
+	authors: string[];
 	body: string;
 	shortDescription: string;
 	status: string;

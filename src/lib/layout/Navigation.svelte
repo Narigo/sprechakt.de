@@ -5,7 +5,10 @@
 </script>
 
 <nav>
-	<li><a class:active={currentUrl === `${base}/`} href="{base}/">Slams</a></li>
+	<li>
+		<a class:active={currentUrl === `${base}/`} href="{base}/">Sprechakt</a>
+	</li>
+	<li><a class:active={currentUrl === `${base}/slams`} href="{base}/slams">Slams</a></li>
 	<li><a class:active={currentUrl === `${base}/acts`} href="{base}/acts">Künstler:innen</a></li>
 	<li>
 		<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
@@ -17,6 +20,7 @@
 
 <style>
 	nav {
+		align-items: center;
 		background-color: var(--primary-color);
 		color: var(--pure-white);
 		display: flex;
@@ -28,6 +32,8 @@
 	}
 
 	li {
+		display: inline-flex;
+		height: 100%;
 		list-style-type: none;
 	}
 
@@ -39,5 +45,9 @@
 	.active {
 		font-weight: 800;
 		text-decoration: underline;
+	}
+
+	.logo {
+		height: 2em;
 	}
 </style>

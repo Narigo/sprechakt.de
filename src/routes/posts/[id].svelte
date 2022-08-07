@@ -15,7 +15,7 @@
 			{entry.title}
 		</h1>
 		<article>
-			<p>geschrieben von {entry.author.map((id) => getActNameById(id)).join(', ')}</p>
+			<p>geschrieben von {entry.authors.map((id) => getActNameById(id)).join(', ')}</p>
 			<SvelteMarkdown source={entry.body} />
 		</article>
 

@@ -111,7 +111,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechaktBlog[]>
 				? [
 						{
 							id: record.getId(),
-							author: record.get('Authors') as string,
+							authors: record.get('Authors') as string[],
 							body: record.get('Body') as string,
 							shortDescription: record.get('ShortDescription') as string,
 							status,
