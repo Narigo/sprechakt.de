@@ -4,16 +4,17 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { getDate, getNextEvents } from '$lib/common/events';
+	import { getDate } from '$lib/common/events';
 	import { getFirstPosts } from '$lib/common/posts';
 	import blogDb from '$data/blog.json';
 	import slamsDb from '$data/slams.json';
-	import EventSection from '$lib/index/EventSection.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import BlogSection from '$lib/index/BlogSection.svelte';
+	import { getNextEvents } from '$lib/common/events';
+	import NextEvents from '$lib/index/NextEvents.svelte';
 
-	const events = getNextEvents(slamsDb);
 	const posts = getFirstPosts(blogDb);
+	const events = getNextEvents(slamsDb);
 	const nextEvent = events[0];
 </script>
 
@@ -41,7 +42,7 @@
 
 		<section>
 			<h2>Die nächsten Events</h2>
-			<EventSection {events} />
+			<NextEvents />
 		</section>
 	</div>
 </PageWithNavigation>
