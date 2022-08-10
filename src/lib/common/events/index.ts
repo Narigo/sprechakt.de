@@ -9,18 +9,20 @@ export function getEventsById(events: SprechaktEvent[]): { [id: string]: typeof 
 }
 
 export function getNextEvents(events: SprechaktEvent[]) {
-	const startOfToday = new Date();
-	startOfToday.setHours(0);
-	startOfToday.setMinutes(0);
-	startOfToday.setSeconds(0);
-	startOfToday.setMilliseconds(0);
-	return head(
-		dropWhile(events, (event) => new Date(event.date) <= startOfToday),
-		5
-	);
+	return head(dropWhile(events, isPastEvent), 5);
 }
 
 export function getDate(event: SprechaktEvent): string {
 	const d = new Date(event.date);
 	return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
+}
+
+export function isPastEvent(event: SprechaktEvent): boolean {
+	const startOfToday = new Date();
+	startOfToday.setHours(0);
+	startOfToday.setMinutes(0);
+	startOfToday.setSeconds(0);
+	startOfToday.setMilliseconds(0);
+
+	return new Date(event.date) <= startOfToday;
 }
