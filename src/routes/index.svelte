@@ -73,7 +73,19 @@
 		align-items: center;
 	}
 
+	.content section {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: stretch;
+		gap: 2em;
+	}
+
 	h1 {
 		width: 100%;
+	}
+
+	h2 {
+		padding: 0 1.25em;
 	}
 </style>
