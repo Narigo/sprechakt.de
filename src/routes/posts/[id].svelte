@@ -4,9 +4,15 @@
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import blogDb from '$data/blog.json';
 	import { getActNameById } from '$lib/common/acts';
+	import { base } from '$app/paths';
 
 	const { id } = $page.params;
-	const entry = blogDb.find((post) => post.id === id);
+	const entryIndex = blogDb.findIndex((post) => post.id === id);
+	const entry = blogDb[entryIndex];
+	const isLastEntry = entryIndex === blogDb.length - 1;
+	const isFirstEntry = entryIndex === 0;
+	const nextEntry = !isLastEntry ? blogDb[entryIndex + 1] : undefined;
+	const previousEntry = !isFirstEntry ? blogDb[entryIndex - 1] : undefined;
 </script>
 
 {#if entry}
@@ -19,6 +25,12 @@
 			<SvelteMarkdown source={entry.body} />
 		</article>
 
-		<a href="..">Zurück</a>
+		{#if previousEntry}
+			<a href="{base}/posts/{previousEntry.id}">👈 {previousEntry.title}</a>
+		{/if}
+		<a href="{base}/posts">Zu den weiteren Nachrichten</a>
+		{#if nextEntry}
+			<a href="{base}/posts/{nextEntry.id}">{nextEntry.title} 👉</a>
+		{/if}
 	</PageWithNavigation>
 {/if}

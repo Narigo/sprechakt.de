@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
 	import blogDb from '$data/blog.json';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
@@ -25,10 +21,6 @@
 
 <style>
 	.header {
-		background-image: url('$lib/index/sprechakt-bild.svg');
-		background-position: right;
-		background-repeat: no-repeat;
-		background-size: contain;
 		display: flex;
 		flex-direction: column;
 		height: 100%;

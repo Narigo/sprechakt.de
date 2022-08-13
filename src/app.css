@@ -9,8 +9,8 @@
 	font-style: normal;
 	font-display: swap;
 	font-weight: 100;
-	src: url('node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff2') format('woff2'),
-		url('node_modules/@fontsource/aileron/files/aileron-latin-100-normal.woff') format('woff');
+	src: url('@fontsource/aileron/files/aileron-latin-100-normal.woff2') format('woff2'),
+		url('@fontsource/aileron/files/aileron-latin-100-normal.woff') format('woff');
 }
 
 :root {
