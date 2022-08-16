@@ -1,8 +1,6 @@
 <footer>
 	<slot />
 	<p>Weitere Informationen folgen bald...</p>
-	<p>Weitere Informationen folgen bald...</p>
-	<p>Weitere Informationen folgen bald...</p>
 </footer>
 
 <style>
