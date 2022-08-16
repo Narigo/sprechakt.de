@@ -12,13 +12,15 @@
 
 <style>
 	section {
+		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2em;
+		justify-content: space-between;
 	}
 
 	img {
 		box-shadow: 0 0 1em -2em #000;
-		max-width: 15em;
+		max-width: calc(33% - 2em);
 	}
 </style>
