@@ -10,6 +10,11 @@
 	const event = dates[id];
 </script>
 
+<svelte:head>
+	<title>Sprechakt - {event.name}</title>
+	<meta name="description" content={event.description} />
+</svelte:head>
+
 <PageWithNavigation>
 	<h1 slot="header">Slams</h1>
 	<SlamEntry

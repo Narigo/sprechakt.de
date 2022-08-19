@@ -10,6 +10,7 @@
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import dropWhile from '$lib/common/dropWhile';
 	import takeWhile from '$lib/common/takeWhile';
+	import NextEventHeader from '$lib/common/slams/NextEventHeader.svelte';
 
 	const upcomingEvents = dropWhile(slamsDb, isPastEvent);
 	const pastEvents = takeWhile(slamsDb, isPastEvent);
@@ -19,19 +20,11 @@
 
 <svelte:head>
 	<title>Sprechakt</title>
-	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
+	<meta name="description" content="Die nächsten Poetry Slam Events vom Sprechakt" />
 </svelte:head>
 
 <PageWithNavigation>
-	<div class="header" slot="header">
-		<h1>Sprechakt</h1>
-		<section>
-			<p>
-				Nächster Termin am {getDate(nextEvent)}.
-				<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
-			</p>
-		</section>
-	</div>
+	<NextEventHeader date={getDate(nextEvent)} link={`${base}/slams/${nextEvent.id}`} slot="header" />
 
 	<section class="content">
 		<div>
@@ -47,30 +40,9 @@
 </PageWithNavigation>
 
 <style>
-	.header {
-		background-image: url('$lib/index/sprechakt-bild.svg');
-		background-position: right;
-		background-repeat: no-repeat;
-		background-size: contain;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	.header section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
 	.content {
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
-	}
-
-	h1 {
-		width: 100%;
 	}
 </style>
