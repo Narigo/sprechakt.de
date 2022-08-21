@@ -9,16 +9,17 @@
 <section>
 	{#each images as image}
 		{#if $selectedImage === image}
-			<div class="selected">
-				<button
-					type="button"
-					on:click={(e) => {
-						e.preventDefault();
-						$selectedImage = null;
-					}}>X</button
-				>
+			<button
+				class="selected"
+				type="button"
+				on:click={(e) => {
+					e.preventDefault();
+					$selectedImage = null;
+				}}
+			>
+				<div><span>X</span></div>
 				<img src={image.url} alt="Eindruck vom Event" />
-			</div>
+			</button>
 		{:else}
 			<div>
 				<button
@@ -55,6 +56,7 @@
 	button {
 		background: none;
 		border: 0;
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -78,15 +80,46 @@
 		justify-content: center;
 		max-width: unset;
 	}
-	.selected button {
+	.selected div {
 		position: absolute;
 		top: 2em;
 		right: 2em;
 		background: var(--text);
 		border: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		min-height: 4em;
 		min-width: 4em;
-		color: var(--text);
+		color: var(--pure-white);
 		background: var(--primary-color);
+	}
+
+	.selected div span {
+		transform: rotate(0deg);
+		transition-duration: 1s;
+		transition: all 1s ease;
+	}
+
+	.selected div:hover span {
+		transform: rotate(360deg);
+	}
+
+	@keyframes rotater {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes reverse {
+		0% {
+			transform: rotate(360deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
 	}
 </style>
