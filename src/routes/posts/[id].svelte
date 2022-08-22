@@ -5,14 +5,29 @@
 	import blogDb from '$data/blog.json';
 	import { getActNameById } from '$lib/common/acts';
 	import { base } from '$app/paths';
+	import { afterUpdate } from 'svelte';
+	import type { SprechaktBlog } from '$lib/types';
 
-	const { id } = $page.params;
-	const entryIndex = blogDb.findIndex((post) => post.id === id);
-	const entry = blogDb[entryIndex];
-	const isLastEntry = entryIndex === blogDb.length - 1;
-	const isFirstEntry = entryIndex === 0;
-	const nextEntry = !isLastEntry ? blogDb[entryIndex + 1] : undefined;
-	const previousEntry = !isFirstEntry ? blogDb[entryIndex - 1] : undefined;
+	let id: string;
+	let entryIndex: number;
+	let entry: SprechaktBlog;
+	let isLastEntry: boolean;
+	let isFirstEntry: boolean;
+	let nextEntry: SprechaktBlog | undefined;
+	let previousEntry: SprechaktBlog | undefined;
+
+	initValues();
+	afterUpdate(initValues);
+
+	function initValues() {
+		id = $page.params.id;
+		entryIndex = blogDb.findIndex((post) => post.id === id);
+		entry = blogDb[entryIndex];
+		isLastEntry = entryIndex === blogDb.length - 1;
+		isFirstEntry = entryIndex === 0;
+		nextEntry = !isLastEntry ? blogDb[entryIndex + 1] : undefined;
+		previousEntry = !isFirstEntry ? blogDb[entryIndex - 1] : undefined;
+	}
 </script>
 
 {#if entry}
