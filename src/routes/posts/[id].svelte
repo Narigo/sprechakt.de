@@ -40,12 +40,22 @@
 			<SvelteMarkdown source={entry.body} />
 		</article>
 
-		{#if previousEntry}
-			<a href="{base}/posts/{previousEntry.id}">👈 {previousEntry.title}</a>
-		{/if}
-		<a href="{base}/posts">Zu den weiteren Nachrichten</a>
-		{#if nextEntry}
-			<a href="{base}/posts/{nextEntry.id}">{nextEntry.title} 👉</a>
-		{/if}
+		<nav>
+			{#if previousEntry}
+				<a href="{base}/posts/{previousEntry.id}">👈 {previousEntry.title}</a>
+			{/if}
+			<a href="{base}/posts">Zu den weiteren Nachrichten</a>
+			{#if nextEntry}
+				<a href="{base}/posts/{nextEntry.id}">{nextEntry.title} 👉</a>
+			{/if}
+		</nav>
 	</PageWithNavigation>
 {/if}
+
+<style>
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+</style>
