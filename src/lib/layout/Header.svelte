@@ -17,5 +17,7 @@
 		flex: 1;
 		padding: 2em;
 		position: relative;
+		text-shadow: -1px -1px 1px #fff, -1px 0px 1px #fff, -1px 1px 1px #fff, 0px -1px 1px #fff,
+			0px 0px 1px #fff, 0px 1px 1px #fff, 1px -1px 1px #fff, 1px 0px 1px #fff, 1px 1px 1px #fff;
 	}
 </style>
