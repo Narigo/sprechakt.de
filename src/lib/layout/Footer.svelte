@@ -1,10 +1,20 @@
+<script>
+	import { assets } from '$app/paths';
+</script>
+
 <footer>
 	<slot />
-	<div class="column">
-		<h4>Social links</h4>
-		<div class="socialIcons">
-			<a href="https://www.facebook.com/Sprechakt" rel="external">Facebook</a>
-			<a href="https://www.instagram.com/sprechakt_landshut/" rel="external">Instagram</a>
+	<div class="columns">
+		<div class="column">
+			<h4>Social links</h4>
+			<div class="socialIcons">
+				<a href="https://www.facebook.com/Sprechakt" rel="external"
+					><img src="{assets}/socials/f_logo_RGB-Black_1024.svg" alt="facebook" /></a
+				>
+				<a href="https://www.instagram.com/sprechakt_landshut/" rel="external"
+					><img src="{assets}/socials/glyph-logo_May2016.svg" alt="Instagram" /></a
+				>
+			</div>
 		</div>
 	</div>
 </footer>
@@ -12,6 +22,7 @@
 <style>
 	footer {
 		background-color: var(--secondary-color);
+		color: var(--text-color);
 		padding: 2rem;
 	}
 	footer > :first-child {
@@ -22,6 +33,10 @@
 		margin-bottom: 0;
 	}
 
+	.columns {
+		display: flex;
+		gap: 2em;
+	}
 	.column {
 		display: flex;
 		flex-direction: column;
@@ -30,7 +45,18 @@
 
 	.socialIcons {
 		display: flex;
-		gap: 1em;
+		gap: 0.5em;
+	}
+
+	.socialIcons a {
+		display: flex;
+		padding: 0.5em;
+		margin: 0;
+	}
+
+	.socialIcons img {
+		height: 2em;
+		margin: 0;
 	}
 
 	h4 {
