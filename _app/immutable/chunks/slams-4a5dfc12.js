@@ -18,8 +18,7 @@ Bis dahin w\xFCnschen wir euch eine gute Zeit. Wir sehen uns dann am 22. Septemb
 Euer Sprechakt-Team
 
 PS: Die n\xE4chsten Slam-Termine stehen auch schon fest:
-
-Donnerstag, 24. November
-Donnerstag, 26. Januar 2023
+- Donnerstag, 24. November
+- Donnerstag, 26. Januar 2023
 `,shortDescription:"Herbstslam"},{id:"recALgFCzAm3rxglg",date:"2022-11-24T18:30:00.000Z",name:"Winterslam",description:`
 `}];export{c as a,l as b,s as d,d as g,r as h,h as i,m as s};
