@@ -6,7 +6,7 @@
 	<slot />
 	<div class="columns">
 		<div class="column">
-			<h4>Social links</h4>
+			<h4>Folgt dem Sprechakt!</h4>
 			<div class="socialIcons">
 				<a href="https://www.facebook.com/Sprechakt" rel="external"
 					><img src="{assets}/socials/f_logo_RGB-Black_1024.svg" alt="facebook" /></a
