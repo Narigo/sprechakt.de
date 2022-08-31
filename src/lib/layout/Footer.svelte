@@ -1,5 +1,7 @@
 <script>
-	import { assets } from '$app/paths';
+	import { assets, base } from '$app/paths';
+	import { page } from '$app/stores';
+	const currentUrl = $page.url.pathname;
 </script>
 
 <footer>
@@ -15,6 +17,14 @@
 					><img src="{assets}/socials/glyph-logo_May2016.svg" alt="Instagram" /></a
 				>
 			</div>
+		</div>
+		<div class="column">
+			<h4>Rechtliches</h4>
+			<nav>
+				<li>
+					<a class:active={currentUrl === `${base}/impressum`} href="{base}/impressum">Impressum</a>
+				</li>
+			</nav>
 		</div>
 	</div>
 </footer>
@@ -35,8 +45,11 @@
 
 	.columns {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 2em;
 	}
+
 	.column {
 		display: flex;
 		flex-direction: column;
@@ -63,5 +76,22 @@
 		font-family: var(--font-heading);
 		margin: 0;
 		text-transform: uppercase;
+	}
+
+	nav li {
+		margin: 0;
+		list-style-type: none;
+	}
+
+	nav li a {
+		color: var(--text-color);
+		font-family: var(--font-subheading);
+		/* font-weight: 300; */
+		text-decoration: none;
+		/* text-transform: uppercase; */
+	}
+
+	nav li a.active {
+		text-decoration: underline;
 	}
 </style>

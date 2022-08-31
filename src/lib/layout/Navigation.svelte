@@ -16,9 +16,6 @@
 	<li>
 		<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
 	</li>
-	<li>
-		<a class:active={currentUrl === `${base}/impressum`} href="{base}/impressum">Impressum</a>
-	</li>
 </nav>
 
 <style>
