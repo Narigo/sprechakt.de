@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import acts from '$data/acts.json';
