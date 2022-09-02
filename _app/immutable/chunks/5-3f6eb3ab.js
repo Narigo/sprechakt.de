@@ -1,0 +1,1 @@
+import{_ as a}from"./_page-d19de4ef.js";import{default as f}from"../components/pages/impressum/_page.svelte-ac825773.js";import"./index-961eddeb.js";import"./PageWithNavigation-6319296b.js";import"./singletons-39e87190.js";import"./stores-083779d6.js";export{f as component,a as shared};
