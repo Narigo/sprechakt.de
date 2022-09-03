@@ -54,3 +54,7 @@ h3 {
 	font-family: var(--font-subheading);
 	font-size: 18px;
 }
+
+p {
+	line-height: 1.75em;
+}
