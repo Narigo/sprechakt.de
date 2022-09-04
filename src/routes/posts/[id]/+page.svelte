@@ -44,7 +44,7 @@
 			{#if previousEntry}
 				<a href="{base}/posts/{previousEntry.id}">👈 {previousEntry.title}</a>
 			{/if}
-			<a href="{base}/posts">Zu den weiteren Nachrichten</a>
+			<a href="{base}/posts">Zu den weiteren Meldungen</a>
 			{#if nextEntry}
 				<a href="{base}/posts/{nextEntry.id}">{nextEntry.title} 👉</a>
 			{/if}

@@ -10,7 +10,7 @@
 	</li>
 	<li><a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams">Slams</a></li>
 	<li>
-		<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Nachrichten</a>
+		<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Aktuelles</a>
 	</li>
 	<li>
 		<a class:active={currentUrl.startsWith(`${base}/acts`)} href="{base}/acts">Künstler:innen</a>

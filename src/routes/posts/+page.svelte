@@ -13,7 +13,7 @@
 
 <PageWithNavigation>
 	<div class="header" slot="header">
-		<h1>Nachrichten rund um den SprechAkt</h1>
+		<h1>Aktuelles rund um den SprechAkt</h1>
 	</div>
 
 	<BlogSection {posts} />

@@ -32,7 +32,7 @@
 
 	<div class="content">
 		<section>
-			<h2>Neueste Nachrichten</h2>
+			<h2>Aktuelles</h2>
 			<BlogSection {posts} />
 		</section>
 
