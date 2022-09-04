@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Sprechakt - {event.name}</title>
+	<title>SprechAkt - {event.name}</title>
 	<meta name="description" content={event.description} />
 </svelte:head>
 

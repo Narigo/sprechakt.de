@@ -8,9 +8,9 @@
 	<slot />
 	<div class="columns">
 		<div class="column">
-			<h4>Folgt dem Sprechakt!</h4>
+			<h4>Folgt dem SprechAkt!</h4>
 			<div class="socialIcons">
-				<a href="https://www.facebook.com/Sprechakt" rel="external"
+				<a href="https://www.facebook.com/SprechAkt" rel="external"
 					><img src="{assets}/socials/f_logo_RGB-Black_1024.svg" alt="facebook" /></a
 				>
 				<a href="https://www.instagram.com/sprechakt_landshut/" rel="external"

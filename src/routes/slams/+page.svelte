@@ -15,8 +15,8 @@
 </script>
 
 <svelte:head>
-	<title>Sprechakt</title>
-	<meta name="description" content="Die nächsten Poetry Slam Events vom Sprechakt" />
+	<title>SprechAkt</title>
+	<meta name="description" content="Die nächsten Poetry Slam Events vom SprechAkt" />
 </svelte:head>
 
 <PageWithNavigation>

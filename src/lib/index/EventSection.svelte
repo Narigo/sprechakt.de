@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getDate } from '$lib/common/events';
-	import type { SprechaktEvent } from '$lib/types';
+	import type { SprechAktEvent } from '$lib/types';
 
-	export let events: SprechaktEvent[];
+	export let events: SprechAktEvent[];
 </script>
 
 <section>

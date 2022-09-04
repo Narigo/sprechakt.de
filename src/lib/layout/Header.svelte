@@ -2,7 +2,7 @@
 	<slot name="navigation" />
 	<div>
 		<slot>
-			<h1>Sprechakt Poetry Slam!</h1>
+			<h1>SprechAkt - Der Poetry Slam in Landshut</h1>
 		</slot>
 	</div>
 </header>

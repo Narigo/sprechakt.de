@@ -6,7 +6,7 @@
 
 <nav>
 	<li>
-		<a class:active={currentUrl === `${base}/`} href="{base}/">Sprechakt</a>
+		<a class:active={currentUrl === `${base}/`} href="{base}/">SprechAkt</a>
 	</li>
 	<li><a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams">Slams</a></li>
 	<li>

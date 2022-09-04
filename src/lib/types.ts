@@ -1,6 +1,6 @@
 import type { Attachment } from 'airtable/lib/attachment';
 
-export type SprechaktAct = {
+export type SprechAktAct = {
 	id: string;
 	name: string;
 	bio: string;
@@ -10,7 +10,7 @@ export type SprechaktAct = {
 	youTube?: string;
 };
 
-export type SprechaktBlog = {
+export type SprechAktBlog = {
 	id: string;
 	authors: string[];
 	body: string;
@@ -19,7 +19,7 @@ export type SprechaktBlog = {
 	title: string;
 };
 
-export type SprechaktEvent = {
+export type SprechAktEvent = {
 	id: string;
 	name: string;
 	date: string;

@@ -4,7 +4,7 @@
 </script>
 
 <div>
-	<h1>Sprechakt</h1>
+	<h1>SprechAkt</h1>
 	<section>
 		<p>
 			Nächster Termin am {date}.

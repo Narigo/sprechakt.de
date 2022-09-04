@@ -6,15 +6,15 @@
 	import { getActNameById } from '$lib/common/acts';
 	import { base } from '$app/paths';
 	import { afterUpdate } from 'svelte';
-	import type { SprechaktBlog } from '$lib/types';
+	import type { SprechAktBlog } from '$lib/types';
 
 	let id: string;
 	let entryIndex: number;
-	let entry: SprechaktBlog;
+	let entry: SprechAktBlog;
 	let isLastEntry: boolean;
 	let isFirstEntry: boolean;
-	let nextEntry: SprechaktBlog | undefined;
-	let previousEntry: SprechaktBlog | undefined;
+	let nextEntry: SprechAktBlog | undefined;
+	let previousEntry: SprechAktBlog | undefined;
 
 	initValues();
 	afterUpdate(initValues);

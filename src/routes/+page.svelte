@@ -15,13 +15,13 @@
 </script>
 
 <svelte:head>
-	<title>Sprechakt</title>
+	<title>SprechAkt</title>
 	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
 </svelte:head>
 
 <PageWithNavigation>
 	<div class="header" slot="header">
-		<h1>Sprechakt</h1>
+		<h1>SprechAkt</h1>
 		<section>
 			<p>
 				Nächster Termin am {getDate(nextEvent)}.

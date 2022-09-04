@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Sprechakt Impressum</title>
+	<title>SprechAkt Impressum</title>
 	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
 </svelte:head>
 

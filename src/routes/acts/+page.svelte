@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Sprechakt Poeten</title>
+	<title>SprechAkt Poeten</title>
 	<meta
 		name="description"
 		content="Poetinnen der vergangenen Slams, sofern sie aufgelistet werden möchten"
@@ -14,7 +14,7 @@
 <PageWithNavigation>
 	<h1 slot="header">Poet:innen</h1>
 	<p>
-		Beim Sprechakt in Landshut sind schon einige Künstler:innen aufgetreten. Auf dieser Seite werden
+		Beim SprechAkt in Landshut sind schon einige Künstler:innen aufgetreten. Auf dieser Seite werden
 		wir diese vorstellen.
 	</p>
 	<ul>

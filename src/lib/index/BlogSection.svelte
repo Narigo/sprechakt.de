@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import type { SprechaktBlog } from '$lib/types';
+	import type { SprechAktBlog } from '$lib/types';
 
-	export let posts: SprechaktBlog[];
+	export let posts: SprechAktBlog[];
 </script>
 
 <section>
