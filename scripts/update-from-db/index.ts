@@ -8,7 +8,7 @@ import type { FieldSet } from 'airtable/lib/field_set';
 import type Record from 'airtable/lib/record';
 import type { QueryParams } from 'airtable/lib/query_params';
 import type Table from 'airtable/lib/table';
-import type { SprechaktAct, SprechaktEvent, SprechaktBlog } from '../../src/lib/types';
+import type { SprechAktAct, SprechAktEvent, SprechAktBlog } from '../../src/lib/types';
 
 const apiKey = process.env.AIRTABLE_API_KEY as string;
 const apiBase = process.env.AIRTABLE_API_BASE as string;
@@ -69,8 +69,8 @@ async function getDataFromAirtable<T, TFields extends FieldSet = FieldSet>({
 	});
 }
 
-async function getActsFromAirtable(base: AirtableBase): Promise<SprechaktAct[]> {
-	return getDataFromAirtable<SprechaktAct>({
+async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> {
+	return getDataFromAirtable<SprechAktAct>({
 		base,
 		sheetName: 'Acts',
 		selectOptions: {
@@ -95,7 +95,7 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechaktAct[]> 
 	});
 }
 
-async function getBlogFromAirtable(base: AirtableBase): Promise<SprechaktBlog[]> {
+async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]> {
 	return getDataFromAirtable({
 		base,
 		sheetName: 'Blog',
@@ -123,7 +123,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechaktBlog[]>
 	});
 }
 
-async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechaktEvent[]> {
+async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechAktEvent[]> {
 	return getDataFromAirtable({
 		base,
 		sheetName: 'Slams',
