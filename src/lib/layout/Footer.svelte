@@ -19,8 +19,11 @@
 			</div>
 		</div>
 		<div class="column">
-			<h4>Rechtliches</h4>
+			<h4>Weiteres</h4>
 			<nav>
+				<li>
+					<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
+				</li>
 				<li>
 					<a class:active={currentUrl === `${base}/impressum`} href="{base}/impressum">Impressum</a>
 				</li>

@@ -7,7 +7,7 @@
 
 <div>
 	<Header>
-		<Navigation slot="navigation" />
+		<Navigation slot="navigation"><slot name="navigation" /></Navigation>
 		<slot name="header" />
 	</Header>
 	<main>

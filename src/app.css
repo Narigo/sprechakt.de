@@ -58,3 +58,15 @@ h3 {
 p {
 	line-height: 1.75em;
 }
+
+li {
+	line-height: 1.5em;
+}
+
+a {
+	color: var(--primary-color);
+}
+
+a[href^='mailto:']::after {
+	content: ' 📧';
+}

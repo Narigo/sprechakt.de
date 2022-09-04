@@ -10,6 +10,11 @@
 
 <PageWithNavigation>
 	<h1 slot="header">Impressum</h1>
-	<p>Die Inhalte sind derzeit noch im Aufbau. Vorübergehend verantwortlich für die Inhalte:</p>
-	<div><strong>Jörn Bernhardt</strong><br />Goethestr. 46<br />84032 Landshut</div>
+	<div>
+		<strong>SprechAkt Landshut</strong><br />
+		c/o Sebastian Geiger<br />
+		Füttererstr. 53<br />
+		84032 Landshut<br />
+		E-Mailadresse: <a href="mailto:sprechakt.landshut@gmx.de">sprechakt.landshut@gmx.de</a>
+	</div>
 </PageWithNavigation>

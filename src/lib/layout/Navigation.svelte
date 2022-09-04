@@ -8,17 +8,13 @@
 	<li>
 		<a class:active={currentUrl === `${base}/`} href="{base}/">SprechAkt</a>
 	</li>
-	<li><a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams">Slams</a></li>
 	<li>
 		<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Aktuelles</a>
 	</li>
-	<li>
-		<a class:active={currentUrl.startsWith(`${base}/acts`)} href="{base}/acts">Künstler:innen</a>
-	</li>
-	<li>
-		<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
-	</li>
+	<li><a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams">Slams</a></li>
+	<li><a class:active={currentUrl.startsWith(`${base}/infos`)} href="{base}/infos">Infos</a></li>
 </nav>
+<slot />
 
 <style>
 	nav {
