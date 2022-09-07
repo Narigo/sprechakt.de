@@ -45,7 +45,7 @@
 
 <style>
 	.header {
-		background-image: url('$lib/index/sprechakt-bild.svg');
+		background-image: url('$lib/index/sprechakt.svg');
 		background-position: right;
 		background-repeat: no-repeat;
 		background-size: contain;
