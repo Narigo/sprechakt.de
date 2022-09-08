@@ -26,6 +26,7 @@
 	--text-color: #000000;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
+	--text-shadow-color: #ffffff;
 }
 
 * {
@@ -69,4 +70,12 @@ a {
 
 a[href^='mailto:']::after {
 	content: ' 📧';
+}
+
+.text-shadow {
+	text-shadow: -1px -1px 1px var(--text-shadow-color), -1px 0px 1px var(--text-shadow-color),
+		-1px 1px 1px var(--text-shadow-color), 0px -1px 1px var(--text-shadow-color),
+		0px 0px 1px var(--text-shadow-color), 0px 1px 1px var(--text-shadow-color),
+		1px -1px 1px var(--text-shadow-color), 1px 0px 1px var(--text-shadow-color),
+		1px 1px 1px var(--text-shadow-color);
 }

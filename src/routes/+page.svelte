@@ -21,9 +21,8 @@
 
 <PageWithNavigation>
 	<div class="header" slot="header">
-		<h1>SprechAkt</h1>
 		<section>
-			<p>
+			<p class="text-shadow">
 				Nächster Termin am {getDate(nextEvent)}.
 				<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
 			</p>
@@ -51,7 +50,9 @@
 		background-size: contain;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		height: 25vh;
+		padding: 2em 0;
+		margin: 0 2em;
 	}
 
 	.content {
