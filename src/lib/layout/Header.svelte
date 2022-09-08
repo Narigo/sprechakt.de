@@ -1,8 +1,10 @@
 <header>
 	<slot name="navigation" />
-	<slot>
-		<h1 class="text-shadow">SprechAkt - Der Poetry Slam in Landshut</h1>
-	</slot>
+	<div>
+		<slot>
+			<h1 class="text-shadow">SprechAkt - Der Poetry Slam in Landshut</h1>
+		</slot>
+	</div>
 </header>
 
 <style>
@@ -11,7 +13,7 @@
 		flex-direction: column;
 	}
 
-	h1 {
+	div {
 		flex: 1;
 		padding: 2em;
 		position: relative;

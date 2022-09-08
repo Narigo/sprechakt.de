@@ -20,14 +20,13 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<div class="header" slot="header">
-		<section>
-			<p class="text-shadow">
-				Nächster Termin am {getDate(nextEvent)}.
-				<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
-			</p>
-		</section>
-	</div>
+	<div class="header" slot="header" />
+	<section>
+		<p class="text-shadow">
+			Nächster Termin am {getDate(nextEvent)}.
+			<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
+		</p>
+	</section>
 
 	<div class="content">
 		<section>
@@ -51,8 +50,6 @@
 		display: flex;
 		flex-direction: column;
 		height: 25vh;
-		padding: 2em 0;
-		margin: 0 2em;
 	}
 
 	.content {
@@ -63,7 +60,7 @@
 		width: 100%;
 	}
 
-	.header section {
+	section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -75,9 +72,5 @@
 		flex-direction: column;
 		justify-content: start;
 		align-items: stretch;
-	}
-
-	h1 {
-		width: 100%;
 	}
 </style>
