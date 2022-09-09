@@ -22,6 +22,7 @@
 		background-color: var(--primary-color);
 		color: var(--pure-white);
 		display: flex;
+		flex-wrap: wrap;
 		font-family: var(--font-heading);
 		gap: 1em;
 		justify-content: center;
@@ -31,7 +32,6 @@
 
 	li {
 		display: inline-flex;
-		height: 100%;
 		list-style-type: none;
 	}
 

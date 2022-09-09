@@ -29,6 +29,7 @@
 		background-color: var(--secondary-color);
 		color: var(--pure-white);
 		display: flex;
+		flex-wrap: wrap;
 		font-family: var(--font-heading);
 		gap: 1em;
 		justify-content: center;
