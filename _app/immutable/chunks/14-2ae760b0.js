@@ -1,1 +1,0 @@
-import{default as a}from"../components/pages/slams/about/_page.svelte-91d3294d.js";import"./index-961eddeb.js";import"./PageWithSlamNav-d9e0b683.js";import"./singletons-ccc91fdb.js";import"./stores-30de57e0.js";import"./PageWithNavigation-3455b3fb.js";export{a as component};
