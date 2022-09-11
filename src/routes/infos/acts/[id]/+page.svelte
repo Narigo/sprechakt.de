@@ -31,3 +31,9 @@
 {:else}
 	<PageWithInfoNav><p>Künstler:in nicht gefunden!</p></PageWithInfoNav>
 {/if}
+
+<style>
+	img {
+		max-width: 100%;
+	}
+</style>
