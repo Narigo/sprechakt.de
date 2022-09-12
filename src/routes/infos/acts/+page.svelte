@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import acts from '$data/acts.json';
+	import ActCard from '$lib/acts/ActCard.svelte';
 	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 </script>
 
@@ -20,7 +21,7 @@
 	</p>
 	<ul>
 		{#each acts as act}
-			<li><a href="{base}/infos/acts/{act.id}">{act.name}</a></li>
+			<li><ActCard {act} /></li>
 		{/each}
 	</ul>
 	<h2>Wie funktioniert das hier?</h2>
