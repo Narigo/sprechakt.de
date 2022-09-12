@@ -12,16 +12,25 @@
 </script>
 
 <svelte:head>
-	<title>SprechAkt - {event.name}</title>
-	<meta name="description" content={event.description} />
+	{#if event}
+		<title>{event.name} - SprechAkt</title>
+		<meta name="description" content={event.description} />
+	{:else}
+		<title>Event nicht gefunden - SprechAkt</title>
+		<meta name="description" content="Das angegebene Event wurde nicht gefunden" />
+	{/if}
 </svelte:head>
 
-<PageWithNavigation>
-	<h1 slot="header">Slams</h1>
-	<SlamEntry
-		title={getDate(event)}
-		markdownContent={event.description ?? ''}
-		images={event.images ?? []}
-		backLink="{base}/slams"
-	/>
-</PageWithNavigation>
+{#if event}
+	<PageWithNavigation>
+		<h1 slot="header">Slams</h1>
+		<SlamEntry
+			title={getDate(event)}
+			markdownContent={event.description ?? ''}
+			images={event.images ?? []}
+			backLink="{base}/slams"
+		/>
+	</PageWithNavigation>
+{:else}
+	<PageWithNavigation>Event nicht gefunden!</PageWithNavigation>
+{/if}
