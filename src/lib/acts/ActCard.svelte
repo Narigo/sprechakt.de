@@ -1,18 +1,25 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import placeholder from './placeholder.svg';
 	import type { SprechAktAct } from '$lib/types';
 
 	export let act: SprechAktAct;
 </script>
 
-<a href="{base}/infos/acts/{act.id}"
-	><div class="card">
-		{#if act.image}<div class="image"><img src={act.image.url} alt={act.name} /></div>{/if}
+<div class="card">
+	<a href="{base}/infos/acts/{act.id}">
+		<div class="image">
+			{#if act.image}
+				<img src={act.image.url} alt={act.name} />
+			{:else}
+				<img src={placeholder} alt={`Platzhalter für ${act.name}`} />
+			{/if}
+		</div>
 		<div class="content">
 			<h3>{act.name}</h3>
 		</div>
-	</div></a
->
+	</a>
+</div>
 
 <style>
 	a {
@@ -23,8 +30,12 @@
 	.card {
 		display: flex;
 		flex-direction: column;
-		max-width: 15em;
+		width: 15em;
 		overflow: hidden;
+	}
+
+	.content {
+		padding: 1em;
 	}
 
 	.image {

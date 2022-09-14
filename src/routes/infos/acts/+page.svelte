@@ -30,3 +30,17 @@
 		beachten? Was erwartet mich? Bis wann muss ich mich anmelden?
 	</p>
 </PageWithInfoNav>
+
+<style>
+	ul {
+		align-items: flex-end;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5em;
+		justify-content: center;
+	}
+	li {
+		box-shadow: 0 0 5em -2em #000;
+		list-style: none;
+	}
+</style>
