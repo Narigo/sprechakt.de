@@ -75,7 +75,7 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> 
 		sheetName: 'Acts',
 		selectOptions: {
 			view: 'database',
-			fields: ['Name', 'Bio', 'Image', 'Instagram', 'Twitter', 'YouTube']
+			fields: ['Name', 'Bio', 'Facebook', 'Image', 'Instagram', 'Twitter', 'YouTube']
 		},
 		flatMapRecord: (record) => {
 			const imageFromDb = record.get('Image') as readonly Attachment[] | undefined;
@@ -85,6 +85,7 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> 
 					id: record.getId(),
 					name: record.get('Name') as string,
 					bio: record.get('Bio') as string,
+					facebook: record.get('Facebook') as string,
 					image,
 					instagram: record.get('Instagram') as string,
 					twitter: record.get('Twitter') as string,

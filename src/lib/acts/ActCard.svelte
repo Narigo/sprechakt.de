@@ -4,6 +4,8 @@
 	import type { SprechAktAct } from '$lib/types';
 
 	export let act: SprechAktAct;
+
+	const hasSocials = !!(act.instagram ?? act.twitter ?? act.youTube);
 </script>
 
 <div class="card">
@@ -15,16 +17,29 @@
 				<img src={placeholder} alt={`Platzhalter für ${act.name}`} />
 			{/if}
 		</div>
-		<div class="content">
-			<h3>{act.name}</h3>
-		</div>
 	</a>
+	<div class="content">
+		<a href="{base}/infos/acts/{act.id}">
+			<h3>{act.name}</h3>
+		</a>
+		{#if hasSocials}
+			<div class="socials">
+				{#if act.facebook}<a rel="external" href={act.facebook}>f</a>{/if}
+				{#if act.instagram}<a rel="external" href={act.instagram}>i</a>{/if}
+				{#if act.twitter}<a rel="external" href={act.twitter}>t</a>{/if}
+				{#if act.youTube}<a rel="external" href={act.youTube}>yt</a>{/if}
+			</div>
+		{/if}
+	</div>
 </div>
 
 <style>
 	a {
 		overflow: hidden;
 		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
 	}
 
 	.card {
@@ -42,7 +57,18 @@
 		max-width: 100%;
 	}
 
+	.socials {
+		display: flex;
+		gap: 1em;
+		justify-content: flex-end;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
 	img {
+		display: block;
 		height: 100%;
 		width: 100%;
 	}
