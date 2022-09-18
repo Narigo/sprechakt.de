@@ -1,0 +1,1 @@
+import{a}from"./acts-629e29b8.js";function o(e){var t;const n=a.find(c=>c.id===e);return(t=n==null?void 0:n.name)!=null?t:"(Person nicht gefunden)"}function r(e){return a.find(t=>t.id===e)}export{o as a,r as g};
