@@ -5,6 +5,7 @@ export type SprechAktAct = {
 	name: string;
 	bio: string;
 	facebook?: string;
+	homepage?: string;
 	image?: Attachment;
 	instagram?: string;
 	twitter?: string;
