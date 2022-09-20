@@ -6,6 +6,9 @@
 	export let act: SprechAktAct;
 
 	const hasSocials = !!(act.instagram ?? act.twitter ?? act.youTube);
+	const worldByTimezone = ['🌎', '🌍', '🌏'][
+		Math.floor((new Date().getTimezoneOffset() / 60 + 12) / 8)
+	];
 </script>
 
 <div class="card">
@@ -25,7 +28,7 @@
 		{#if hasSocials}
 			<div class="socials">
 				{#if act.homepage}
-					<a rel="external" href={act.homepage}>🌍</a>
+					<a rel="external" href={act.homepage}>{worldByTimezone}</a>
 				{/if}
 				{#if act.facebook}
 					<a rel="external" href={act.facebook}>
