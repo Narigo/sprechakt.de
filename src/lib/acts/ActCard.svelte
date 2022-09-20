@@ -6,9 +6,11 @@
 	export let act: SprechAktAct;
 
 	const hasSocials = !!(act.instagram ?? act.twitter ?? act.youTube);
-	const worldByTimezone = ['🌎', '🌍', '🌏'][
-		Math.floor((new Date().getTimezoneOffset() / 60 + 12) / 8)
-	];
+	const worlds = ['🌎', '🌍', '🌏'];
+	const worldByTimezone =
+		worlds[
+			Math.floor((new Date().getTimezoneOffset() / 60 + 12) / (24 / worlds.length)) % worlds.length
+		];
 </script>
 
 <div class="card">
