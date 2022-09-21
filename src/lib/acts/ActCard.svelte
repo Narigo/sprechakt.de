@@ -14,19 +14,25 @@
 </script>
 
 <div class="card">
-	<a href="{base}/infos/acts/{act.id}">
-		<div class="image">
-			{#if act.image}
-				<img src={act.image.url} alt={act.name} />
-			{:else}
-				<img src={placeholder} alt="Platzhalter für {act.name}" />
-			{/if}
-		</div>
-	</a>
+	<div class="image">
+		{#if act.image}
+			<img src={act.image.url} alt={act.name} />
+		{:else}
+			<img src={placeholder} alt="Platzhalter für {act.name}" />
+		{/if}
+	</div>
 	<div class="content">
-		<a href="{base}/infos/acts/{act.id}">
+		{#if act.bio}
+			<a href="{base}/infos/acts/{act.id}">
+				<h3>{act.name}</h3>
+			</a>
+		{:else if act.homepage}
+			<a href={act.homepage}>
+				<h3>{act.name}</h3>
+			</a>
+		{:else}
 			<h3>{act.name}</h3>
-		</a>
+		{/if}
 		{#if hasSocials}
 			<div class="socials">
 				{#if act.homepage}
@@ -91,6 +97,10 @@
 	.socials a {
 		padding: 0 0.5em;
 		width: 2.5em;
+	}
+
+	.socials a:hover {
+		text-decoration: none;
 	}
 
 	h3 {
