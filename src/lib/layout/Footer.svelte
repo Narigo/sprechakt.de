@@ -22,7 +22,7 @@
 			<h4>Weiteres</h4>
 			<nav>
 				<li>
-					<a class:active={currentUrl === `${base}/historie`} href="{base}/historie">Historie</a>
+					<a class:active={currentUrl === `${base}/history`} href="{base}/history">Historie</a>
 				</li>
 				<li>
 					<a class:active={currentUrl === `${base}/impressum`} href="{base}/impressum">Impressum</a>

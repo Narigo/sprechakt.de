@@ -4,6 +4,8 @@
 	import slamsDb from '$data/slams.json';
 	import { getNextEvents } from '$lib/common/events';
 	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import imageUrl from './startpage.jpg';
 
 	const events = getNextEvents(slamsDb);
 	const nextEvent = events[0];
@@ -15,13 +17,16 @@
 </svelte:head>
 
 <PageWithSprechAktNav>
-	<section class="header" slot="header">
-		<h2 class="big-text-shadow">Der SprechAkt Landshut</h2>
-		<p class="big-text-shadow">
-			Nächster Termin am {getDate(nextEvent)}.
-			<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
-		</p>
-	</section>
+	<div slot="header">
+		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="top" {imageUrl} />
+		<section class="header">
+			<h2 class="big-text-shadow">Der SprechAkt Landshut</h2>
+			<p class="big-text-shadow">
+				Nächster Termin am {getDate(nextEvent)}.
+				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
+			</p>
+		</section>
+	</div>
 
 	<section>
 		<h2>Der SprechAkt Landshut</h2>
@@ -46,16 +51,6 @@
 </PageWithSprechAktNav>
 
 <style>
-	.header {
-		background-image: url('$lib/index/startpage.jpg');
-		background-position: center top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		display: flex;
-		flex-direction: column;
-		height: 75vh;
-	}
-
 	.header {
 		display: flex;
 		flex-direction: column;

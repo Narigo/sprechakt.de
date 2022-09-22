@@ -17,7 +17,7 @@
 
 	<h3>Die Anfänge</h3>
 	<p>
-		November 2013 – der erste SprechAkt Poetry Slam findet unter der Leitung von Sebastian Stopfer
+		November 2013 - der erste SprechAkt Poetry Slam findet unter der Leitung von Sebastian Stopfer
 		und Sabine Oberpriller in der Alten Kaserne statt. Damals noch im Clubraum, doch wegen des
 		großen Besucherandrangs zog der Slam schon bei der dritten Veranstaltung in den großen Saal.<br
 		/>

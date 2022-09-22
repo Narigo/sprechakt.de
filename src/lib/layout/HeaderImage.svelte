@@ -4,16 +4,17 @@
 	export let alt: string;
 	export let aspectRatio: string = '2 / 3';
 	export let imageUrl: string;
+	export let position: string = 'center';
 </script>
 
-<h2 use:styles={{ aspectRatio, imageUrl: `url(${imageUrl})` }}>
+<h2 use:styles={{ aspectRatio, imageUrl: `url(${imageUrl})`, position }}>
 	{alt}
 </h2>
 
 <style>
 	h2 {
 		background-image: var(--imageUrl);
-		background-position: center;
+		background-position: var(--position);
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: transparent;
