@@ -28,7 +28,7 @@
 			title={getDate(event)}
 			markdownContent={event.description ?? ''}
 			images={event.images ?? []}
-			backLink="{base}/slams"
+			backLink="{base}/slams/events"
 		/>
 	</PageWithNavigation>
 {:else}
