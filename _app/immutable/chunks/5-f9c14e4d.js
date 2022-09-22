@@ -1,0 +1,1 @@
+import{default as f}from"../components/pages/history/_page.svelte-7904ea71.js";import"./index-cdc6a83d.js";import"./HeaderImage-014d9c09.js";import"./PageWithSprechAktNav-30ba959f.js";import"./singletons-12656d99.js";import"./stores-1deca326.js";import"./PageWithNavigation-0aeb5a9d.js";export{f as component};
