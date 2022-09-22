@@ -54,6 +54,11 @@ h2 {
 h3 {
 	font-family: var(--font-subheading);
 	font-size: 18px;
+	margin-bottom: 0;
+}
+
+h4 {
+	margin-bottom: 0;
 }
 
 p {
@@ -70,6 +75,14 @@ a {
 
 a[href^='mailto:']::after {
 	content: ' 📧';
+}
+
+.big-text-shadow {
+	text-shadow: -20px -20px 20px var(--text-shadow-color), -20px 0px 20px var(--text-shadow-color),
+		-20px 20px 20px var(--text-shadow-color), 0px -20px 20px var(--text-shadow-color),
+		0px 0px 20px var(--text-shadow-color), 0px 20px 20px var(--text-shadow-color),
+		20px -20px 20px var(--text-shadow-color), 20px 0px 20px var(--text-shadow-color),
+		20px 20px 20px var(--text-shadow-color);
 }
 
 .text-shadow {

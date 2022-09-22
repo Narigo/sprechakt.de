@@ -1,11 +1,10 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
 	import { page } from '$app/stores';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import blogDb from '$data/blog.json';
-	import { getActNameById } from '$lib/common/acts';
 	import { base } from '$app/paths';
 	import { afterUpdate } from 'svelte';
+	import BlogEntry from '$lib/posts/BlogEntry.svelte';
 	import type { SprechAktBlog } from '$lib/types';
 
 	let id: string;
@@ -32,13 +31,7 @@
 
 {#if entry}
 	<PageWithNavigation>
-		<h1 slot="header">
-			{entry.title}
-		</h1>
-		<article>
-			<p>geschrieben von {entry.authors.map((id) => getActNameById(id)).join(', ')}</p>
-			<SvelteMarkdown source={entry.body} />
-		</article>
+		<BlogEntry {entry} />
 
 		<nav>
 			{#if previousEntry}

@@ -1,13 +1,29 @@
 <script>
-	import Map from '$lib/infos/Map.svelte';
 	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import imageUrl from './directions.jpg';
 </script>
 
 <PageWithInfoNav>
-	<h1 slot="header">Anfahrt</h1>
+	<HeaderImage slot="header" alt="Anfahrt" {imageUrl} />
+
 	<p>
-		Hier folgt eine Karte zum einfachen Finden des Poetry Slams. Und eine Beschreibung, wie man mit
-		den öffentlichen Verkehrsmitteln gut hin kommt.
+		Die Alte Kaserne, das Jugendkulturzentrum der Stadt Landshut, ist die Heimat des SprechAkt
+		Poetry Slams.
 	</p>
-	<Map />
+
+	<h2>Mit dem ÖPNV - Haltestelle Alte Kaserne</h2>
+
+	<h3>Vom Landshuter Hauptbahnhof:</h3>
+	<ul>
+		<li>Linie 3 (Richtung: Auloh)</li>
+		<li>Linie 6 (Richtung: Auwaldsiedlung) - <strong>Achtung: andere Haltestelle Konrad-Adenauer-Str.</strong></li>
+	</ul>
+
+	<h3>Von der Altstadt:</h3>
+	<ul>
+		<li>Linie 3 (Richtung: Auloh)</li>
+		<li>Linie 5 (Richtung: Alte Kaserne)</li>
+		<li>Linie 14 (Richtung: Wolfsteinerau)</li>
+	</ul>
 </PageWithInfoNav>

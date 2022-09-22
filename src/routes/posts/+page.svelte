@@ -2,8 +2,12 @@
 	import blogDb from '$data/blog.json';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import BlogSection from '$lib/index/BlogSection.svelte';
+	import BlogEntry from '$lib/posts/BlogEntry.svelte';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import imageUrl from '$lib/posts/aktuelles.jpg';
 
-	const posts = blogDb;
+	const posts = blogDb.slice(0, -1);
+	const entry = blogDb.slice(-1)[0];
 </script>
 
 <svelte:head>
@@ -12,21 +16,9 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<div class="header" slot="header">
-		<h1>Aktuelles rund um den SprechAkt</h1>
-	</div>
+	<HeaderImage slot="header" alt="Aktuelles" {imageUrl} />
+	<BlogEntry {entry} />
 
+	<h2>Blog-Archiv</h2>
 	<BlogSection {posts} />
 </PageWithNavigation>
-
-<style>
-	.header {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	h1 {
-		width: 100%;
-	}
-</style>

@@ -6,13 +6,21 @@
 
 <nav>
 	<li>
-		<a class:active={currentUrl === `${base}/`} href="{base}/">SprechAkt</a>
-	</li>
-	<li>
 		<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Aktuelles</a>
 	</li>
-	<li><a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams">Slams</a></li>
-	<li><a class:active={currentUrl.startsWith(`${base}/infos`)} href="{base}/infos">Infos</a></li>
+	<li>
+		<a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams/events">Slams</a>
+	</li>
+	<li><a class:active={currentUrl.startsWith(`${base}/infos`)} href="{base}/infos/visitors">Infos</a></li>
+	<li>
+		<a
+			class:active={currentUrl === `${base}/` ||
+				currentUrl.startsWith(`${base}/acts`) ||
+				currentUrl.startsWith(`${base}/history`) ||
+				currentUrl.startsWith(`${base}/team`)}
+			href="{base}/">Der SprechAkt</a
+		>
+	</li>
 </nav>
 <slot />
 

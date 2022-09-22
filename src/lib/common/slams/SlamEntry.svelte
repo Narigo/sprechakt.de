@@ -3,8 +3,8 @@
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
 
 	import type { Attachment } from 'airtable/lib/attachment';
+	import { url } from 'inspector';
 	import SvelteMarkdown from 'svelte-markdown';
-	import PageWithNavigation from '../../layout./../layout/PageWithNavigation.svelte';
 
 	export let backLink: string | undefined;
 	export let markdownContent: string | undefined;
@@ -22,7 +22,7 @@
 				/>{/if}
 		</slot>
 	</div>
-	{#if images}<ImageGrid {images} />{/if}
+	{#if images}<ImageGrid images={images.map((i) => ({ url: i.url, alt: i.filename }))} />{/if}
 	{#if backLink}<a href={backLink}>Zurück</a>{/if}
 </section>
 

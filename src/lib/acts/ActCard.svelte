@@ -23,7 +23,7 @@
 	</div>
 	<div class="content">
 		{#if act.bio}
-			<a href="{base}/infos/acts/{act.id}">
+			<a href="{base}/acts/{act.id}">
 				<h3>{act.name}</h3>
 			</a>
 		{:else if act.homepage}

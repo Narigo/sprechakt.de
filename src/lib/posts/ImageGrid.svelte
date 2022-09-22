@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { Attachment } from 'airtable/lib/attachment';
 	import { writable } from 'svelte/store';
 
-	export let images: readonly Attachment[];
-	let selectedImage = writable<Attachment | null>(null);
+	export let images: readonly { alt: string; url: string }[];
+	let selectedImage = writable<{ alt: string; url: string } | null>(null);
 </script>
 
 <section>
@@ -18,7 +17,7 @@
 				}}
 			>
 				<div><span>X</span></div>
-				<img src={image.url} alt="Eindruck vom Event" />
+				<img src={image.url} alt={image.alt} />
 			</button>
 		{:else}
 			<div>
@@ -29,7 +28,7 @@
 						$selectedImage = image;
 					}}
 				>
-					<img src={image.url} alt="Eindruck vom Event" />
+					<img src={image.url} alt={image.alt} />
 				</button>
 			</div>
 		{/if}

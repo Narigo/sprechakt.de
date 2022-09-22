@@ -1,15 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getDate } from '$lib/common/events';
-	import { getFirstPosts } from '$lib/common/posts';
-	import blogDb from '$data/blog.json';
 	import slamsDb from '$data/slams.json';
-	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
-	import BlogSection from '$lib/index/BlogSection.svelte';
 	import { getNextEvents } from '$lib/common/events';
-	import NextEvents from '$lib/index/NextEvents.svelte';
+	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
 
-	const posts = getFirstPosts(blogDb);
 	const events = getNextEvents(slamsDb);
 	const nextEvent = events[0];
 </script>
@@ -19,58 +14,52 @@
 	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
 </svelte:head>
 
-<PageWithNavigation>
-	<div class="header" slot="header" />
-	<section>
-		<p class="text-shadow">
+<PageWithSprechAktNav>
+	<section class="header" slot="header">
+		<h2 class="big-text-shadow">Der SprechAkt Landshut</h2>
+		<p class="big-text-shadow">
 			Nächster Termin am {getDate(nextEvent)}.
-			<a href={`${base}/slams/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
+			<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
 		</p>
 	</section>
 
-	<div class="content">
-		<section>
-			<h2>Aktuelles</h2>
-			<BlogSection {posts} />
-		</section>
-
-		<section>
-			<h2>Die nächsten Events</h2>
-			<NextEvents />
-		</section>
-	</div>
-</PageWithNavigation>
+	<section>
+		<h2>Der SprechAkt Landshut</h2>
+		<p>
+			Was ist ein Sprechakt? Es bedeutet nicht, wie wir in einem Kommentar auf Instagram mal gefragt
+			wurden, dass die Künstler:Innen unbekleidet auf der Bühne stehen. Stattdessen ist der
+			Sprechakt ein Begriff aus der Sprachforschung, genauer der Pragmatik. Kurz runtergebrochen und
+			etwas umgangssprachlich ausgedrückt, besagt die Sprechakttheorie, dass wir nicht einfach nur
+			schöne Worte in den Äther entlassen, wenn wir reden. Stattdessen handeln wir mit unseren
+			sprachlichen Äußerungen und verändern dadurch die Realität um uns herum. Wir handeln, also
+			agieren, wenn wir sprechen. Wer Poetry Slam erlebt, bekommt eine Ahnung davon, was das
+			bedeutet.
+		</p>
+		<p>
+			Seit fast zehn Jahren bringt der SprechAkt Poetry Slam regelmäßig junge und junggebliebene
+			Poet:Innen und Autor:Innen auf die Bühne der Alten Kaserne in Landshut, wo sie mit
+			selbstverfassten Texten und Gedichten um die Gunst des Publikums kämpfen. Was die
+			Künstler:Innen dort präsentieren ist vielfältig, reicht von lustig über emotional bis hin zu
+			nachdenklich und ernst und zeigt, wie vielfältig moderne Literatur sein kann.
+		</p>
+	</section>
+</PageWithSprechAktNav>
 
 <style>
 	.header {
-		background-image: url('$lib/index/sprechakt.svg');
-		background-position: right;
+		background-image: url('$lib/index/startpage.jpg');
+		background-position: center top;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		display: flex;
 		flex-direction: column;
-		height: 25vh;
+		height: 75vh;
 	}
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		gap: 4em;
-		height: 100%;
-		width: 100%;
-	}
-
-	section {
+	.header {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.content section {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: stretch;
 	}
 </style>

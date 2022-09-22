@@ -1,1 +1,0 @@
-<div>...folgt...</div>

@@ -8,13 +8,13 @@
 <PageWithNavigation>
 	<nav slot="navigation">
 		<li>
-			<a class:active={currentUrl.startsWith(`${base}/slams/events`)} href={`${base}/slams/events`}
-				>Frühere Veranstaltungen</a
+			<a class:active={currentUrl.startsWith(`${base}/slams/about`)} href={`${base}/slams/about`}
+				>Was ist ein Poetry Slam?</a
 			>
 		</li>
 		<li>
-			<a class:active={currentUrl.startsWith(`${base}/slams/about`)} href={`${base}/slams/about`}
-				>Was ist ein Poetry Slam?</a
+			<a class:active={currentUrl.startsWith(`${base}/slams/events`)} href={`${base}/slams/events`}
+				>Unsere Termine</a
 			>
 		</li>
 	</nav>
