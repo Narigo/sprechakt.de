@@ -2,6 +2,7 @@
 	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './directions.jpg';
+	import map from './map.jpg';
 </script>
 
 <PageWithInfoNav>
@@ -11,6 +12,8 @@
 		Die Alte Kaserne, das Jugendkulturzentrum der Stadt Landshut, ist die Heimat des SprechAkt
 		Poetry Slams.
 	</p>
+
+	<img src={map} alt="Übersichtskarte für den Weg zur alten Kaserne" />
 
 	<h2>Mit dem ÖPNV - Haltestelle Alte Kaserne</h2>
 
