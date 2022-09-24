@@ -75,7 +75,17 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> 
 		sheetName: 'Acts',
 		selectOptions: {
 			view: 'database',
-			fields: ['Name', 'Bio', 'Facebook', 'Homepage', 'Image', 'Instagram', 'Twitter', 'YouTube']
+			fields: [
+				'Name',
+				'Bio',
+				'Facebook',
+				'Homepage',
+				'Image',
+				'Instagram',
+				'Twitter',
+				'UserType',
+				'YouTube'
+			]
 		},
 		flatMapRecord: (record) => {
 			const imageFromDb = record.get('Image') as readonly Attachment[] | undefined;
@@ -83,13 +93,16 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> 
 			return [
 				{
 					id: record.getId(),
-					name: record.get('Name') as string,
-					bio: record.get('Bio') as string,
+					name: (record.get('Name') ?? '') as string,
+					bio: (record.get('Bio') ?? '') as string,
 					facebook: record.get('Facebook') as string,
 					homepage: record.get('Homepage') as string,
 					image,
 					instagram: record.get('Instagram') as string,
 					twitter: record.get('Twitter') as string,
+					userTypes: (record.get('UserType') as string[] | undefined)?.map((x) => {
+						return x.toLowerCase();
+					}) as ('feature' | 'poet' | 'team')[],
 					youTube: record.get('YouTube') as string
 				}
 			];
@@ -103,7 +116,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 		sheetName: 'Blog',
 		selectOptions: {
 			view: 'database',
-			fields: ['Authors', 'Body', 'ShortDescription', 'Status', 'Title']
+			fields: ['Authors', 'AuthorFallback', 'Body', 'ShortDescription', 'Status', 'Title']
 		},
 		flatMapRecord: (record) => {
 			console.log('status =', record.get('Status'));
@@ -114,6 +127,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 						{
 							id: record.getId(),
 							authors: record.get('Authors') as string[],
+							authorFallback: record.get('AuthorFallback') as string | undefined,
 							body: record.get('Body') as string,
 							shortDescription: record.get('ShortDescription') as string,
 							status,

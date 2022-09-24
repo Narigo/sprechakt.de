@@ -9,12 +9,14 @@ export type SprechAktAct = {
 	image?: Attachment;
 	instagram?: string;
 	twitter?: string;
+	userTypes?: ('feature' | 'poet' | 'team')[];
 	youTube?: string;
 };
 
 export type SprechAktBlog = {
 	id: string;
 	authors: string[];
+	authorFallback?: string;
 	body: string;
 	shortDescription: string;
 	status: string;

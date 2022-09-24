@@ -9,6 +9,10 @@
 	{entry.title}
 </h2>
 <article>
-	<p>geschrieben von {entry.authors.map((id) => getActNameById(id)).join(', ')}</p>
+	<p>
+		geschrieben von {entry.authorFallback ??
+			entry.authors?.map((id) => getActNameById(id)).join(', ') ??
+			'?'}
+	</p>
 	<SvelteMarkdown source={entry.body} />
 </article>
