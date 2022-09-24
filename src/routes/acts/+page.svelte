@@ -1,9 +1,14 @@
 <script lang="ts">
-	import acts from '$data/acts.json';
+	import dataActs from '$data/acts.json';
 	import ActCard from '$lib/acts/ActCard.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
+	import type { SprechAktAct } from '$lib/types';
 	import imageUrl from './acts.jpg';
+
+	const acts = (dataActs as SprechAktAct[]).filter(
+		(act) => act.userTypes?.includes('poet') || act.userTypes?.includes('feature')
+	);
 </script>
 
 <svelte:head>
