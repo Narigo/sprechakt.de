@@ -17,4 +17,8 @@
 		84032 Landshut<br />
 		E-Mailadresse: <a href="mailto:sprechakt.landshut@gmx.de">sprechakt.landshut@gmx.de</a>
 	</div>
+	<div>
+		<h3>Fotos &copy; und mit freundlicher Genehmigung von:</h3>
+		<p>Sebastian Geiger, Sandra Schörghuber, Anas Faiz</p>
+	</div>
 </PageWithNavigation>
