@@ -3,7 +3,6 @@
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
 
 	import type { Attachment } from 'airtable/lib/attachment';
-	import { url } from 'inspector';
 	import SvelteMarkdown from 'svelte-markdown';
 
 	export let backLink: string | undefined;

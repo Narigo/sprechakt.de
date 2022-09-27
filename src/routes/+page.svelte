@@ -3,9 +3,9 @@
 	import { getDate } from '$lib/common/events';
 	import slamsDb from '$data/slams.json';
 	import { getNextEvents } from '$lib/common/events';
-	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './startpage.jpg';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
 	const events = getNextEvents(slamsDb);
 	const nextEvent = events[0];
@@ -16,12 +16,12 @@
 	<meta name="description" content="Der Landshuter Poetry Slam in der Alten Kaserne" />
 </svelte:head>
 
-<PageWithSprechAktNav>
+<PageWithNavigation>
 	<div slot="header">
 		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="top" {imageUrl} />
 		<section class="header">
-			<h2 class="big-text-shadow">Der SprechAkt Landshut</h2>
-			<p class="big-text-shadow">
+			<h2>Der SprechAkt Landshut</h2>
+			<p>
 				Nächster Termin am {getDate(nextEvent)}.
 				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
 			</p>
@@ -48,7 +48,7 @@
 			nachdenklich und ernst und zeigt, wie vielfältig moderne Literatur sein kann.
 		</p>
 	</section>
-</PageWithSprechAktNav>
+</PageWithNavigation>
 
 <style>
 	.header {
@@ -56,5 +56,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 0 2em;
 	}
 </style>

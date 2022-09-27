@@ -1,10 +1,10 @@
 <script>
-	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import imageUrl from './info-acts.jpg';
 </script>
 
-<PageWithInfoNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Infos für Poet:Innen" {imageUrl} />
 
 	<h2>Wie ist der Ablauf und was muss man als Künstler:In beachten?</h2>
@@ -52,4 +52,4 @@
 		Wir würden außerdem Sandwiches machen. Gibt es irgendetwas, das du nicht essen kannst oder willst?
 		Dann schauen wir, dass wir das berücksichtigen.
 	</p>
-</PageWithInfoNav>
+</PageWithNavigation>

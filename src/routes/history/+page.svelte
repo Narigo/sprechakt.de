@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import imageUrl from './history.jpg';
 </script>
 
@@ -12,7 +12,7 @@
 	/>
 </svelte:head>
 
-<PageWithSprechAktNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Historie" {imageUrl} />
 
 	<h3>Die Anfänge</h3>
@@ -57,4 +57,4 @@
 	</p>
 
 	<h3>2023 steht dem SprechAkt ein weiterer wichtiger Meilenstein bevor: Er wird 10!</h3>
-</PageWithSprechAktNav>
+</PageWithNavigation>

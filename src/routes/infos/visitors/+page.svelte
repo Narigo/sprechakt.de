@@ -1,11 +1,11 @@
 <script>
-	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import imageUrl from './info-visitors.jpg';
 	import visitors from './visitors.jpg';
 </script>
 
-<PageWithInfoNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Infos für Besucher:Innen" {imageUrl} />
 
 	<p>
@@ -46,7 +46,7 @@
 			gesamte Publikum über den Applaus, wer schlussendlich gewinnt.
 		</p>
 	</section>
-</PageWithInfoNav>
+</PageWithNavigation>
 
 <style>
 	img {

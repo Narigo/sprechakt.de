@@ -1,11 +1,11 @@
 <script>
-	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import imageUrl from './directions.jpg';
 	import map from './map.jpg';
 </script>
 
-<PageWithInfoNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Anfahrt" {imageUrl} />
 
 	<p>
@@ -20,7 +20,11 @@
 	<h3>Vom Landshuter Hauptbahnhof:</h3>
 	<ul>
 		<li>Linie 3 (Richtung: Auloh)</li>
-		<li>Linie 6 (Richtung: Auwaldsiedlung) - <strong>Achtung: andere Haltestelle Konrad-Adenauer-Str.</strong></li>
+		<li>
+			Linie 6 (Richtung: Auwaldsiedlung) - <strong
+				>Achtung: andere Haltestelle Konrad-Adenauer-Str.</strong
+			>
+		</li>
 	</ul>
 
 	<h3>Von der Altstadt:</h3>
@@ -29,4 +33,4 @@
 		<li>Linie 5 (Richtung: Alte Kaserne)</li>
 		<li>Linie 14 (Richtung: Wolfsteinerau)</li>
 	</ul>
-</PageWithInfoNav>
+</PageWithNavigation>

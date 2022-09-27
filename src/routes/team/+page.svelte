@@ -1,10 +1,10 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './team.jpg';
-	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
 	import sase from './sase.jpg';
 	import stopfers from './stopfers.jpg';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 	<meta name="description" content="Das Team des SprechAkt Landshut stellt sich vor" />
 </svelte:head>
 
-<PageWithSprechAktNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Team" {imageUrl} />
 
 	<h2>Aktuelle Mitglieder:</h2>
@@ -65,4 +65,4 @@
 			{ alt: 'Aktuelle Teammitglieder', url: sase }
 		]}
 	/>
-</PageWithSprechAktNav>
+</PageWithNavigation>

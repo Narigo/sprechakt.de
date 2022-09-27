@@ -1,5 +1,4 @@
 <script>
-	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
 	import imageUrl from './coops.jpg';
@@ -8,6 +7,7 @@
 	import poet3 from './poet3.jpg';
 	import musicAct from './musicAct.jpg';
 	import allActs from './allActs.jpg';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
 	<meta name="description" content="Kooperationen mit dem SprechAkt" />
 </svelte:head>
 
-<PageWithInfoNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Kooperationen" {imageUrl} />
 	<div>
 		<section>
@@ -50,7 +50,7 @@
 			/>
 		</section>
 	</div>
-</PageWithInfoNav>
+</PageWithNavigation>
 
 <style>
 	div {

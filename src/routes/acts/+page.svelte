@@ -2,7 +2,7 @@
 	import dataActs from '$data/acts.json';
 	import ActCard from '$lib/acts/ActCard.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import PageWithSprechAktNav from '$lib/layout/PageWithSprechAktNav.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import type { SprechAktAct } from '$lib/types';
 	import imageUrl from './acts.jpg';
 
@@ -19,7 +19,7 @@
 	/>
 </svelte:head>
 
-<PageWithSprechAktNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Poet:Innen" {imageUrl} />
 
 	<p>Diese Poetry Slammer:Innen sind unter anderem bereits beim SprechAkt aufgetreten:</p>
@@ -30,7 +30,7 @@
 			<li><ActCard {act} /></li>
 		{/each}
 	</ul>
-</PageWithSprechAktNav>
+</PageWithNavigation>
 
 <style>
 	ul {

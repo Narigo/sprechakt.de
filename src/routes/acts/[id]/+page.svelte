@@ -4,7 +4,7 @@
 	import { getActById } from '$lib/common/acts';
 	import { afterUpdate } from 'svelte';
 	import type { SprechAktAct } from '$lib/types';
-	import PageWithInfoNav from '$lib/infos/PageWithInfoNav.svelte';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
 	let id: string;
 	let act: SprechAktAct | undefined;
@@ -19,7 +19,7 @@
 </script>
 
 {#if act}
-	<PageWithInfoNav>
+	<PageWithNavigation>
 		<h1 slot="header">
 			{act.name}
 		</h1>
@@ -27,9 +27,9 @@
 			{#if act.image}<img src={act.image?.url} alt={act.name} />{/if}
 			<SvelteMarkdown source={act.bio} />
 		</article>
-	</PageWithInfoNav>
+	</PageWithNavigation>
 {:else}
-	<PageWithInfoNav><p>Künstler:in nicht gefunden!</p></PageWithInfoNav>
+	<PageWithNavigation><p>Künstler:in nicht gefunden!</p></PageWithNavigation>
 {/if}
 
 <style>

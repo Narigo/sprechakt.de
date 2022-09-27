@@ -1,8 +1,8 @@
 <script lang="ts">
-	import PageWithSlamNav from '$lib/slams/PageWithSlamNav.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './about.jpg';
 	import poetUrl from './poet.jpg';
+	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +10,7 @@
 	<meta name="description" content="Was erwartet mich und wozu überhaupt?" />
 </svelte:head>
 
-<PageWithSlamNav>
+<PageWithNavigation>
 	<HeaderImage slot="header" alt="Was ist ein Poetry Slam?" {imageUrl} />
 	<p>
 		Ein Poetry Slam ist eine Veranstaltungsform, bei der verschiedene Künstler mit
@@ -31,4 +31,4 @@
 	</p>
 
 	<img src={poetUrl} alt="Poet steht erklärend auf der Bühne" />
-</PageWithSlamNav>
+</PageWithNavigation>
