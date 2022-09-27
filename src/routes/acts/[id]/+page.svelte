@@ -33,6 +33,9 @@
 {/if}
 
 <style>
+	h1 {
+		padding: 0 1em;
+	}
 	img {
 		max-width: 100%;
 	}

@@ -22,3 +22,9 @@
 		<p>Sebastian Geiger, Sandra Schörghuber, Anas Faiz</p>
 	</div>
 </PageWithNavigation>
+
+<style>
+	h1 {
+		padding: 0 1em;
+	}
+</style>

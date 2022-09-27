@@ -221,9 +221,8 @@
 			display: flex;
 			flex: 1;
 			height: 100%;
-			max-width: 23em;
 			position: unset;
-			width: 100%;
+			width: 23em;
 		}
 
 		.menu-btn {

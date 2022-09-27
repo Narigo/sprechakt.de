@@ -1,14 +1,13 @@
 <script lang="ts">
-	import dataActs from '$data/acts.json';
 	import ActCard from '$lib/acts/ActCard.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
-	import type { SprechAktAct } from '$lib/types';
+	import type { PageData } from './$types';
 	import imageUrl from './acts.jpg';
 
-	const acts = (dataActs as SprechAktAct[]).filter(
-		(act) => act.userTypes?.includes('poet') || act.userTypes?.includes('feature')
-	);
+	export let data: PageData;
+
+	const acts = data.acts;
 </script>
 
 <svelte:head>

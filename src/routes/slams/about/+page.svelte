@@ -30,5 +30,12 @@
 		kleineren wie eben Landshut.
 	</p>
 
-	<img src={poetUrl} alt="Poet steht erklärend auf der Bühne" />
+	<img src={poetUrl} alt="Poet steht erklärend auf der Bühne" height="3648" width="5472" />
 </PageWithNavigation>
+
+<style>
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+</style>
