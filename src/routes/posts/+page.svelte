@@ -1,13 +1,13 @@
 <script lang="ts">
-	import blogDb from '$data/blog.json';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import BlogSection from '$lib/index/BlogSection.svelte';
 	import BlogEntry from '$lib/posts/BlogEntry.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from '$lib/posts/aktuelles.jpg';
+	import type { PageData } from './$types';
 
-	const posts = blogDb.slice(0, -1);
-	const entry = blogDb.slice(-1)[0];
+	export let data: PageData;
+	const { posts, entry } = data;
 </script>
 
 <svelte:head>
