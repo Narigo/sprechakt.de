@@ -52,6 +52,7 @@ async function downloadImage(image: Attachment): Promise<Image> {
 	if (!response.ok || response.body === null) {
 		throw new Error(`could not download ${image.url}`);
 	}
+	console.log('content-type:', response.headers.get('Content-type'));
 	const downloadFilePath = `${assetPath}/${pathInAssets}`;
 	await promisify(pipeline)(response.body, createWriteStream(downloadFilePath));
 	await $`magick ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
