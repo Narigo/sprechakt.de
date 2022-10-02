@@ -15,10 +15,15 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3.0.2
+      - name: Make imagemagick available 🪄
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -O 'https://download.imagemagick.org/ImageMagick/download/binaries/magick'
+          chmod u+x magick
+          mv magick "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Install dependencies 📦
         run: |
-          apt-get update -y && apt-get install -y imagemagick
-          magick --version
           corepack enable
           pnpm install
       - name: Retrieve latest data from airtable 📨
