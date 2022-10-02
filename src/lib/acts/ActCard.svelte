@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { assets, base } from '$app/paths';
 	import placeholder from './placeholder.svg';
 	import type { SprechAktAct } from '$lib/types';
 
 	export let act: SprechAktAct;
 
+	const imageDb = `${assets}/images/from-db`;
 	const hasSocials = !!(act.instagram ?? act.twitter ?? act.youTube);
 	const worlds = ['🌎', '🌍', '🌏'];
 	const worldByTimezone =
@@ -16,7 +17,7 @@
 <div class="card">
 	<div class="image">
 		{#if act.image}
-			<img src={act.image.url} alt={act.name} />
+			<img src="{imageDb}/{act.image.pathInAssets}" alt={act.name} />
 		{:else}
 			<img src={placeholder} alt="Platzhalter für {act.name}" />
 		{/if}

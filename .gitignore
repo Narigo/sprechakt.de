@@ -10,3 +10,4 @@ node_modules
 .output
 .pnpm-store
 /database
+/static/images/from-db/

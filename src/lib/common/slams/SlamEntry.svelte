@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { assets, base } from '$app/paths';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
+	import type { Image } from '$lib/types';
 
-	import type { Attachment } from 'airtable/lib/attachment';
 	import SvelteMarkdown from 'svelte-markdown';
 
 	export let backLink: string | undefined;
 	export let markdownContent: string | undefined;
-	export let images: readonly Attachment[] | undefined = [];
+	export let images: Image[] = [];
 	export let title: string | undefined;
+
+	const imageDb = `${assets}/images/from-db`;
 </script>
 
 <section>
@@ -21,7 +23,9 @@
 				/>{/if}
 		</slot>
 	</div>
-	{#if images}<ImageGrid images={images.map((i) => ({ url: i.url, alt: i.filename }))} />{/if}
+	{#if images}<ImageGrid
+			images={images.map((i) => ({ url: `${imageDb}/${i.pathInAssets}`, alt: i.filename }))}
+		/>{/if}
 	{#if backLink}<a href={backLink}>Zurück</a>{/if}
 </section>
 

@@ -1,6 +1,8 @@
 import path from 'node:path';
 import { mkdir, writeFile } from 'node:fs/promises';
+import { pipeline } from 'node:stream';
 import { fileURLToPath } from 'node:url';
+import { $, fetch } from 'zx';
 import Airtable from 'airtable';
 import type { Attachment } from 'airtable';
 import type { AirtableBase } from 'airtable/lib/airtable_base';
@@ -8,12 +10,15 @@ import type { FieldSet } from 'airtable/lib/field_set';
 import type Record from 'airtable/lib/record';
 import type { QueryParams } from 'airtable/lib/query_params';
 import type Table from 'airtable/lib/table';
-import type { SprechAktAct, SprechAktEvent, SprechAktBlog } from '../../src/lib/types';
+import type { SprechAktAct, SprechAktEvent, SprechAktBlog, Image } from '../../src/lib/types';
+import { createWriteStream } from 'node:fs';
+import { promisify } from 'node:util';
 
 const apiKey = process.env.AIRTABLE_API_KEY as string;
 const apiBase = process.env.AIRTABLE_API_BASE as string;
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const dbDirectory = path.resolve(dirname, '../../database');
+const assetPath = path.resolve(dirname, '../../static/images/from-db');
 
 run()
 	.then(() => {
@@ -39,6 +44,30 @@ async function run() {
 	]);
 }
 
+async function downloadImage(image: Attachment): Promise<Image> {
+	await mkdir(`${assetPath}/${image.id}`, { recursive: true });
+	const pathInAssets = `${image.id}/${image.filename}`;
+	const type = image.type;
+	const response = await fetch(image.url);
+	if (!response.ok || response.body === null) {
+		throw new Error(`could not download ${image.url}`);
+	}
+	const downloadFilePath = `${assetPath}/${pathInAssets}`;
+	await promisify(pipeline)(response.body, createWriteStream(downloadFilePath));
+	await $`magick ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
+	const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
+	const [width, height] = result.stdout.split(':');
+
+	return {
+		filename: image.filename,
+		height: parseInt(height, 10),
+		id: image.id,
+		pathInAssets,
+		type,
+		width: parseInt(width, 10)
+	};
+}
+
 async function getDataFromAirtable<T, TFields extends FieldSet = FieldSet>({
 	base,
 	flatMapRecord,
@@ -46,27 +75,23 @@ async function getDataFromAirtable<T, TFields extends FieldSet = FieldSet>({
 	sheetName
 }: {
 	base: AirtableBase;
-	flatMapRecord: (record: Record<TFields>) => T[];
+	flatMapRecord: (record: Record<TFields>) => Promise<T[]>;
 	selectOptions: QueryParams<TFields>;
 	sheetName: string;
 }): Promise<T[]> {
 	let data: T[] = [];
 	console.log('checking sheet', sheetName);
-	return new Promise((resolve, reject) => {
-		(base(sheetName) as Table<TFields>).select(selectOptions).eachPage(
-			(records, fetchNextPage) => {
-				console.log('got some records in', sheetName, ' -> ', records.length);
-				data = [...data, ...records.flatMap(flatMapRecord)];
-				fetchNextPage();
-			},
-			(err) => {
-				if (err) {
-					return reject(err);
-				}
-				return resolve(data);
+	await (base(sheetName) as Table<TFields>)
+		.select(selectOptions)
+		.eachPage(async (records, fetchNextPage) => {
+			console.log('got some records in', sheetName, ' -> ', records.length);
+			for await (const record of records) {
+				const results = await flatMapRecord(record);
+				data = [...data, ...results];
 			}
-		);
-	});
+			fetchNextPage();
+		});
+	return data;
 }
 
 async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> {
@@ -87,9 +112,10 @@ async function getActsFromAirtable(base: AirtableBase): Promise<SprechAktAct[]> 
 				'YouTube'
 			]
 		},
-		flatMapRecord: (record) => {
+		flatMapRecord: async (record) => {
 			const imageFromDb = record.get('Image') as readonly Attachment[] | undefined;
-			const image = imageFromDb && imageFromDb.length > 0 ? imageFromDb[0] : undefined;
+			const imageToUse = imageFromDb && imageFromDb.length > 0 ? imageFromDb[0] : undefined;
+			const image = imageToUse ? await downloadImage(imageToUse) : undefined;
 			return [
 				{
 					id: record.getId(),
@@ -118,7 +144,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 			view: 'database',
 			fields: ['Authors', 'AuthorFallback', 'Body', 'ShortDescription', 'Status', 'Title']
 		},
-		flatMapRecord: (record) => {
+		flatMapRecord: async (record) => {
 			console.log('status =', record.get('Status'));
 			const status = record.get('Status') as string | undefined;
 			const isPublic = status === 'Public';
@@ -147,13 +173,15 @@ async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechAktEvent[
 			view: 'database',
 			fields: ['Name', 'ShortDescription', 'Description', 'Date', 'Images']
 		},
-		flatMapRecord: (record) => {
+		flatMapRecord: async (record) => {
+			const imageFromDb = (record.get('Images') as readonly Attachment[] | undefined) ?? [];
+			const images = await Promise.all(imageFromDb.map(downloadImage));
 			return [
 				{
 					id: record.getId(),
 					date: record.get('Date')?.toLocaleString() as string,
 					name: record.get('Name')?.toLocaleString() as string,
-					images: record.get('Images') as readonly Attachment[],
+					images,
 					description: record.get('Description')?.toLocaleString(),
 					shortDescription: record.get('ShortDescription')?.toLocaleString()
 				}

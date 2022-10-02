@@ -1,4 +1,11 @@
-import type { Attachment } from 'airtable/lib/attachment';
+export type Image = {
+	filename: string;
+	height: number;
+	id: string;
+	pathInAssets: string;
+	type: string;
+	width: number;
+};
 
 export type SprechAktAct = {
 	id: string;
@@ -6,7 +13,7 @@ export type SprechAktAct = {
 	bio: string;
 	facebook?: string;
 	homepage?: string;
-	image?: Attachment;
+	image?: Image;
 	instagram?: string;
 	twitter?: string;
 	userTypes?: ('feature' | 'poet' | 'team')[];
@@ -27,7 +34,7 @@ export type SprechAktEvent = {
 	id: string;
 	name: string;
 	date: string;
-	images?: readonly Attachment[];
+	images?: Image[];
 	shortDescription?: string;
 	description?: string;
 };
