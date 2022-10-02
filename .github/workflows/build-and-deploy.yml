@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v3.0.2
       - name: Install dependencies 📦
         run: |
+          apt-get update -y && apt-get install -y imagemagick
+          magick --version
           corepack enable
           pnpm install
       - name: Retrieve latest data from airtable 📨
