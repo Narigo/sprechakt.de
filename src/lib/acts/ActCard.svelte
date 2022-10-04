@@ -41,22 +41,22 @@
 				{/if}
 				{#if act.facebook}
 					<a rel="external" target="_blank" href={act.facebook}>
-						<img src="{base}/socials/f_logo_RGB-Black_1024.svg" alt="Facebook" />
+						<img src="{assets}/socials/f_logo_RGB-Black_1024.svg" alt="Facebook" />
 					</a>
 				{/if}
 				{#if act.instagram}
 					<a rel="external" target="_blank" href={act.instagram}>
-						<img src="{base}/socials/glyph-logo_May2016.svg" alt="Instagram" />
+						<img src="{assets}/socials/glyph-logo_May2016.svg" alt="Instagram" />
 					</a>
 				{/if}
 				{#if act.twitter}
 					<a rel="external" target="_blank" href={act.twitter}>
-						<img src="{base}/socials/twitter-2021-black.svg" alt="Twitter" />
+						<img src="{assets}/socials/twitter-2021-black.svg" alt="Twitter" />
 					</a>
 				{/if}
 				{#if act.youTube}
 					<a rel="external" target="_blank" href={act.youTube}>
-						<img src="{base}/socials/yt_icon_mono_light.svg" alt="YouTube" />
+						<img src="{assets}/socials/yt_icon_mono_light.svg" alt="YouTube" />
 					</a>
 				{/if}
 			</div>
