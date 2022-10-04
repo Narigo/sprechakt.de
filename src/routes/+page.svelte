@@ -18,9 +18,8 @@
 
 <PageWithNavigation>
 	<div slot="header">
-		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="top" {imageUrl} />
+		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="center" {imageUrl} />
 		<section class="header">
-			<h2>Der SprechAkt Landshut</h2>
 			<p>
 				Nächster Termin am {getDate(nextEvent)}.
 				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
@@ -29,7 +28,6 @@
 	</div>
 
 	<section>
-		<h2>Der SprechAkt Landshut</h2>
 		<p>
 			Was ist ein Sprechakt? Es bedeutet nicht, wie wir in einem Kommentar auf Instagram mal gefragt
 			wurden, dass die Künstler:Innen unbekleidet auf der Bühne stehen. Stattdessen ist der
