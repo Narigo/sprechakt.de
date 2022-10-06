@@ -21,7 +21,7 @@
 				<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Aktuelles</a>
 			</li>
 			<li>
-				<a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams/events">Slams</a
+				<a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams/events">Poetry Slam</a
 				>
 				<ul>
 					<li>

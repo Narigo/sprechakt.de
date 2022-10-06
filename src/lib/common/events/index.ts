@@ -12,9 +12,13 @@ export function getNextEvents(events: SprechAktEvent[]) {
 	return head(dropWhile(events, isPastEvent), 5);
 }
 
+const dayOfWeek = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+
 export function getDate(event: SprechAktEvent): string {
 	const d = new Date(event.date);
-	return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
+	return `${dayOfWeek[d.getDay() % dayOfWeek.length]}, ${d.getDate()}.${
+		d.getMonth() + 1
+	}.${d.getFullYear()}`;
 }
 
 export function isPastEvent(event: SprechAktEvent): boolean {

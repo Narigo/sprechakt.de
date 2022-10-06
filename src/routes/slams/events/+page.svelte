@@ -20,6 +20,12 @@
 <PageWithNavigation>
 	<HeaderImage slot="header" alt="Unsere Termine" {imageUrl} />
 
+	<p>
+		Der SprechAkt findet regelmäßig alle zwei Monate donnerstags in der Alten Kaserne statt. Daneben
+		gibt es ab und zu Lesungen und Themenslams in anderen Locations wie Bücher Pustet oder der VHS
+		Moosburg.
+	</p>
+
 	<section>
 		<h2>Anstehende Termine</h2>
 		<EventSection events={upcomingEvents} />
