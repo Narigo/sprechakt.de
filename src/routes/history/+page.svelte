@@ -15,7 +15,7 @@
 <PageWithNavigation>
 	<HeaderImage slot="header" alt="Historie" {imageUrl} />
 
-	<h3>Die Anfänge</h3>
+	<h2>Die Anfänge</h2>
 	<p>
 		November 2013 - der erste SprechAkt Poetry Slam findet unter der Leitung von Sebastian Stopfer
 		und Sabine Oberpriller in der Alten Kaserne statt. Damals noch im Clubraum, doch wegen des
@@ -28,7 +28,7 @@
 		und Bert Uschner, die heute noch regelmäßig in Landshut zu Gast sind.
 	</p>
 
-	<h3>Personelle Veränderungen</h3>
+	<h2>Personelle Veränderungen</h2>
 	<p>
 		Im Organisationsteam gab es in den letzten Jahren mehrere Veränderungen: Sabine Oberpriller und
 		Sebastian Stopfer hielten nach der Gründung bis 2015 das Zepter in der Hand. Danach übergaben
@@ -37,16 +37,16 @@
 		Sterl (inzwischen Stopfer) weiter.
 	</p>
 
-	<h3>Einige Experimente</h3>
+	<h2>Einige Experimente</h2>
 	<p>
 		In der Zeit nach 2017 entstanden einige neue Formate - die bereits erwähnten Themenslams und
-		Leseabende, eine Open Stage in Joschi’s Bar in der Landshuter Altstadt sowie der Grand Slam.
+		Leseabende, eine Open Stage in Joschi's Bar in der Landshuter Altstadt sowie der Grand Slam.
 		Letzterer leitete jeweils im Januar die Slam-Saison 2019 und 2020 ein. Nahezu 250 Besucher kamen
 		zu dem Wettstreit der Gewinner:Innen des Vorjahres, der zusätzlich durch besondere
 		Feature-Poeten wie Bas Böttcher im ersten und Alex Burkard im zweiten Jahr glänzte.
 	</p>
 
-	<h3>Instagram und die Corona-Jahre</h3>
+	<h2>Instagram und die Corona-Jahre</h2>
 	<p>
 		Nach dem Ausscheiden von Kristina Sterl ergänzte Sandra Schörghuber 2019 das Organisationsteam.
 		Kurz darauf erblickte der Instagram-Kanal des SprechAkts das Licht der Welt und wurde zusammen
@@ -56,5 +56,5 @@
 		aus der VHS Moosburg.
 	</p>
 
-	<h3>2023 steht dem SprechAkt ein weiterer wichtiger Meilenstein bevor: Er wird 10!</h3>
+	<h2>2023 steht dem SprechAkt ein weiterer wichtiger Meilenstein bevor: Er wird 10!</h2>
 </PageWithNavigation>
