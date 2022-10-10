@@ -27,7 +27,9 @@
 		<p>
 			Hier haben wir eine kleine Auswahl an Bildern zusammengestellt, die uns freundlicherweise
 			überlassen wurden - wer sein Bild wieder erkennt und als 'von unbekannt' deklariert wurde,
-			kann sich gerne bei uns melden! Weitere Bilder findet Ihr auch auf
+			kann sich gerne bei uns melden (<a href="mailto:sprechakt.landshut@gmx.de"
+				>sprechakt.landshut@gmx.de</a
+			>)! Weitere Bilder findet Ihr auch auf
 			<a href="https://www.instagram.com/slammaler/" rel="external"
 				>Jörns Instagramkanal (@slammaler)</a
 			>.
