@@ -1,8 +1,14 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { assets } from '$app/paths';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './slammaler.jpg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
+	import type { PageData } from './$types';
+	import ImageGrid from '$lib/posts/ImageGrid.svelte';
+
+	export let data: PageData;
+	const images = data.images;
+	const imageDb = `${assets}/images/from-db`;
 </script>
 
 <svelte:head>
@@ -35,4 +41,15 @@
 			>.
 		</p>
 	</section>
+
+	<ImageGrid
+		images={images.flatMap((i) => {
+			return i.images.flatMap((image) => {
+				return {
+					alt: i.alt,
+					url: `${imageDb}/${image.id}/${image.filename}`
+				};
+			});
+		})}
+	/>
 </PageWithNavigation>
