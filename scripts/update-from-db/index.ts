@@ -10,7 +10,13 @@ import type { FieldSet } from 'airtable/lib/field_set';
 import type Record from 'airtable/lib/record';
 import type { QueryParams } from 'airtable/lib/query_params';
 import type Table from 'airtable/lib/table';
-import type { SprechAktAct, SprechAktEvent, SprechAktBlog, Image } from '../../src/lib/types';
+import type {
+	SprechAktAct,
+	SprechAktEvent,
+	SprechAktBlog,
+	SprechAktImage,
+	Image
+} from '../../src/lib/types';
 import { createWriteStream } from 'node:fs';
 import { promisify } from 'node:util';
 
@@ -32,15 +38,17 @@ run()
 async function run() {
 	await mkdir(dbDirectory, { recursive: true });
 	const base = new Airtable({ apiKey }).base(apiBase);
-	const [slamDb, blogDb, actsDb] = await Promise.all([
+	const [slamDb, blogDb, actsDb, galleriesDb] = await Promise.all([
 		getSlamsFromAirtable(base),
 		getBlogFromAirtable(base),
-		getActsFromAirtable(base)
+		getActsFromAirtable(base),
+		getGalleriesFromAirtable(base)
 	]);
 	await Promise.all([
 		writeFile(path.resolve(dirname, `${dbDirectory}/acts.json`), JSON.stringify(actsDb)),
 		writeFile(path.resolve(dirname, `${dbDirectory}/blog.json`), JSON.stringify(blogDb)),
-		writeFile(path.resolve(dirname, `${dbDirectory}/slams.json`), JSON.stringify(slamDb))
+		writeFile(path.resolve(dirname, `${dbDirectory}/slams.json`), JSON.stringify(slamDb)),
+		writeFile(path.resolve(dirname, `${dbDirectory}/galleries.json`), JSON.stringify(galleriesDb))
 	]);
 }
 
@@ -187,6 +195,36 @@ async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechAktEvent[
 					shortDescription: record.get('ShortDescription')?.toLocaleString()
 				}
 			];
+		}
+	});
+}
+
+async function getGalleriesFromAirtable(base: AirtableBase): Promise<SprechAktImage[]> {
+	return getDataFromAirtable({
+		base,
+		sheetName: 'Galleries',
+		selectOptions: {
+			view: 'database',
+			fields: ['Title', 'Route', 'Alt', 'Credits', 'Acts', 'Images']
+		},
+		flatMapRecord: async (record) => {
+			const imageFromDb = (record.get('Images') as readonly Attachment[] | undefined) ?? [];
+			const images = await Promise.all(imageFromDb.map(downloadImage));
+			const hasImages = images.length > 0;
+			const route = record.get('Route')?.toLocaleString();
+			return route && hasImages
+				? [
+						{
+							id: record.getId(),
+							acts: record.get('Acts')?.toLocaleString() as string,
+							alt: record.get('Alt')?.toLocaleString() as string,
+							credits: record.get('Credits')?.toLocaleString() as string,
+							images,
+							route,
+							title: record.get('Title')?.toLocaleString() as string
+						}
+				  ]
+				: [];
 		}
 	});
 }

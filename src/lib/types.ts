@@ -7,6 +7,16 @@ export type Image = {
 	width: number;
 };
 
+export type SprechAktImage = {
+	id: string;
+	acts: unknown;
+	alt: string;
+	credits: string;
+	images: Image[];
+	route: string;
+	title: string;
+};
+
 export type SprechAktAct = {
 	id: string;
 	name: string;
