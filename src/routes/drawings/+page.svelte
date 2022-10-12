@@ -47,6 +47,8 @@
 			return i.images.flatMap((image) => {
 				return {
 					alt: i.alt,
+					credits: i.credits,
+					title: i.title,
 					url: `${imageDb}/${image.id}/${image.filename}`
 				};
 			});

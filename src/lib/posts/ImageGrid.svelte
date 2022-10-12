@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
 
-	export let images: readonly { alt: string; url: string }[];
+	export let images: readonly { alt: string; url: string; credits?: string; title?: string }[];
 	let selectedImage = writable<{ alt: string; url: string } | null>(null);
 </script>
 
@@ -17,7 +17,7 @@
 				}}
 			>
 				<div><span>X</span></div>
-				<img src={image.url} alt={image.alt} />
+				<img src={image.url} alt={image.alt} title={image.title} />
 			</button>
 		{:else}
 			<div>
@@ -28,7 +28,7 @@
 						$selectedImage = image;
 					}}
 				>
-					<img src={image.url} alt={image.alt} />
+					<img src={image.url} alt={image.alt} title={image.title} />
 				</button>
 			</div>
 		{/if}
