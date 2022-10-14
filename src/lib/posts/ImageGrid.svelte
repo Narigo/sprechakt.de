@@ -18,6 +18,7 @@
 			>
 				<div><span>X</span></div>
 				<img src={image.url} alt={image.alt} title={image.title} />
+				<p>{image.credits}</p>
 			</button>
 		{:else}
 			<div>
@@ -102,6 +103,11 @@
 
 	.selected div:hover span {
 		transform: rotate(360deg);
+	}
+
+	p {
+		position: absolute;
+		bottom: 0;
 	}
 
 	@keyframes rotater {
