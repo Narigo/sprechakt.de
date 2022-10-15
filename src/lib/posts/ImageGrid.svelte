@@ -18,7 +18,7 @@
 			>
 				<div><span>X</span></div>
 				<img src={image.url} alt={image.alt} title={image.title} />
-				<p>{image.credits}</p>
+				<p class="text-shadow">{image.credits}</p>
 			</button>
 		{:else}
 			<div>
@@ -106,8 +106,13 @@
 	}
 
 	p {
+		margin: 1em;
+		padding: 2em;
 		position: absolute;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 50px 50px 0;
 		bottom: 0;
+		right: 0;
 	}
 
 	@keyframes rotater {
