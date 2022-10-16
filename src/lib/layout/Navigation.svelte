@@ -21,7 +21,8 @@
 				<a class:active={currentUrl.startsWith(`${base}/posts`)} href="{base}/posts">Aktuelles</a>
 			</li>
 			<li>
-				<a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams/events">Poetry Slam</a
+				<a class:active={currentUrl.startsWith(`${base}/slams`)} href="{base}/slams/events"
+					>Poetry Slam</a
 				>
 				<ul>
 					<li>
@@ -88,6 +89,11 @@
 					<li>
 						<a class:active={currentUrl.startsWith(`${base}/acts`)} href={`${base}/acts`}
 							>Poet:Innen</a
+						>
+					</li>
+					<li>
+						<a class:active={currentUrl.startsWith(`${base}/drawings`)} href={`${base}/drawings`}
+							>Zeichnungen</a
 						>
 					</li>
 				</ul>
