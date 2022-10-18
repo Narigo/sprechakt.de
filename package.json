@@ -34,6 +34,7 @@
 		"jest": "28",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
+		"reimemonster": "^0.2.0",
 		"svelte": "^3.46.0",
 		"svelte-check": "^2.8.1",
 		"svelte-markdown": "^0.2.3",
