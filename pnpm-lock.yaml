@@ -20,7 +20,7 @@ specifiers:
   jest: '28'
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
-  reimemonster: ^0.2.0
+  reimemonster: ^0.2.1
   svelte: ^3.46.0
   svelte-check: ^2.8.1
   svelte-markdown: ^0.2.3
@@ -38,7 +38,7 @@ devDependencies:
   '@fontsource/fira-mono': 4.5.9
   '@fontsource/montserrat': 4.5.12
   '@playwright/test': 1.25.1
-  '@sveltejs/adapter-static': 1.0.0-next.44
+  '@sveltejs/adapter-static': 1.0.0-next.45
   '@sveltejs/kit': 1.0.0-next.460_fhgkwirxvgjw2igda6zmhiisma
   '@types/cookie': 0.5.1
   '@types/jest': 28.1.8
@@ -52,7 +52,7 @@ devDependencies:
   jest: 28.1.3_vqz5d3y22yhywvm6xfyh7j5jna
   prettier: 2.7.1
   prettier-plugin-svelte: 2.7.0_o3ioganyptcsrh6x4hnxvjkpqi
-  reimemonster: 0.2.0
+  reimemonster: 0.2.1
   svelte: 3.49.0
   svelte-check: 2.8.1_svelte@3.49.0
   svelte-markdown: 0.2.3_svelte@3.49.0
@@ -796,8 +796,8 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.44:
-    resolution: {integrity: sha512-qBtkmIMYGiDv5r2F3AfSG0ABHZim2NC+1PL2YVCa+QYz8IVCm1E/wGQ0RW4KVrANZ3MZk8y52PPajx+8/fwmNw==}
+  /@sveltejs/adapter-static/1.0.0-next.45:
+    resolution: {integrity: sha512-7hJp3QYbn5+hDJKJDMe3ufAvPlgSP6Ishm1X84cbydKM1ZuI/rtmQw3gDEUuXAgcU+TDJTJLwrSlcErr1/HjIw==}
     dev: true
 
   /@sveltejs/kit/1.0.0-next.460_fhgkwirxvgjw2igda6zmhiisma:
@@ -2265,10 +2265,6 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /hyphen/1.6.4:
-    resolution: {integrity: sha512-nWwvXceFMAFIjkiRzqZMZSOa1LVngieSolnYIVKWSwmDwMSmdutjzqImmdbxe2eUCfX693fgrCgtPjbllqx1lA==}
-    dev: true
-
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
@@ -3306,11 +3302,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /reimemonster/0.2.0:
-    resolution: {integrity: sha512-r1gXXfr+84yrZOYla0FJ6YzqT5qA2+B4qS24tGfv0HwzwBAMccNGtYO7ajOm/+fRwONes6gmbFXO+xoI3mkOSg==}
+  /reimemonster/0.2.1:
+    resolution: {integrity: sha512-/87Z5fN4ujJMyIf+Q4tP/w0ctZ28IMuq+D+dZwYl7UepECYxMxpxiK9LMurRu5Np3KZB2x3O25hO+YX6iO26iw==}
     engines: {node: '>=8.6.0'}
+    hasBin: true
     dependencies:
-      hyphen: 1.6.4
       split: 1.0.1
     dev: true
 
