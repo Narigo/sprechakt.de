@@ -34,3 +34,10 @@
 		<li>Linie 14 (Richtung: Wolfsteinerau)</li>
 	</ul>
 </PageWithNavigation>
+
+<style>
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+</style>

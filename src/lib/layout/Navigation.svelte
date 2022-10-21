@@ -221,7 +221,7 @@
 		text-decoration: underline;
 	}
 
-	@media (min-width: 784px) {
+	@media (min-width: 1024px) {
 		#layout-navigation-menu ~ nav,
 		#layout-navigation-menu:checked ~ nav {
 			display: flex;
