@@ -34,3 +34,11 @@
 {:else}
 	<PageWithNavigation>Event nicht gefunden!</PageWithNavigation>
 {/if}
+
+<style>
+	h1 {
+		max-width: 1024px;
+		margin: 0;
+		padding: 1em;
+	}
+</style>
