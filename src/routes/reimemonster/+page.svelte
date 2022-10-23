@@ -1,7 +1,6 @@
 <script>
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import PoemCreator from '$lib/reimemonster/PoemCreator/PoemCreator.svelte';
-	import { findRhyme, countSyllables } from 'reimemonster';
 </script>
 
 <PageWithNavigation>
