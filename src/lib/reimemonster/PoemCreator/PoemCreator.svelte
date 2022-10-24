@@ -34,7 +34,10 @@
 			<PoemDropdown on:select>
 				<PoemDropdownList on:select={loadPoem} on:remove={removePoem} />
 			</PoemDropdown>
-			<SavePoemButton on:save={savePoem} />
+			<SavePoemButton
+				disabled={$poem.text?.trim() === '' || $poem.title?.trim() === ''}
+				on:save={savePoem}
+			/>
 		</div>
 	</PoemTitle>
 	<PoemInput />

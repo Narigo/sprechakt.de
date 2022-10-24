@@ -3,6 +3,9 @@
 
 	import { createEventDispatcher, getContext } from 'svelte';
 
+	export let disabled: boolean = false;
+	console.log({ disabled });
+
 	const dispatch = createEventDispatcher();
 	const { poem } = getContext<PoemStore>(POEM_CONTEXT_KEY);
 
@@ -11,7 +14,7 @@
 	}
 </script>
 
-<button type="button" on:click={savePoem}><span>+</span></button>
+<button type="button" {disabled} on:click={savePoem}><span>+</span></button>
 
 <style>
 	button {

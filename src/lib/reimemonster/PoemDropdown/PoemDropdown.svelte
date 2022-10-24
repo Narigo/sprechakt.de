@@ -27,6 +27,7 @@
 	}
 
 	details {
+		--background-color: var(--pure-white);
 		align-items: center;
 		display: flex;
 		flex: 0;
