@@ -20,8 +20,8 @@
 	function findLastWord(target: EventTarget & HTMLTextAreaElement) {
 		const start = text.slice(0, target.selectionStart);
 		const end = text.slice(target.selectionEnd);
-		const currentWordFront = /\b(\w*)$/.exec(start);
-		const currentWordBack = /^(\w*)\b/.exec(end);
+		const currentWordFront = /\b(\p{L}*)$/u.exec(start);
+		const currentWordBack = /^(\p{L}*)\b/u.exec(end);
 		const possibleWord = `${currentWordFront ? currentWordFront[1] : ''}${
 			currentWordBack ? currentWordBack[1] : ''
 		}`;
@@ -79,6 +79,7 @@
 	<div class="input-wrapper">
 		<textarea
 			class="input"
+			placeholder="Inhalt des Gedichts ..."
 			bind:this={inputField}
 			on:blur={onBlur}
 			on:click={onClick}

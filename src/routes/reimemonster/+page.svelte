@@ -17,3 +17,11 @@
 	</p>
 	<PoemCreator />
 </PageWithNavigation>
+
+<style>
+	h2 {
+		max-width: 1024px;
+		margin: 0;
+		padding: 1em;
+	}
+</style>

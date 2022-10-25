@@ -15,7 +15,15 @@
 
 <div>
 	<slot name="left" />
-	<input type="text" name="title" bind:value on:blur on:change on:focus />
+	<input
+		type="text"
+		name="title"
+		placeholder="Titel des Gedichts ..."
+		bind:value
+		on:blur
+		on:change
+		on:focus
+	/>
 	<slot name="right" />
 </div>
 
