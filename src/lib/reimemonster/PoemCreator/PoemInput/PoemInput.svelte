@@ -123,7 +123,9 @@
 	}
 
 	.syllables li {
+		line-height: 2em;
 		margin: 0;
+		padding: 0;
 		text-align: center;
 	}
 
@@ -145,6 +147,7 @@
 		border: 0;
 		flex: 1 0 auto;
 		font: var(--poem-content-font);
+		line-height: 2em;
 		letter-spacing: 2px;
 		overflow: hidden;
 		resize: none;

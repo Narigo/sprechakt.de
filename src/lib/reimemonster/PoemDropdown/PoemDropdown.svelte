@@ -3,7 +3,7 @@
 </script>
 
 <details bind:open>
-	<summary>∨</summary>
+	<summary title="Gespeicherte Gedichte">∨</summary>
 	<div>
 		<slot />
 	</div>

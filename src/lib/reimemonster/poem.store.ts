@@ -58,14 +58,11 @@ export const createPoemStore = (): PoemStore => {
 	const syllables = derived(poem, ({ text }) => {
 		const acc: { syllables: number; okay: boolean }[] = [];
 		let previous = 0;
-		text
-			.trim()
-			.split(/\n/)
-			.forEach((element) => {
-				const syllables = countSyllables(element);
-				acc.push({ syllables, okay: previous === 0 || previous === syllables });
-				previous = syllables;
-			});
+		text.split(/\n/).forEach((element) => {
+			const syllables = countSyllables(element);
+			acc.push({ syllables, okay: previous === 0 || previous === syllables });
+			previous = syllables;
+		});
 		return acc;
 	});
 	return { lastWordTyped, poem, syllables };

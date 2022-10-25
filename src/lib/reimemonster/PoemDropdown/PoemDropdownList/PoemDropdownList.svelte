@@ -21,7 +21,7 @@
 			<button type="button" on:click={() => removePoem(poem)}>Delete</button>
 		</li>
 	{:else}
-		<li>No saved poems found!</li>
+		<li>Keine gespeicherten Gedichte gefunden!</li>
 	{/each}
 </ul>
 
