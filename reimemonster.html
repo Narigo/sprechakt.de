@@ -6,17 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link href="./_app/immutable/assets/_layout-28da7cc5.css" rel="stylesheet">
-	<link href="./_app/immutable/assets/_page-cba4ec00.css" rel="stylesheet">
+	<link href="./_app/immutable/assets/_page-df1b6303.css" rel="stylesheet">
 	<link href="./_app/immutable/assets/PageWithNavigation-47b03b4e.css" rel="stylesheet">
-	<link rel="modulepreload" href="./_app/immutable/start-83ecdd85.js">
+	<link rel="modulepreload" href="./_app/immutable/start-24aec480.js">
 	<link rel="modulepreload" href="./_app/immutable/chunks/index-fc6b635c.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/singletons-73a7b6ac.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d854596b.js">
 	<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-c2c479cc.js">
 	<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 	<link rel="modulepreload" href="./_app/immutable/chunks/_layout-1daba58d.js">
-	<link rel="modulepreload" href="./_app/immutable/components/pages/reimemonster/_page.svelte-d51b01f6.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/PageWithNavigation-055bee5c.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/stores-fe5929d5.js">
+	<link rel="modulepreload" href="./_app/immutable/components/pages/reimemonster/_page.svelte-abea435e.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/PageWithNavigation-dc947184.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/stores-1e02eab3.js">
 	</head>
 	<body>
 		
@@ -43,28 +43,35 @@
 					<li class="svelte-pcebvq"><a href="/drawings" class="svelte-pcebvq">Zeichnungen</a></li></ul></li></ul></nav></div>
 
 		<div class="main svelte-1xgsd28"><header class="svelte-os9nsm">
-	<div class="svelte-os9nsm"><h2 slot="header">Das Reimemonster</h2></div>
+	<div class="svelte-os9nsm"><h2 slot="header" class="svelte-12y4lgb">Das Reimemonster</h2></div>
 </header>
-			<main class="svelte-1xgsd28"><p>Das folgende Tool soll Dir helfen, wenn Du selbst Gedichte schreiben möchtest. Es zeigt Dir
-		Reimvorschläge an und die Anzahl der Silben, die in einem Vers (einer Zeile) vorkommen. Manchmal
-		kommt die Anzahl der Silben auf die Betonung an, daher ist diese Zahl nicht immer zu 100% genau
-		(&quot;Mil-li-o-nen&quot; oder &quot;Mil-lio-nen&quot; zum Beispiel).
-	</p>
-	<p>Die Gedichte, die Du hier schreibst, werden nur auf Deinem Endgerät gespeichert, auf dem Du den
-		jeweiligen Text verfasst.
-	</p>
+			<main class="svelte-1xgsd28"><details class="svelte-12y4lgb" open><summary class="svelte-12y4lgb"><h3 class="svelte-12y4lgb">Einführungstext einklappen</h3></summary>
+		<p>Das Reimemonster-Tool soll Dir beim Schreiben von Gedichten helfen. Es zeigt Dir unter dem
+			Textfeld Reimvorschläge an und auf der linken Seite die Anzahl der Silben, die in einem Vers
+			(einer Zeile) vorkommen. Manchmal kommt die Anzahl der Silben auf die Betonung an, daher ist
+			diese Zahl nicht immer zu 100% genau (&quot;Mil-li-o-nen&quot; oder &quot;Mil-lio-nen&quot; zum Beispiel). Zudem
+			hilft die Zahl zwar oft, um ein Reimschema durchzuhalten, aber auch das funktioniert damit
+			nicht immer. Nichtsdestotrotz können die Reimvorschläge und die Silbenanzahl durchaus
+			hilfreich sein, auf schönere Texte zu kommen.
+		</p>
+		<p>Die Gedichte, die Du hier speichern kannst, werden nur auf dem Endgerät gespeichert, auf dem
+			Du den jeweiligen Text verfasst. Sobald ein Titel und ein Text eingegeben wurde, wird es
+			möglich, mit dem &quot;+&quot; Symbol zu speichern. Gespeicherte Gedichte lassen sich mit dem Icon neben
+			dem Titel anzeigen und von dort laden. Es besteht an der Stelle auch die Möglichkeit,
+			gespeicherte Gedichte zu löschen.
+		</p></details>
 	<section class="svelte-1l5d35j"><div class="svelte-iop7bq">
-	<input type="text" name="title" class="svelte-iop7bq" value="">
-	<div slot="right" class="svelte-1l5d35j"><details class="svelte-16yuq9h"><summary class="svelte-16yuq9h">∨</summary>
-	<div><ul class="svelte-15nwzy1"><li>No saved poems found!</li>
+	<input type="text" name="title" placeholder="Titel des Gedichts ..." class="svelte-iop7bq" value="">
+	<div slot="right" class="svelte-1l5d35j"><details class="svelte-14igv94"><summary title="Gespeicherte Gedichte" class="svelte-14igv94">∨</summary>
+	<div><ul class="svelte-15nwzy1"><li>Keine gespeicherten Gedichte gefunden!</li>
 </ul></div>
 </details>
-			<button type="button" class="svelte-1gbca8x"><span class="svelte-1gbca8x">+</span></button></div>
+			<button type="button" disabled class="svelte-1gbca8x"><span title="Speichern" class="svelte-1gbca8x">+</span></button></div>
 </div>
-	<div class="poem svelte-1f3r8h5"><ol class="syllables svelte-1f3r8h5"><li class="okay svelte-1f3r8h5">0
+	<div class="poem svelte-18yv9r7"><ol class="syllables svelte-18yv9r7"><li class="okay svelte-18yv9r7">0
 			</li></ol>
-	<div class="input-wrapper svelte-1f3r8h5"><textarea class="input svelte-1f3r8h5"></textarea></div>
-	<div class="padding-right svelte-1f3r8h5"></div>
+	<div class="input-wrapper svelte-18yv9r7"><textarea class="input svelte-18yv9r7" placeholder="Inhalt des Gedichts ..."></textarea></div>
+	<div class="padding-right svelte-18yv9r7"></div>
 </div>
 	<h3></h3>
 <div>
@@ -81,8 +88,8 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1h2j3jj">
-		import { start } from "./_app/immutable/start-83ecdd85.js";
+		<script type="module" data-sveltekit-hydrate="1qo75hj">
+		import { start } from "./_app/immutable/start-24aec480.js";
 
 		start({
 			env: {},
@@ -96,7 +103,7 @@
 				errors: null
 			},
 			paths: {"base":"","assets":""},
-			target: document.querySelector('[data-sveltekit-hydrate="1h2j3jj"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1qo75hj"]').parentNode,
 			trailing_slash: "never"
 		});
 	</script>
