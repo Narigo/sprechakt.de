@@ -21,7 +21,7 @@
 			diese Zahl nicht immer zu 100% genau ("Mil-li-o-nen" oder "Mil-lio-nen" zum Beispiel). Zudem
 			hilft die Zahl zwar oft, um ein Reimschema durchzuhalten, aber auch das funktioniert damit
 			nicht immer. Nichtsdestotrotz können die Reimvorschläge und die Silbenanzahl durchaus
-			hilfreich sein, auf schönere Texte zu kommen.
+			hilfreich sein, um auf schönere Texte zu kommen.
 		</p>
 		<p>
 			Die Gedichte, die Du hier speichern kannst, werden nur auf dem Endgerät gespeichert, auf dem
