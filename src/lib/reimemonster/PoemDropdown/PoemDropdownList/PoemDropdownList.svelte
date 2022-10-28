@@ -17,8 +17,12 @@
 <ul>
 	{#each $poems as poem}
 		<li>
-			<button type="button" on:click={() => selectPoem(poem)}>{poem.title}</button>
-			<button type="button" on:click={() => removePoem(poem)}>Delete</button>
+			<span>{poem.title}</span>
+			<span
+				><button class="select" type="button" on:click={() => selectPoem(poem)}>Laden</button>
+				<button class="delete" type="button" on:click={() => removePoem(poem)}>Löschen</button
+				></span
+			>
 		</li>
 	{:else}
 		<li>Keine gespeicherten Gedichte gefunden!</li>
@@ -40,5 +44,10 @@
 		right: 0;
 		top: 2em;
 		z-index: 1;
+	}
+	li {
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
 	}
 </style>
