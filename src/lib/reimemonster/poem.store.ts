@@ -34,7 +34,6 @@ export const poems: Writable<Poem[]> = (function () {
 	try {
 		if (browser) {
 			const initialValue = JSON.parse(window.localStorage.getItem(key) || '[]');
-			console.log({ initialValue });
 			setter(initialValue);
 		}
 	} catch {
