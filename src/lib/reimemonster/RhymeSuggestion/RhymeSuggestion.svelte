@@ -31,14 +31,14 @@
 		}
 	}
 
-	onMount(() => {
-		const workerListener = (event: MessageEvent<string>) => {
-			const data = JSON.parse(event.data);
-			$wordRhymeStore[data.word] = data.rhymes;
-			suggestedWords = $wordRhymeStore[word];
-			isLoading = false;
-		};
+	const workerListener = (event: MessageEvent<string>) => {
+		const data = JSON.parse(event.data);
+		$wordRhymeStore[data.word] = data.rhymes;
+		suggestedWords = $wordRhymeStore[data.word];
+		isLoading = false;
+	};
 
+	onMount(() => {
 		backgroundWorker = new SuggestionWorker();
 		backgroundWorker.addEventListener('message', workerListener);
 

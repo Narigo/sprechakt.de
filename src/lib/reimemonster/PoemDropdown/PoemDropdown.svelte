@@ -3,7 +3,7 @@
 </script>
 
 <details bind:open>
-	<summary title="Gespeicherte Gedichte">∨</summary>
+	<summary title="Gespeicherte Gedichte">♻️</summary>
 	<div>
 		<slot />
 	</div>
@@ -18,7 +18,6 @@
 		list-style: none;
 		height: 2em;
 		width: 2em;
-		transform: rotate(-90deg);
 	}
 
 	summary:focus {
