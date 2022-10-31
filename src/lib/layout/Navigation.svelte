@@ -37,6 +37,12 @@
 							href={`${base}/slams/events`}>Unsere Termine</a
 						>
 					</li>
+					<li>
+						<a
+							class:active={currentUrl.startsWith(`${base}/reimemonster`)}
+							href={`${base}/reimemonster`}>Reimemonster</a
+						>
+					</li>
 				</ul>
 			</li>
 			<li>
