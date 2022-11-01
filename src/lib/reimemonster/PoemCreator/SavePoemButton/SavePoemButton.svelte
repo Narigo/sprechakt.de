@@ -9,7 +9,7 @@
 	const { poem } = getContext<PoemStore>(POEM_CONTEXT_KEY);
 
 	function savePoem() {
-		dispatch('save', $poem);
+		dispatch('save', { ...$poem, lastChangeAt: new Date().toISOString() });
 	}
 </script>
 

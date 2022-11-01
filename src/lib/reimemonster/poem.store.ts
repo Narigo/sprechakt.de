@@ -4,6 +4,7 @@ import type { Readable, Writable } from 'svelte/store';
 import { derived, get, writable } from 'svelte/store';
 
 export type Poem = {
+	lastChangeAt: string;
 	title: string;
 	text: string;
 };
@@ -53,7 +54,7 @@ export const poems: Writable<Poem[]> = (function () {
 
 export const createPoemStore = (): PoemStore => {
 	const lastWordTyped = writable('');
-	const poem = writable({ title: '', text: '' });
+	const poem = writable({ title: '', text: '', lastChangeAt: new Date().toISOString() });
 	const syllables = derived(poem, ({ text }) => {
 		const acc: { syllables: number; okay: boolean }[] = [];
 		let previous = 0;
