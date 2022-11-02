@@ -17,7 +17,7 @@
 <ul>
 	{#each $poems as poem}
 		<li>
-			<span>{poem.title}</span>
+			<span>{poem.title} ({new Date(poem.lastChangeAt).toLocaleString()})</span>
 			<span
 				><button class="select" type="button" on:click={() => selectPoem(poem)}>Laden</button>
 				<button class="delete" type="button" on:click={() => removePoem(poem)}>Löschen</button
