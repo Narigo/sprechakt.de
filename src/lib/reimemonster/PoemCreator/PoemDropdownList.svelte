@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Poem } from '../../poem.store';
-	import { poems } from '../../poem.store';
+	import type { Poem } from '../poem.store';
+	import { poems } from '../poem.store';
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -39,12 +39,8 @@
 		list-style: none;
 		margin: 0;
 		padding: 1em;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 2em;
-		z-index: 1;
 	}
+
 	li {
 		display: flex;
 		justify-content: space-between;
