@@ -52,11 +52,16 @@ async function run() {
 	]);
 }
 
+async function fetchOrReuseCache({ cacheKey, url }: { cacheKey: string; url: string }) {
+	console.log('should check whether', cacheKey, 'exists');
+	return fetch(url);
+}
+
 async function downloadImage(image: Attachment): Promise<Image> {
 	await mkdir(`${assetPath}/${image.id}`, { recursive: true });
 	const pathInAssets = `${image.id}/${image.filename}`;
 	const type = image.type;
-	const response = await fetch(image.url);
+	const response = await fetchOrReuseCache({ cacheKey: image.id, url: image.url });
 	if (!response.ok || response.body === null) {
 		throw new Error(`could not download ${image.url}`);
 	}
