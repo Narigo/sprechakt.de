@@ -97,26 +97,7 @@ async function fetchOrReuseCache({
 async function downloadImage(image: Attachment): Promise<Image> {
 	await mkdir(`${assetPath}/${image.id}`, { recursive: true });
 	const pathInAssets = `${image.id}/${image.filename}`;
-	const type = image.type;
-	const response = await fetchOrReuseCache({ pathInAssets, image });
-	if (!response.ok || response.body === null) {
-		throw new Error(`could not download ${image.url}`);
-	}
-	console.log('content-type:', response.headers.get('Content-type'));
-	const downloadFilePath = `${assetPath}/${pathInAssets}`;
-	await promisify(pipeline)(response.body, createWriteStream(downloadFilePath));
-	await $`magick ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
-	const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
-	const [width, height] = result.stdout.split(':');
-
-	return {
-		filename: image.filename,
-		height: parseInt(height, 10),
-		id: image.id,
-		pathInAssets,
-		type,
-		width: parseInt(width, 10)
-	};
+	return await fetchOrReuseCache({ pathInAssets, image });
 }
 
 async function getDataFromAirtable<T, TFields extends FieldSet = FieldSet>({
