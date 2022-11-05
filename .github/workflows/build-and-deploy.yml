@@ -27,6 +27,12 @@ jobs:
         run: |
           corepack enable
           pnpm install
+      - name: Retrieve images from cache 🖼
+        id: cache-downloaded-images
+        uses: actions/cache@v3.0.11
+        with:
+          path: static/images/from-db
+          key: images-from-db
       - name: Retrieve latest data from airtable 📨
         run: |
           pnpm run update-db

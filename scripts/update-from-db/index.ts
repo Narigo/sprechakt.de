@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { access, mkdir, writeFile } from 'node:fs/promises';
 import { pipeline } from 'node:stream';
 import { fileURLToPath } from 'node:url';
 import { $, fetch } from 'zx';
@@ -52,16 +52,53 @@ async function run() {
 	]);
 }
 
-async function fetchOrReuseCache({ cacheKey, url }: { cacheKey: string; url: string }) {
-	console.log('should check whether', cacheKey, 'exists');
-	return fetch(url);
+async function fetchOrReuseCache({
+	pathInAssets,
+	image
+}: {
+	pathInAssets: string;
+	image: Attachment;
+}) {
+	console.log('should check whether', pathInAssets, 'exists');
+	const downloadFilePath = `${assetPath}/${pathInAssets}`;
+
+	try {
+		const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
+		const [width, height] = result.stdout.split(':');
+		return {
+			filename: image.filename,
+			height: parseInt(height, 10),
+			id: image.id,
+			pathInAssets,
+			type: image.type,
+			width: parseInt(width, 10)
+		};
+	} catch (err) {
+		const response = await fetch(image.url);
+		if (!response.ok || response.body === null) {
+			throw new Error(`could not download ${image.url}`);
+		}
+		await promisify(pipeline)(response.body, createWriteStream(downloadFilePath));
+		await $`magick ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
+	}
+
+	const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
+	const [width, height] = result.stdout.split(':');
+	return {
+		filename: image.filename,
+		height: parseInt(height, 10),
+		id: image.id,
+		pathInAssets,
+		type: image.type,
+		width: parseInt(width, 10)
+	};
 }
 
 async function downloadImage(image: Attachment): Promise<Image> {
 	await mkdir(`${assetPath}/${image.id}`, { recursive: true });
 	const pathInAssets = `${image.id}/${image.filename}`;
 	const type = image.type;
-	const response = await fetchOrReuseCache({ cacheKey: image.id, url: image.url });
+	const response = await fetchOrReuseCache({ pathInAssets, image });
 	if (!response.ok || response.body === null) {
 		throw new Error(`could not download ${image.url}`);
 	}
