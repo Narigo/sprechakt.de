@@ -1,0 +1,1 @@
+import{default as f}from"../components/pages/slams/events/_page.svelte-eda3fbdb.js";import"./index-fc6b635c.js";import"./slams-2cfde767.js";import"./singletons-3961ec6d.js";import"./HeaderImage-e47b4907.js";import"./PageWithNavigation-6b1e8a24.js";import"./stores-14852346.js";export{f as component};
