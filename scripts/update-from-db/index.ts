@@ -203,21 +203,25 @@ async function getSlamsFromAirtable(base: AirtableBase): Promise<SprechAktEvent[
 		sheetName: 'Slams',
 		selectOptions: {
 			view: 'database',
-			fields: ['Name', 'ShortDescription', 'Description', 'Date', 'Images']
+			fields: ['Name', 'ShortDescription', 'Description', 'Date', 'Images', 'Status']
 		},
 		flatMapRecord: async (record) => {
 			const imageFromDb = (record.get('Images') as readonly Attachment[] | undefined) ?? [];
 			const images = await Promise.all(imageFromDb.map(downloadImage));
-			return [
-				{
-					id: record.getId(),
-					date: record.get('Date')?.toLocaleString() as string,
-					name: record.get('Name')?.toLocaleString() as string,
-					images,
-					description: record.get('Description')?.toLocaleString(),
-					shortDescription: record.get('ShortDescription')?.toLocaleString()
-				}
-			];
+			const status = record.get('Status') as string | undefined;
+			const isPublic = status === 'Public';
+			return isPublic
+				? [
+						{
+							id: record.getId(),
+							date: record.get('Date')?.toLocaleString() as string,
+							name: record.get('Name')?.toLocaleString() as string,
+							images,
+							description: record.get('Description')?.toLocaleString(),
+							shortDescription: record.get('ShortDescription')?.toLocaleString()
+						}
+				  ]
+				: [];
 		}
 	});
 }
