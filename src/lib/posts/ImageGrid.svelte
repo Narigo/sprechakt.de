@@ -18,7 +18,7 @@
 			>
 				<div><span>X</span></div>
 				<img src={image.url} alt={image.alt} title={image.title} />
-				<p class="text-shadow">{image.credits}</p>
+				{#if image.credits}<p class="text-shadow">{image.credits}</p>{/if}
 			</button>
 		{:else}
 			<div>

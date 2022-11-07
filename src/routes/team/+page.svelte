@@ -1,10 +1,11 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './team.jpg';
-	import ImageGrid from '$lib/posts/ImageGrid.svelte';
-	import sase from './sase.jpg';
-	import stopfers from './stopfers.jpg';
-	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
+	import PageWithNavigationAndGallery from '$lib/layout/PageWithNavigationAndGallery.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const images = data.images;
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
 	<meta name="description" content="Das Team des SprechAkt Landshut stellt sich vor" />
 </svelte:head>
 
-<PageWithNavigation>
+<PageWithNavigationAndGallery {images}>
 	<HeaderImage slot="header" alt="Team" {imageUrl} />
 
 	<h2>Aktuelle Mitglieder:</h2>
@@ -58,11 +59,4 @@
 			Inzwischen sind die beiden verheiratet.
 		</li>
 	</ul>
-
-	<ImageGrid
-		images={[
-			{ alt: 'Ehemalige Teammitglieder', url: stopfers },
-			{ alt: 'Aktuelle Teammitglieder', url: sase }
-		]}
-	/>
-</PageWithNavigation>
+</PageWithNavigationAndGallery>

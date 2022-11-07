@@ -9,9 +9,9 @@ export type Image = {
 
 export type SprechAktImage = {
 	id: string;
-	acts: unknown;
+	acts?: unknown;
 	alt: string;
-	credits: string;
+	credits?: string;
 	images: Image[];
 	route: string;
 	title: string;
