@@ -12,6 +12,7 @@
 	<slot slot="navigation" name="navigation" />
 	<slot slot="header" name="header" />
 	<slot />
+	<div />
 	<ImageGrid
 		images={images.flatMap((i) => {
 			return i.images.flatMap((image) => {
@@ -26,3 +27,9 @@
 	/>
 	<slot name="footer" />
 </PageWithNavigation>
+
+<style>
+	div {
+		height: 1em;
+	}
+</style>
