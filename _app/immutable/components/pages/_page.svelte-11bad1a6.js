@@ -1,0 +1,25 @@
+import{S as H,i as q,s as C,k as h,a as E,v as L,K as M,l as c,h as d,c as y,w as B,n as k,I as a,b as W,x as N,f as j,t as T,y as D,q as f,m,r as p,A as G}from"../../chunks/index-fc6b635c.js";import{c as R}from"../../chunks/singletons-d0f5771b.js";import{g as J,a as O,e as U}from"../../chunks/slams-2cfde767.js";import{H as V}from"../../chunks/HeaderImage-e47b4907.js";import{P as F}from"../../chunks/PageWithNavigation-68b2e821.js";import"../../chunks/stores-51e56d8c.js";const Q=""+new URL("../../assets/startpage-a19b455c.jpg",import.meta.url).href;function X(g){let e,n,s,r,t,i;return{c(){e=h("section"),n=h("p"),s=f(`Was ist ein Sprechakt? Es bedeutet nicht, wie wir in einem Kommentar auf Instagram mal gefragt
+			wurden, dass die K\xFCnstler:Innen unbekleidet auf der B\xFChne stehen. Stattdessen ist der
+			Sprechakt ein Begriff aus der Sprachforschung, genauer der Pragmatik. Kurz runtergebrochen und
+			etwas umgangssprachlich ausgedr\xFCckt, besagt die Sprechakttheorie, dass wir nicht einfach nur
+			sch\xF6ne Worte in den \xC4ther entlassen, wenn wir reden. Stattdessen handeln wir mit unseren
+			sprachlichen \xC4u\xDFerungen und ver\xE4ndern dadurch die Realit\xE4t um uns herum. Wir handeln, also
+			agieren, wenn wir sprechen. Wer Poetry Slam erlebt, bekommt eine Ahnung davon, was das
+			bedeutet.`),r=E(),t=h("p"),i=f(`Seit fast zehn Jahren bringt der SprechAkt Poetry Slam regelm\xE4\xDFig junge und junggebliebene
+			Poet:Innen und Autor:Innen auf die B\xFChne der Alten Kaserne in Landshut, wo sie mit
+			selbstverfassten Texten und Gedichten um die Gunst des Publikums k\xE4mpfen. Was die
+			K\xFCnstler:Innen dort pr\xE4sentieren ist vielf\xE4ltig, reicht von lustig \xFCber emotional bis hin zu
+			nachdenklich und ernst und zeigt, wie vielf\xE4ltig moderne Literatur sein kann.`)},l(l){e=c(l,"SECTION",{});var o=m(e);n=c(o,"P",{});var v=m(n);s=p(v,`Was ist ein Sprechakt? Es bedeutet nicht, wie wir in einem Kommentar auf Instagram mal gefragt
+			wurden, dass die K\xFCnstler:Innen unbekleidet auf der B\xFChne stehen. Stattdessen ist der
+			Sprechakt ein Begriff aus der Sprachforschung, genauer der Pragmatik. Kurz runtergebrochen und
+			etwas umgangssprachlich ausgedr\xFCckt, besagt die Sprechakttheorie, dass wir nicht einfach nur
+			sch\xF6ne Worte in den \xC4ther entlassen, wenn wir reden. Stattdessen handeln wir mit unseren
+			sprachlichen \xC4u\xDFerungen und ver\xE4ndern dadurch die Realit\xE4t um uns herum. Wir handeln, also
+			agieren, wenn wir sprechen. Wer Poetry Slam erlebt, bekommt eine Ahnung davon, was das
+			bedeutet.`),v.forEach(d),r=y(o),t=c(o,"P",{});var S=m(t);i=p(S,`Seit fast zehn Jahren bringt der SprechAkt Poetry Slam regelm\xE4\xDFig junge und junggebliebene
+			Poet:Innen und Autor:Innen auf die B\xFChne der Alten Kaserne in Landshut, wo sie mit
+			selbstverfassten Texten und Gedichten um die Gunst des Publikums k\xE4mpfen. Was die
+			K\xFCnstler:Innen dort pr\xE4sentieren ist vielf\xE4ltig, reicht von lustig \xFCber emotional bis hin zu
+			nachdenklich und ernst und zeigt, wie vielf\xE4ltig moderne Literatur sein kann.`),S.forEach(d),o.forEach(d)},m(l,o){W(l,e,o),a(e,n),a(n,s),a(e,r),a(e,t),a(t,i)},p:G,d(l){l&&d(e)}}}function Y(g){let e,n,s,r,t,i,l,o,v,S=O(g[0])+"",I,A,_,K,$;return n=new V({props:{alt:"SprechAkt - Der Poetry Slam in Landshut",position:"center",imageUrl:Q}}),{c(){e=h("div"),L(n.$$.fragment),s=E(),r=h("section"),t=h("p"),i=f("Hallo wir sind der SprechAkt und wir machen Poetry Slam!"),l=E(),o=h("p"),v=f("N\xE4chster Poetry Slam am "),I=f(S),A=f(`.
+				`),_=h("a"),K=f("Mehr Informationen zum n\xE4chsten Event"),this.h()},l(u){e=c(u,"DIV",{slot:!0});var w=m(e);B(n.$$.fragment,w),s=y(w),r=c(w,"SECTION",{class:!0});var P=m(r);t=c(P,"P",{});var x=m(t);i=p(x,"Hallo wir sind der SprechAkt und wir machen Poetry Slam!"),x.forEach(d),l=y(P),o=c(P,"P",{});var b=m(o);v=p(b,"N\xE4chster Poetry Slam am "),I=p(b,S),A=p(b,`.
+				`),_=c(b,"A",{href:!0});var z=m(_);K=p(z,"Mehr Informationen zum n\xE4chsten Event"),z.forEach(d),b.forEach(d),P.forEach(d),w.forEach(d),this.h()},h(){k(_,"href",`${R}/slams/events/${g[0].id}`),k(r,"class","header svelte-1ot2eya"),k(e,"slot","header")},m(u,w){W(u,e,w),N(n,e,null),a(e,s),a(e,r),a(r,t),a(t,i),a(r,l),a(r,o),a(o,v),a(o,I),a(o,A),a(o,_),a(_,K),$=!0},p:G,i(u){$||(j(n.$$.fragment,u),$=!0)},o(u){T(n.$$.fragment,u),$=!1},d(u){u&&d(e),D(n)}}}function Z(g){let e,n,s,r;return s=new F({props:{$$slots:{header:[Y],default:[X]},$$scope:{ctx:g}}}),{c(){e=h("meta"),n=E(),L(s.$$.fragment),this.h()},l(t){const i=M('[data-svelte="svelte-1cdga72"]',document.head);e=c(i,"META",{name:!0,content:!0}),i.forEach(d),n=y(t),B(s.$$.fragment,t),this.h()},h(){document.title="SprechAkt",k(e,"name","description"),k(e,"content","Der Landshuter Poetry Slam in der Alten Kaserne")},m(t,i){a(document.head,e),W(t,n,i),N(s,t,i),r=!0},p(t,[i]){const l={};i&4&&(l.$$scope={dirty:i,ctx:t}),s.$set(l)},i(t){r||(j(s.$$.fragment,t),r=!0)},o(t){T(s.$$.fragment,t),r=!1},d(t){d(e),t&&d(n),D(s,t)}}}function ee(g){return[J(U)[0]]}class oe extends H{constructor(e){super(),q(this,e,ee,Z,C,{})}}export{oe as default};
