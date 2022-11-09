@@ -23,7 +23,7 @@
 			<p>Hallo wir sind der SprechAkt und wir machen Poetry Slam!</p>
 			<p>
 				Nächster Poetry Slam am {getDate(nextEvent)}.
-				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>
+				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
 			</p>
 		</section>
 	</div>
