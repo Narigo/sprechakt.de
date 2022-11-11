@@ -6,7 +6,7 @@
 </script>
 
 <section>
-	{#each images as image}
+	{#each images as image, imageIndex}
 		{#if $selectedImage === image}
 			<button
 				class="selected"
@@ -20,6 +20,22 @@
 				<img src={image.url} alt={image.alt} title={image.title} />
 				{#if image.credits}<p class="text-shadow">{image.credits}</p>{/if}
 			</button>
+			<button
+				class="arrow prev"
+				type="button"
+				on:click={(e) => {
+					e.preventDefault();
+					$selectedImage = images[(images.length + (imageIndex - 1)) % images.length];
+				}}
+			/>
+			<button
+				class="arrow next"
+				type="button"
+				on:click={(e) => {
+					e.preventDefault();
+					$selectedImage = images[(imageIndex + 1) % images.length];
+				}}
+			/>
 		{:else}
 			<div>
 				<button
@@ -65,6 +81,37 @@
 	}
 	div:not(.selected) {
 		max-width: calc(33% - 2em);
+	}
+	.arrow {
+		--arrow-color: #bbb;
+		border-radius: 50%;
+		display: flex;
+		place-items: center center;
+		height: 6em;
+		padding: 1em;
+		position: fixed;
+		top: calc(50% - 2em);
+		width: 6em;
+	}
+	.arrow:hover {
+		--arrow-color: #fff;
+		background: rgba(255, 255, 255, 0.3);
+	}
+	.arrow::before {
+		content: '';
+		border-left: 5px solid var(--arrow-color);
+		border-bottom: 5px solid var(--arrow-color);
+		margin-left: 1em;
+		rotate: 45deg;
+		height: 2em;
+		width: 2em;
+	}
+	.arrow.prev {
+		left: 0;
+	}
+	.arrow.next {
+		right: 0;
+		rotate: 180deg;
 	}
 	.selected {
 		background-color: rgba(0, 0, 0, 0.8);
