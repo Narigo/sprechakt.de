@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { writable, type Writable } from 'svelte/store';
 	import { wordRhymeStore } from '../poem.store';
 	import LoadingIpsum from '../LoadingIpsum/LoadingIpsum.svelte';
 	import SuggestionWorker from './worker.ts?worker';
@@ -7,7 +8,7 @@
 	export let word = '';
 
 	let isLoading = false;
-	let suggestedWords: string[] | null = null;
+	let suggestedWords: Writable<string[]> = writable([]);
 
 	let backgroundWorker: Worker | null = null;
 	const timeToWait = 750;
@@ -21,7 +22,7 @@
 				backgroundWorker?.postMessage(normalizedWord);
 			}, timeToWait);
 		} else {
-			suggestedWords = $wordRhymeStore[normalizedWord];
+			$suggestedWords = $wordRhymeStore[normalizedWord];
 		}
 	};
 
@@ -34,7 +35,10 @@
 	const workerListener = (event: MessageEvent<string>) => {
 		const data = JSON.parse(event.data);
 		$wordRhymeStore[data.word] = data.rhymes;
-		suggestedWords = $wordRhymeStore[data.word];
+		const normalizedWord = word.toLowerCase();
+		if (data.word === normalizedWord) {
+			$suggestedWords = $wordRhymeStore[data.word];
+		}
 		isLoading = false;
 	};
 
@@ -48,20 +52,21 @@
 	});
 </script>
 
-<h3>{word}</h3>
-<div>
-	{#if isLoading}
-		<LoadingIpsum />
-	{:else if suggestedWords}
-		<ul>
-			{#each suggestedWords as suggestion}
-				<li>{suggestion}</li>
-			{:else}
-				<li>Keine Wortvorschläge gefunden!</li>
-			{/each}
-		</ul>
-	{/if}
-</div>
+{#if word}<h3>Reimvorschläge für "{word}"</h3>
+	<div>
+		{#if isLoading}
+			<LoadingIpsum />
+		{:else if $suggestedWords}
+			<ul>
+				{#each $suggestedWords as suggestion}
+					<li>{suggestion}</li>
+				{:else}
+					<li>Keine Wortvorschläge gefunden!</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
+{/if}
 
 <style>
 	ul {
