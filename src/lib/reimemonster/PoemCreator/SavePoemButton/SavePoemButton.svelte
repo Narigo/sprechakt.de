@@ -13,7 +13,7 @@
 	}
 </script>
 
-<button type="button" {disabled} on:click={savePoem}><span title="Speichern">+</span></button>
+<button type="button" {disabled} on:click={savePoem}><span title="Speichern">💾</span></button>
 
 <style>
 	button {
