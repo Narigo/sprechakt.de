@@ -12,10 +12,7 @@
 		autoGrow(inputField);
 	}
 
-	const unsubscribe = poem.subscribe((p) => (text = p.text));
-	onDestroy(() => {
-		unsubscribe();
-	});
+	$: text = $poem.text;
 
 	function findLastWord(target: EventTarget & HTMLTextAreaElement) {
 		const start = text.slice(0, target.selectionStart);
