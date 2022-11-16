@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
 	import { wordRhymeStore } from '../poem.store';
 	import LoadingIpsum from '../LoadingIpsum/LoadingIpsum.svelte';
@@ -32,6 +32,7 @@
 		}
 	}
 
+	const dispatch = createEventDispatcher();
 	const workerListener = (event: MessageEvent<string>) => {
 		const data = JSON.parse(event.data);
 		$wordRhymeStore[data.word] = data.rhymes;
@@ -59,7 +60,15 @@
 		{:else if $suggestedWords}
 			<ul>
 				{#each $suggestedWords as suggestion}
-					<li>{suggestion}</li>
+					<li>
+						<button
+							on:click={(e) => {
+								e.preventDefault();
+								dispatch('select', suggestion);
+							}}
+							type="button">{suggestion}</button
+						>
+					</li>
 				{:else}
 					<li>Keine Wortvorschläge gefunden!</li>
 				{/each}
@@ -76,5 +85,15 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	button {
+		border: 0;
+		background: none;
+		cursor: pointer;
+	}
+
+	button:hover {
+		text-decoration: underline;
 	}
 </style>

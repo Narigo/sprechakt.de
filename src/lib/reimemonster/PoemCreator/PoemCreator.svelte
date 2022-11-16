@@ -12,6 +12,10 @@
 	let { lastWordTyped, poem } = poemStore;
 	setContext(POEM_CONTEXT_KEY, poemStore);
 
+	function addWordToPoem(event: CustomEvent<string>) {
+		$poem.text = $poem.text + event.detail;
+	}
+
 	function loadPoem(event: CustomEvent<Poem>) {
 		$poem = event.detail;
 	}
@@ -42,7 +46,7 @@
 		{#if open}<PoemDropdownList on:select={loadPoem} on:remove={removePoem} />{/if}
 	</div>
 	<PoemInput />
-	<RhymeSuggestion word={$lastWordTyped} />
+	<RhymeSuggestion on:select={addWordToPoem} word={$lastWordTyped} />
 </section>
 
 <style>
