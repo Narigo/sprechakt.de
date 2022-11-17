@@ -20,7 +20,6 @@
 	<div slot="header">
 		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="center" {imageUrl} />
 		<section class="header">
-			<h2>Hallo, wir sind der SprechAkt und wir machen Poetry Slam!</h2>
 			<p>
 				Nächster Poetry Slam am {getDate(nextEvent)}.
 				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.

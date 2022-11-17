@@ -14,7 +14,7 @@
 </script>
 
 <section>
-	<h3>{title}</h3>
+	<h2>{title}</h2>
 	<div>
 		<slot name="content">
 			{#if markdownContent}<SvelteMarkdown

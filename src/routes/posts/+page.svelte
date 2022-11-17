@@ -3,7 +3,7 @@
 	import BlogSection from '$lib/index/BlogSection.svelte';
 	import BlogEntry from '$lib/posts/BlogEntry.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from '$lib/posts/aktuelles.jpg';
+	import imageUrl from './aktuelles.jpg';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -17,8 +17,22 @@
 
 <PageWithNavigation>
 	<HeaderImage slot="header" alt="Aktuelles" {imageUrl} />
-	<BlogEntry {entry} />
+	<div>
+		<section>
+			<BlogEntry {entry} />
+		</section>
 
-	<h2>Blog-Archiv</h2>
-	<BlogSection {posts} />
+		<section>
+			<h2>Blog-Archiv</h2>
+			<BlogSection {posts} />
+		</section>
+	</div>
 </PageWithNavigation>
+
+<style>
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 3em;
+	}
+</style>

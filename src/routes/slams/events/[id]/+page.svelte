@@ -2,9 +2,11 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { getDate, getEventsById } from '$lib/common/events';
+	import SlamEntry from '$lib/common/slams/SlamEntry.svelte';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import events from '$data/slams.json';
-	import SlamEntry from '$lib/common/slams/SlamEntry.svelte';
+	import imageUrl from '../events.jpg';
 
 	const id = $page.params.id;
 	const dates = getEventsById(events);
@@ -23,16 +25,19 @@
 
 {#if event}
 	<PageWithNavigation>
-		<h1 slot="header">Slams</h1>
+		<HeaderImage slot="header" alt="Unsere Termine" {imageUrl} />
 		<SlamEntry
-			title={getDate(event)}
+			title={`${event.name} am ${getDate(event)}`}
 			markdownContent={event.description ?? ''}
 			images={event.images ?? []}
 			backLink="{base}/slams/events"
 		/>
 	</PageWithNavigation>
 {:else}
-	<PageWithNavigation>Event nicht gefunden!</PageWithNavigation>
+	<PageWithNavigation>
+		<HeaderImage slot="header" alt="Unsere Termine" {imageUrl} />
+		Event nicht gefunden!</PageWithNavigation
+	>
 {/if}
 
 <style>

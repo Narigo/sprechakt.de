@@ -6,6 +6,8 @@
 	import type { SprechAktAct } from '$lib/types';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import { assets } from '$app/paths';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import imageUrl from '../acts.jpg';
 
 	let id: string;
 	let act: SprechAktAct | undefined;
@@ -23,9 +25,8 @@
 
 {#if act}
 	<PageWithNavigation>
-		<h1 slot="header">
-			{act.name}
-		</h1>
+		<HeaderImage slot="header" alt="Poet:Innen" {imageUrl} />
+		<h2>{act.name}</h2>
 		<article>
 			{#if act.image}<img src="{imageDb}/{act.image.pathInAssets}" alt={act.name} />{/if}
 			<SvelteMarkdown source={act.bio} />

@@ -1,18 +1,20 @@
 <script>
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import PoemCreator from '$lib/reimemonster/PoemCreator/PoemCreator.svelte';
+	import imageUrl from './reimemonster.jpg';
 
 	let showHelp = true;
 </script>
 
 <PageWithNavigation>
-	<h2 slot="header">Das Reimemonster</h2>
+	<HeaderImage slot="header" alt="Was ist ein Poetry Slam?" {imageUrl} />
 	<details bind:open={showHelp}>
 		<summary
-			><h3>
+			><h2>
 				{#if showHelp}Einführungstext einklappen
 				{:else}Einführungstext anzeigen{/if}
-			</h3>
+			</h2>
 		</summary>
 		<p>
 			Das Reimemonster-Tool soll Dir beim Schreiben von Gedichten helfen. Es zeigt Dir unter dem
@@ -35,11 +37,6 @@
 </PageWithNavigation>
 
 <style>
-	h2 {
-		max-width: 1024px;
-		margin: 0;
-		padding: 1em;
-	}
 	details {
 		margin-bottom: 2em;
 	}
@@ -49,7 +46,7 @@
 		cursor: pointer;
 		padding: 1em 0;
 	}
-	summary h3 {
+	summary h2 {
 		display: inline;
 	}
 </style>

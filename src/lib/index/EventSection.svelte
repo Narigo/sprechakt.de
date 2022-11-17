@@ -10,7 +10,7 @@
 	{#each events as event}
 		<a href={`${base}/slams/events/${event.id}`}
 			><div>
-				<h3>{getDate(event)}</h3>
+				<h3>{event.name} am {getDate(event)}</h3>
 				{#if event.shortDescription}
 					<p>{event.shortDescription}</p>
 				{:else}

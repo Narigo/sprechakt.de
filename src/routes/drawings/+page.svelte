@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { assets } from '$app/paths';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './slammaler.jpg';
+	import imageUrl from './drawings.jpg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import type { PageData } from './$types';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
@@ -17,9 +17,7 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<div slot="header">
-		<HeaderImage alt="Jörn, der Slammaler" position="center" {imageUrl} />
-	</div>
+	<HeaderImage slot="header" alt="Zeichnungen" {imageUrl} />
 
 	<section>
 		<p>
@@ -27,8 +25,8 @@
 			ihren vorgetragenen Texten geschenkt bekommen. Nahezu von Beginn an begleitet eine Stammjury
 			den SprechAkt. Ein fester Bestandteil dieses Bewertungsgremiums ist Jörn, der die
 			Bewertungstafeln mit Illustrationen dekoriert, die von dem jeweiligen Text inspiriert sind.
-			Diese verteilt er anschließend an die Poet:innen. Das führte im Lauf der Zeit dazu, dass die
-			nun viele unserer Jurys nicht nur Punkte vergeben, sondern sich auch künstlerisch betätigen.
+			Diese verteilt er anschließend an die Poet:innen. Das führte im Lauf der Zeit dazu, dass nun
+			viele unserer Jurys nicht nur Punkte vergeben, sondern sich auch künstlerisch betätigen.
 		</p>
 		<p>
 			Hier haben wir eine kleine Auswahl an Bildern zusammengestellt, die uns freundlicherweise

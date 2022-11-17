@@ -20,25 +20,34 @@
 <PageWithNavigation>
 	<HeaderImage slot="header" alt="Unsere Termine" {imageUrl} />
 
-	<p>
-		Der SprechAkt findet regelmäßig alle zwei Monate donnerstags in der Alten Kaserne statt. Daneben
-		gibt es ab und zu Lesungen und Themenslams in anderen Locations wie Bücher Pustet oder der VHS
-		Moosburg.
-	</p>
+	<div>
+		<section>
+			<p>
+				Der SprechAkt findet regelmäßig alle zwei Monate donnerstags in der Alten Kaserne statt.
+				Daneben gibt es ab und zu Lesungen und Themenslams in anderen Locations wie Bücher Pustet
+				oder der VHS Moosburg.
+			</p>
+		</section>
 
-	<section>
-		<h2>Anstehende Termine</h2>
-		<EventSection events={upcomingEvents} />
-	</section>
+		<section>
+			<h2>Anstehende Termine</h2>
+			<EventSection events={upcomingEvents} />
+		</section>
 
-	<section>
-		<h2>Frühere Termine</h2>
-		<EventSection events={pastEvents} />
-	</section>
+		<section>
+			<h2>Frühere Termine</h2>
+			<EventSection events={pastEvents} />
+		</section>
+	</div>
 </PageWithNavigation>
 
 <style>
-	section {
-		margin-bottom: 2em;
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 3em;
+	}
+	section :last-child {
+		margin-bottom: 0;
 	}
 </style>

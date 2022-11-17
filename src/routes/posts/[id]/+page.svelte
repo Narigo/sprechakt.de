@@ -5,6 +5,8 @@
 	import BlogEntry from '$lib/posts/BlogEntry.svelte';
 	import type { SprechAktBlog } from '$lib/types';
 	import type { PageData } from './$types';
+	import HeaderImage from '$lib/layout/HeaderImage.svelte';
+	import imageUrl from '../aktuelles.jpg';
 
 	let entry: SprechAktBlog;
 	let nextEntry: SprechAktBlog | undefined;
@@ -24,6 +26,7 @@
 
 {#if entry}
 	<PageWithNavigation>
+		<HeaderImage slot="header" alt="Aktuelles" {imageUrl} />
 		<BlogEntry {entry} />
 
 		<nav>
