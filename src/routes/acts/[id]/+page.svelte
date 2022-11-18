@@ -7,7 +7,7 @@
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import { assets } from '$app/paths';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from '../acts.jpg';
+	import imageUrl from '../acts.svg';
 
 	let id: string;
 	let act: SprechAktAct | undefined;

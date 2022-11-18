@@ -2,7 +2,7 @@
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import PoemCreator from '$lib/reimemonster/PoemCreator/PoemCreator.svelte';
-	import imageUrl from './reimemonster.jpg';
+	import imageUrl from './reimemonster.svg';
 
 	let showHelp = true;
 </script>

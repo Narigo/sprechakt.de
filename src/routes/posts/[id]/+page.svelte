@@ -6,7 +6,7 @@
 	import type { SprechAktBlog } from '$lib/types';
 	import type { PageData } from './$types';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from '../aktuelles.jpg';
+	import imageUrl from '../aktuelles.svg';
 
 	let entry: SprechAktBlog;
 	let nextEntry: SprechAktBlog | undefined;

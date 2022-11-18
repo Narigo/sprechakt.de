@@ -1,7 +1,7 @@
 <script>
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';
-	import imageUrl from './coops.jpg';
+	import imageUrl from './coops.svg';
 	import poet1 from './poet1.jpg';
 	import poet2 from './poet2.jpg';
 	import poet3 from './poet3.jpg';

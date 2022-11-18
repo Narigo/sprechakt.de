@@ -3,7 +3,7 @@
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import type { PageData } from './$types';
-	import imageUrl from './acts.jpg';
+	import imageUrl from './acts.svg';
 
 	export let data: PageData;
 

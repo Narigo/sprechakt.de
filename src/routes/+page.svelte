@@ -4,7 +4,7 @@
 	import slamsDb from '$data/slams.json';
 	import { getNextEvents } from '$lib/common/events';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './startpage.jpg';
+	import imageUrl from './startpage.svg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
 	const events = getNextEvents(slamsDb);

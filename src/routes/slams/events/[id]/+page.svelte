@@ -6,7 +6,7 @@
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import events from '$data/slams.json';
-	import imageUrl from '../events.jpg';
+	import imageUrl from '../events.svg';
 
 	const id = $page.params.id;
 	const dates = getEventsById(events);

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './team.jpg';
+	import imageUrl from './team.svg';
 	import PageWithNavigationAndGallery from '$lib/layout/PageWithNavigationAndGallery.svelte';
 	import type { PageData } from './$types';
 

@@ -5,7 +5,7 @@
 	import dropWhile from '$lib/common/dropWhile';
 	import takeWhile from '$lib/common/takeWhile';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './events.jpg';
+	import imageUrl from './events.svg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
 	const pastEvents = takeWhile(slamsDb, isPastEvent);

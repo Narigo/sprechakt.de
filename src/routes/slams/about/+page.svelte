@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './about.jpg';
+	import imageUrl from './about.svg';
 	import poetUrl from './poet.jpg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 </script>

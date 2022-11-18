@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { assets } from '$app/paths';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
-	import imageUrl from './drawings.jpg';
+	import imageUrl from './drawings.svg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import type { PageData } from './$types';
 	import ImageGrid from '$lib/posts/ImageGrid.svelte';

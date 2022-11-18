@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
-	import imageUrl from './history.jpg';
+	import imageUrl from './history.svg';
 </script>
 
 <svelte:head>

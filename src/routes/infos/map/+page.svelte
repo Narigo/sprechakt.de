@@ -1,7 +1,7 @@
 <script>
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
-	import imageUrl from './directions.jpg';
+	import imageUrl from './directions.svg';
 	import map from './map.jpg';
 </script>
 
