@@ -97,6 +97,10 @@
 		--arrow-color: #fff;
 		background: rgba(255, 255, 255, 0.3);
 	}
+	.arrow:hover.arrow::before {
+		animation: 1500ms infinite forwards ease-in-out movearrow;
+	}
+
 	.arrow::before {
 		content: '';
 		border-left: 5px solid var(--arrow-color);
@@ -160,6 +164,21 @@
 		border-radius: 50px 50px 0;
 		bottom: 0;
 		right: 0;
+	}
+
+	@keyframes movearrow {
+		0% {
+			transform: translateX(0px) translateY(0px);
+		}
+		25% {
+			transform: translateX(-10px) translateY(10px);
+		}
+		75% {
+			transform: translateX(10px) translateY(-10px);
+		}
+		100% {
+			transform: translateX(0px) translateY(0px);
+		}
 	}
 
 	@keyframes rotater {
