@@ -98,7 +98,7 @@
 		background: rgba(255, 255, 255, 0.3);
 	}
 	.arrow:hover.arrow::before {
-		animation: 1500ms infinite forwards ease-in-out movearrow;
+		animation: 1200ms infinite forwards linear movearrow;
 	}
 
 	.arrow::before {
@@ -168,16 +168,16 @@
 
 	@keyframes movearrow {
 		0% {
-			transform: translateX(0px) translateY(0px);
+			transform: translateX(0px) translateY(0px) scale(1.2);
 		}
 		25% {
-			transform: translateX(-10px) translateY(10px);
+			transform: translateX(-4px) translateY(4px);
 		}
 		75% {
-			transform: translateX(10px) translateY(-10px);
+			transform: translateX(4px) translateY(-4px);
 		}
 		100% {
-			transform: translateX(0px) translateY(0px);
+			transform: translateX(0px) translateY(0px) scale(1.2);
 		}
 	}
 
