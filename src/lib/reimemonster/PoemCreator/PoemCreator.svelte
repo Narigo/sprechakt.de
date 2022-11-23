@@ -13,7 +13,8 @@
 	setContext(POEM_CONTEXT_KEY, poemStore);
 
 	function addWordToPoem(event: CustomEvent<string>) {
-		$poem.text = $poem.text + (/\s$/.test($poem.text) ? '' : ' ') + event.detail;
+		const endsWithSpacing = /\s$/.test($poem.text);
+		$poem.text = $poem.text + (endsWithSpacing ? '' : ' ') + event.detail;
 	}
 
 	function loadPoem(event: CustomEvent<Poem>) {
