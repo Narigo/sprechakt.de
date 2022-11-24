@@ -53,7 +53,8 @@
 	});
 </script>
 
-{#if word}<h3>Reimvorschläge für "{word}"</h3>
+{#if word}
+	<h3>Reimvorschläge für "{word}"</h3>
 	<div>
 		{#if isLoading}
 			<LoadingIpsum />
@@ -81,7 +82,7 @@
 	ul {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1em;
+		gap: 0.5em;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -89,11 +90,22 @@
 
 	button {
 		border: 0;
-		background: none;
+		background: #fff;
 		cursor: pointer;
+		padding: 0.5em;
+		position: relative;
 	}
-
 	button:hover {
 		text-decoration: underline;
+	}
+	button:hover::after {
+		box-shadow: 0 0 100px rgba(0, 0, 0, 0.15), 0 0 10px -5px rgba(51, 102, 102, 1);
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
 	}
 </style>
