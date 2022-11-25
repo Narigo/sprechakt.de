@@ -32,6 +32,13 @@
 			dem Titel anzeigen und von dort laden. Es besteht an der Stelle auch die Möglichkeit,
 			gespeicherte Gedichte zu löschen.
 		</p>
+		<p>
+			Verbesserungsvorschläge und Kritik für das Reimemonster gerne direkt an Jörn (<a
+				href="https://www.instagram.com/slammaler/"
+				rel="external noopener"
+				target="_blank">@slammaler</a
+			> auf Instagram).
+		</p>
 	</details>
 	<PoemCreator />
 </PageWithNavigation>
