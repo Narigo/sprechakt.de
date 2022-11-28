@@ -15,8 +15,9 @@
 	h2 {
 		background-image: var(--imageUrl);
 		background-position: var(--position);
-		background-size: cover;
+		background-size: contain;
 		background-repeat: no-repeat;
+		background-color: #96b0b0;
 		color: transparent;
 		height: calc(var(--aspectRatio) * 100vw);
 		margin: 0;
