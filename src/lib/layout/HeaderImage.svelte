@@ -17,7 +17,7 @@
 		background-position: var(--position);
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-color: #96b0b0;
+		background-color: var(--secondary-color);
 		color: transparent;
 		height: calc(var(--aspectRatio) * 100vw);
 		margin: 0;
