@@ -32,8 +32,22 @@
 		text-decoration: none;
 	}
 
+	div::before {
+		position: absolute;
+		box-shadow: rgba(0, 0, 0, 0.1) 0 0 20em 2em;
+		box-sizing: border-box;
+		content: '';
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
 	div {
-		box-shadow: var(--text-color) 0 0 5em -2.5em;
+		background-color: #fff;
+		box-sizing: border-box;
+		position: relative;
 		padding: 2em;
 	}
 
