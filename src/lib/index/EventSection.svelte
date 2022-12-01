@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { getDate } from '$lib/common/events';
+	import WideCard from '$lib/layout/WideCard.svelte';
 	import type { SprechAktEvent } from '$lib/types';
 
 	export let events: SprechAktEvent[];
@@ -9,14 +10,14 @@
 <section>
 	{#each events as event}
 		<a href={`${base}/slams/events/${event.id}`}
-			><div>
+			><WideCard>
 				<h3>{event.name} am {getDate(event)}</h3>
 				{#if event.shortDescription}
 					<p>{event.shortDescription}</p>
 				{:else}
 					<p>Ein weiterer Slam</p>
 				{/if}
-			</div></a
+			</WideCard></a
 		>
 	{/each}
 </section>
@@ -32,15 +33,8 @@
 		color: var(--text-color);
 		text-decoration: none;
 	}
-
-	div {
-		box-shadow: var(--text-color) 0 0 5em -2.5em;
-		padding: 2em;
-	}
-
-	div:hover {
-		background-color: var(--secondary-color);
-		box-shadow: var(--text-color) 0 0 2em -1em;
+	a:hover {
+		--background-color: var(--secondary-color);
 	}
 
 	h3 {
