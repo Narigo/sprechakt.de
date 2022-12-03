@@ -1,0 +1,58 @@
+name: Build Preview Page
+
+on:
+  workflow_dispatch:
+    inputs:
+      preview_path:
+        description: 'Where should the preview live?'
+        required: true
+        type: string
+      show_drafts:
+        description: 'Should drafts be shown in the end-result?'
+        required: false
+        type: boolean
+
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3.0.2
+      - name: Make imagemagick available 🪄
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -O 'https://imagemagick.org/archive/binaries/magick'
+          chmod u+x magick
+          mv magick "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          magick --version
+      - name: Install dependencies 📦
+        run: |
+          corepack enable
+          pnpm install
+      - name: Retrieve images from cache 🖼
+        id: cache-downloaded-images
+        uses: actions/cache@v3.0.11
+        with:
+          path: static/images/from-db
+          key: images-from-db
+      - name: Retrieve latest data from airtable 📨
+        run: |
+          pnpm run update-db
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_API_BASE: ${{ secrets.AIRTABLE_API_BASE }}
+      - name: Build 🛠
+        run: |
+          pnpm run build
+        env:
+          PREVIEW_PATH: sprechakt-de-${{ inputs.preview_path }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: main
+          folder: build/
+          repository-name: compose-us/website-preview
+          target-folder: sprechakt-de-${{ inputs.preview_path }}
+          token: ${{ secrets.PREVIEW_TOKEN }}
