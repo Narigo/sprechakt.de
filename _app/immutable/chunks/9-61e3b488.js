@@ -1,0 +1,1 @@
+import{default as f}from"../components/pages/infos/coops/_page.svelte-993622ec.js";import"./index-fc6b635c.js";import"./HeaderImage-511ab545.js";import"./ImageGrid-93c09639.js";import"./singletons-94e4d090.js";import"./PageWithNavigation-5839fa1d.js";import"./stores-c6716ca0.js";export{f as component};
