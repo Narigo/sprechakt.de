@@ -1,1 +1,0 @@
-import{default as a}from"../components/pages/acts/_page.svelte-3bd12b22.js";import"./index-fc6b635c.js";import"./singletons-94e4d090.js";import"./HeaderImage-511ab545.js";import"./PageWithNavigation-5839fa1d.js";import"./stores-c6716ca0.js";import"./acts-a5b618d5.js";const i=!0;export{a as component,i as server};
