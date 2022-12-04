@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { access, mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { pipeline } from 'node:stream';
 import { fileURLToPath } from 'node:url';
 import { $, fetch } from 'zx';
@@ -22,6 +22,8 @@ import { promisify } from 'node:util';
 
 const apiKey = process.env.AIRTABLE_API_KEY as string;
 const apiBase = process.env.AIRTABLE_API_BASE as string;
+const showDrafts = process.env.SHOW_DRAFTS;
+const includeDrafts = showDrafts === 'true';
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const dbDirectory = path.resolve(dirname, '../../database');
 const assetPath = path.resolve(dirname, '../../static/images/from-db');
@@ -179,8 +181,8 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 		flatMapRecord: async (record) => {
 			console.log('status =', record.get('Status'));
 			const status = record.get('Status') as string | undefined;
-			const isPublic = status === 'Public';
-			return isPublic
+			const includeBlogPost = includeDrafts || status === 'Public';
+			return includeBlogPost
 				? [
 						{
 							id: record.getId(),
@@ -188,7 +190,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 							authorFallback: record.get('AuthorFallback') as string | undefined,
 							body: record.get('Body') as string,
 							shortDescription: record.get('ShortDescription') as string,
-							status,
+							status: status ?? 'Entwurf',
 							title: record.get('Title') as string
 						}
 				  ]

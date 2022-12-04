@@ -43,6 +43,7 @@ jobs:
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_API_BASE: ${{ secrets.AIRTABLE_API_BASE }}
+          SHOW_DRAFTS: ${{ inputs.show_drafts }}
       - name: Build 🛠
         run: |
           pnpm run build
