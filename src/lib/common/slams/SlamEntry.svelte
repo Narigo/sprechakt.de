@@ -30,10 +30,6 @@
 </section>
 
 <style>
-	h3 {
-		margin: 0;
-	}
-
 	section {
 		display: flex;
 		flex-direction: column;
