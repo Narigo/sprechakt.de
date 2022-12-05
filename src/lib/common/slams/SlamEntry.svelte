@@ -5,7 +5,6 @@
 
 	import SvelteMarkdown from 'svelte-markdown';
 
-	export let backLink: string | undefined;
 	export let markdownContent: string | undefined;
 	export let images: Image[] = [];
 	export let title: string | undefined;
@@ -23,24 +22,20 @@
 				/>{/if}
 		</slot>
 	</div>
-	{#if images}<ImageGrid
+	{#if images.length > 0}<ImageGrid
 			images={images.map((i) => ({ url: `${imageDb}/${i.pathInAssets}`, alt: i.filename }))}
 		/>{/if}
-	{#if backLink}<a href={backLink}>Zurück</a>{/if}
+	<a href="{base}/slams/events">Zurück</a>
 </section>
 
 <style>
 	section {
 		display: flex;
 		flex-direction: column;
-		gap: 2em;
+		gap: 1em;
 	}
 
-	div > :global(:first-child) {
-		margin-top: 0;
-	}
-
-	div > :global(:last-child) {
-		margin-bottom: 0;
+	section > h2 {
+		margin: 0;
 	}
 </style>
