@@ -35,4 +35,10 @@
 		flex-direction: column;
 		gap: 3em;
 	}
+	section > :global(:first-child) {
+		margin-top: 0;
+	}
+	section > :global(:last-child) {
+		margin-bottom: 0;
+	}
 </style>

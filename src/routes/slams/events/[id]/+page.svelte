@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { getDate, getEventsById } from '$lib/common/events';
 	import SlamEntry from '$lib/common/slams/SlamEntry.svelte';
@@ -30,7 +29,6 @@
 			title={`${event.name} am ${getDate(event)}`}
 			markdownContent={event.description ?? ''}
 			images={event.images ?? []}
-			backLink="{base}/slams/events"
 		/>
 	</PageWithNavigation>
 {:else}

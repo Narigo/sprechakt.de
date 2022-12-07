@@ -15,18 +15,20 @@
 		<div class="content">
 			<slot />
 		</div>
-		<ImageGrid
-			images={images.flatMap((i) => {
-				return i.images.flatMap((image) => {
-					return {
-						alt: i.alt,
-						credits: i.credits,
-						title: i.title,
-						url: `${imageDb}/${image.id}/${image.filename}`
-					};
-				});
-			})}
-		/>
+		<div>
+			<ImageGrid
+				images={images.flatMap((i) => {
+					return i.images.flatMap((image) => {
+						return {
+							alt: i.alt,
+							credits: i.credits,
+							title: i.title,
+							url: `${imageDb}/${image.id}/${image.filename}`
+						};
+					});
+				})}
+			/>
+		</div>
 	</div>
 	<slot name="footer" />
 </PageWithNavigation>
@@ -35,10 +37,18 @@
 	.content-layout {
 		display: flex;
 		flex-direction: column;
-		gap: 1em;
+		gap: 2em;
 	}
 
 	.content {
 		flex: 1;
+	}
+
+	.content > :global(:first-child) {
+		margin-top: 0;
+	}
+
+	.content > :global(:last-child) {
+		margin-bottom: 0;
 	}
 </style>

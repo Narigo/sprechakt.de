@@ -46,10 +46,10 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
-	main > :first-child {
+	main > :global(:first-child) {
 		margin-top: 0;
 	}
-	main > :last-child {
+	main > :global(:last-child) {
 		margin-bottom: 0;
 	}
 </style>

@@ -47,7 +47,10 @@
 		flex-direction: column;
 		gap: 3em;
 	}
-	section :last-child {
+	section > :first-child {
+		margin-top: 0;
+	}
+	section > :last-child {
 		margin-bottom: 0;
 	}
 </style>

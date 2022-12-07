@@ -69,18 +69,20 @@
 		flex-direction: row;
 		align-items: center;
 		cursor: pointer;
+		padding: 0 0 1em;
 	}
 	label h2 {
 		display: inline;
+		margin: 0;
 	}
 	label::before {
 		content: '';
 		box-sizing: border-box;
 		border: calc(var(--arrow-size) / 2) solid transparent;
 		border-left: var(--arrow-size) solid #000;
+		font-size: 0;
 		height: var(--arrow-size);
 		width: var(--arrow-size);
-		font-size: 0;
 		transform: rotate(0deg);
 		transform-origin: 25% 50%;
 		transition: transform calc(var(--animation-duration) / 2);
