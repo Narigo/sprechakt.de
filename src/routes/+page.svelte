@@ -17,15 +17,18 @@
 </svelte:head>
 
 <PageWithNavigation>
-	<div slot="header">
-		<HeaderImage alt="SprechAkt - Der Poetry Slam in Landshut" position="center" {imageUrl} />
-		<section class="header">
-			<p>
-				Nächster Poetry Slam am {getDate(nextEvent)}.
-				<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
-			</p>
-		</section>
-	</div>
+	<HeaderImage
+		slot="header"
+		alt="SprechAkt - Der Poetry Slam in Landshut"
+		position="center"
+		{imageUrl}
+	/>
+	<section class="header">
+		<h2>
+			Nächster Poetry Slam am {getDate(nextEvent)}.<br />
+			<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
+		</h2>
+	</section>
 
 	<section>
 		<p>
@@ -55,5 +58,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: 0 2em;
+		text-align: center;
 	}
 </style>
