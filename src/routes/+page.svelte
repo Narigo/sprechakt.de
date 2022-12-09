@@ -23,12 +23,10 @@
 		position="center"
 		{imageUrl}
 	/>
-	<section class="header">
-		<h2>
-			Nächster Poetry Slam am {getDate(nextEvent)}.<br />
-			<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
-		</h2>
-	</section>
+	<h2>
+		Nächster Poetry Slam am {getDate(nextEvent)}.<br />
+		<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
+	</h2>
 
 	<section>
 		<p>
@@ -52,12 +50,7 @@
 </PageWithNavigation>
 
 <style>
-	.header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 0 2em;
+	h2 {
 		text-align: center;
 	}
 </style>
