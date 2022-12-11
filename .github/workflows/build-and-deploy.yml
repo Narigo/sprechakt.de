@@ -22,8 +22,7 @@ jobs:
           chmod u+x magick
           mv magick "$HOME/.local/bin"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          magick --appimage-extract
-          magick --version
+          magick --appimage-extract-and-run --version
       - name: Install dependencies 📦
         run: |
           corepack enable
