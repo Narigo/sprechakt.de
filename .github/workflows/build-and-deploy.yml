@@ -17,12 +17,8 @@ jobs:
         uses: actions/checkout@v3.1.0
       - name: Make imagemagick available 🪄
         run: |
-          mkdir -p "$HOME/.local/bin"
-          curl -O 'https://imagemagick.org/archive/binaries/magick'
-          chmod u+x magick
-          mv magick "$HOME/.local/bin"
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          magick --appimage-extract-and-run --version
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          brew install imagemagick
       - name: Install dependencies 📦
         run: |
           corepack enable

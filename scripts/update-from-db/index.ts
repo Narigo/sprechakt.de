@@ -65,7 +65,7 @@ async function fetchOrReuseCache({
 	const downloadFilePath = `${assetPath}/${pathInAssets}`;
 
 	try {
-		const result = await $`magick --appimage-extract-and-run identify -ping -format '%w:%h' ${downloadFilePath}`;
+		const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
 		const [width, height] = result.stdout.split(':');
 		return {
 			filename: image.filename,
@@ -81,10 +81,10 @@ async function fetchOrReuseCache({
 			throw new Error(`could not download ${image.url}`);
 		}
 		await promisify(pipeline)(response.body, createWriteStream(downloadFilePath));
-		await $`magick --appimage-extract-and-run ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
+		await $`magick ${downloadFilePath} -resize 2048x\\> -resize x1280\\> ${downloadFilePath}`;
 	}
 
-	const result = await $`magick --appimage-extract-and-run identify -ping -format '%w:%h' ${downloadFilePath}`;
+	const result = await $`magick identify -ping -format '%w:%h' ${downloadFilePath}`;
 	const [width, height] = result.stdout.split(':');
 	return {
 		filename: image.filename,
