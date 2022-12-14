@@ -15,9 +15,8 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3.1.0
-      - name: Make imagemagick available 🪄
+      - name: Check imagemagick version 🪄
         run: |
-          brew install imagemagick
           magick --version
       - name: Install dependencies 📦
         run: |
