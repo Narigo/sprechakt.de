@@ -7,7 +7,7 @@ specifiers:
   '@fontsource/montserrat': ^4.5.12
   '@playwright/test': ^1.25.1
   '@sveltejs/adapter-static': ^1.0.0
-  '@sveltejs/kit': 1.0.0-next.587
+  '@sveltejs/kit': 1.0.0
   '@types/cookie': ^0.5.1
   '@types/jest': ^28.1.8
   '@types/node': ^18.7.13
@@ -38,8 +38,8 @@ devDependencies:
   '@fontsource/fira-mono': 4.5.9
   '@fontsource/montserrat': 4.5.12
   '@playwright/test': 1.25.1
-  '@sveltejs/adapter-static': 1.0.0_oogoraclbppcquiitsbqrelvd4
-  '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
+  '@sveltejs/adapter-static': 1.0.0_@sveltejs+kit@1.0.0
+  '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
   '@types/cookie': 0.5.1
   '@types/jest': 28.1.8
   '@types/node': 18.7.13
@@ -977,16 +977,16 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0_oogoraclbppcquiitsbqrelvd4:
+  /@sveltejs/adapter-static/1.0.0_@sveltejs+kit@1.0.0:
     resolution: {integrity: sha512-ZrQhRgSa2TsH+zvrOIKpdVsAhExafpsn+w6Gv1WHzV76RZ2XOYFa8xi6hEzRjeeAL++ac0dsZHzp8M4X7YIabg==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.587_svelte@3.55.0+vite@4.0.1:
-    resolution: {integrity: sha512-F8zYXd7URcq57sGfrBRWTLtfj6JKkhNhwM4M8w4hNnJsJlZawPUvpybOSlIP87Z8URO8iCmyigQHxAYYzedrOg==}
+  /@sveltejs/kit/1.0.0_svelte@3.55.0+vite@4.0.1:
+    resolution: {integrity: sha512-6VgD5C3i2XOT7GRBi5LaPPLiFAmpiDkhKJNVt8fLg1RmaL6f7rT4Kiwi2XGpYRj3V1F4t1QRdsfmAkkDUKY3OA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
