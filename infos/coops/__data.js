@@ -1,1 +1,0 @@
-window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{images:[]},uses:{dependencies:a,params:a,parent:a,url:1}}]}}(void 0,"data"))
