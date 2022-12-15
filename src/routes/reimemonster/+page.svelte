@@ -46,7 +46,7 @@
 				<p>
 					Verbesserungsvorschläge und Kritik für das Reimemonster gerne direkt an Jörn (<a
 						href="https://www.instagram.com/slammaler/"
-						rel="external noopener"
+						rel="external noopener noreferrer"
 						target="_blank">@slammaler</a
 					> auf Instagram).
 				</p>

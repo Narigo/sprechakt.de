@@ -6,7 +6,7 @@
 </script>
 
 <div class="navigation">
-	<input id="layout-navigation-menu" type="checkbox" role="presentation" />
+	<input id="layout-navigation-menu" type="checkbox" />
 	<label class="menu-btn" for="layout-navigation-menu"><span class="icon" /></label>
 	<nav>
 		<a class="logo" href="{base}/">

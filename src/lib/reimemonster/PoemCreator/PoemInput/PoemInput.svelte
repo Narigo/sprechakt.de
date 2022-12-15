@@ -65,7 +65,7 @@
 	}
 </script>
 
-<div class="poem" on:click={focusInput}>
+<div class="poem" on:click={focusInput} on:keydown={focusInput}>
 	<ol class="syllables">
 		{#each $syllables as currentLine}
 			<li class={currentLine.okay ? 'okay' : 'different'}>
