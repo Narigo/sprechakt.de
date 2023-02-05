@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = () => {
 	return {
-		posts: blogDb.slice(0, -1),
-		entry: blogDb.slice(-1)[0]
+		posts: blogDb.slice(1),
+		entry: blogDb[0]
 	};
 };
