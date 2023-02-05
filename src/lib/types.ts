@@ -35,6 +35,7 @@ export type SprechAktBlog = {
 	authors: string[];
 	authorFallback?: string;
 	body: string;
+	date: string;
 	shortDescription: string;
 	status: string;
 	title: string;

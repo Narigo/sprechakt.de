@@ -46,6 +46,8 @@ async function run() {
 		getActsFromAirtable(base),
 		getGalleriesFromAirtable(base)
 	]);
+	slamDb.sort((a, b) => +new Date(b.date) - +new Date(a.date));
+	blogDb.sort((a, b) => +new Date(b.date) - +new Date(a.date));
 	await Promise.all([
 		writeFile(path.resolve(dirname, `${dbDirectory}/acts.json`), JSON.stringify(actsDb)),
 		writeFile(path.resolve(dirname, `${dbDirectory}/blog.json`), JSON.stringify(blogDb)),
@@ -176,7 +178,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 		sheetName: 'Blog',
 		selectOptions: {
 			view: 'database',
-			fields: ['Authors', 'AuthorFallback', 'Body', 'ShortDescription', 'Status', 'Title']
+			fields: ['Authors', 'AuthorFallback', 'Body', 'ShortDescription', 'Status', 'Title', 'Date']
 		},
 		flatMapRecord: async (record) => {
 			console.log('status =', record.get('Status'));
@@ -189,6 +191,7 @@ async function getBlogFromAirtable(base: AirtableBase): Promise<SprechAktBlog[]>
 							authors: record.get('Authors') as string[],
 							authorFallback: record.get('AuthorFallback') as string | undefined,
 							body: record.get('Body') as string,
+							date: record.get('Date')?.toLocaleString() as string,
 							shortDescription: record.get('ShortDescription') as string,
 							status: status ?? 'Entwurf',
 							title: record.get('Title') as string
