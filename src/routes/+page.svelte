@@ -6,9 +6,10 @@
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import imageUrl from './startpage.svg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
+	import type { SprechAktEvent } from '$lib/types';
 
 	const events = getNextEvents(slamsDb);
-	const nextEvent = events[0];
+	const nextEvent: SprechAktEvent | undefined = events[0];
 </script>
 
 <svelte:head>
@@ -23,10 +24,12 @@
 		position="center"
 		{imageUrl}
 	/>
-	<h2>
-		Nächster Poetry Slam am {getDate(nextEvent)}.<br />
-		<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
-	</h2>
+	{#if nextEvent}
+		<h2>
+			Nächster Poetry Slam am {getDate(nextEvent)}.<br />
+			<a href={`${base}/slams/events/${nextEvent.id}`}>Mehr Informationen zum nächsten Event</a>.
+		</h2>
+	{/if}
 
 	<section>
 		<p>
