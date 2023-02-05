@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '30 18 * * 3,6' # every Wednesday and Saturday at 18:30
   workflow_dispatch:
     branches:
       - main
