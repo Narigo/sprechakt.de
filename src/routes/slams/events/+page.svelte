@@ -11,8 +11,6 @@
 	const upcomingEvents = takeWhile(slamsDb, isUpcomingEvent);
 	upcomingEvents.reverse();
 	const pastEvents = dropWhile(slamsDb, isUpcomingEvent);
-
-	console.log({ pastEvents, upcomingEvents });
 </script>
 
 <svelte:head>

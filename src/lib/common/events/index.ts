@@ -29,7 +29,6 @@ export function isPastEvent(event: SprechAktEvent): boolean {
 	startOfToday.setMilliseconds(0);
 
 	const eventDate = new Date(event.date);
-	console.log({ eventDate, startOfToday });
 
 	return eventDate <= startOfToday;
 }
