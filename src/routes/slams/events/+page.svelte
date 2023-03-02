@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isPastEvent } from '$lib/common/events';
+	import { isUpcomingEvent } from '$lib/common/events';
 	import slamsDb from '$data/slams.json';
 	import EventSection from '$lib/index/EventSection.svelte';
 	import dropWhile from '$lib/common/dropWhile';
@@ -8,8 +8,11 @@
 	import imageUrl from './events.svg';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 
-	const pastEvents = takeWhile(slamsDb, isPastEvent);
-	const upcomingEvents = dropWhile(slamsDb, isPastEvent);
+	const upcomingEvents = takeWhile(slamsDb, isUpcomingEvent);
+	upcomingEvents.reverse();
+	const pastEvents = dropWhile(slamsDb, isUpcomingEvent);
+
+	console.log({ pastEvents, upcomingEvents });
 </script>
 
 <svelte:head>
