@@ -1,6 +1,6 @@
 import head from '$lib/common/head';
 import type { SprechAktEvent } from '$lib/types';
-import dropWhile from '../dropWhile';
+import takeWhile from '../takeWhile';
 
 export function getEventsById(events: SprechAktEvent[]): { [id: string]: typeof events[number] } {
 	return events.reduce((acc, event) => {
@@ -9,7 +9,7 @@ export function getEventsById(events: SprechAktEvent[]): { [id: string]: typeof 
 }
 
 export function getNextEvents(events: SprechAktEvent[]) {
-	return head(dropWhile(events, isPastEvent), 5);
+	return head(takeWhile(events, isUpcomingEvent), 5);
 }
 
 const dayOfWeek = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -30,7 +30,7 @@ export function isPastEvent(event: SprechAktEvent): boolean {
 
 	const eventDate = new Date(event.date);
 
-	return eventDate <= startOfToday;
+	return +eventDate <= +startOfToday;
 }
 
 export function isUpcomingEvent(event: SprechAktEvent): boolean {

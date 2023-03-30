@@ -9,7 +9,7 @@
 	import type { SprechAktEvent } from '$lib/types';
 
 	const events = getNextEvents(slamsDb);
-	const nextEvent: SprechAktEvent | undefined = events[0];
+	const nextEvent: SprechAktEvent | undefined = events[events.length - 1];
 </script>
 
 <svelte:head>
