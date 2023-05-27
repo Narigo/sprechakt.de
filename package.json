@@ -52,5 +52,5 @@
 			"^.+\\.ts$": "ts-jest"
 		}
 	},
-	"packageManager": "pnpm@7.18.2"
+	"packageManager": "pnpm@8.5.1"
 }
