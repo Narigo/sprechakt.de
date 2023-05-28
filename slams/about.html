@@ -4,21 +4,20 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-28da7cc5.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page-e19a48f3.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/HeaderImage-bacb2d6b.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/PageWithNavigation-8a91194b.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-bbeaab34.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-5a7f2d14.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-898fd478.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-596fb9f2.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/slams/about/_page.svelte-fa2086c6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/HeaderImage-847b430d.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/PageWithNavigation-806c05a9.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores-804186c8.js"><title>Was ist ein Poetry Slam?</title><!-- HEAD_svelte-154dm4l_START --><meta name="description" content="Was erwartet mich und wozu überhaupt?"><!-- HEAD_svelte-154dm4l_END -->
+		
+		<link href="../_app/immutable/assets/0.fa8fc91b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/10.e19a48f3.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/HeaderImage.bacb2d6b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/PageWithNavigation.8a91194b.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.cd193564.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6e6d21e2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.11ad4343.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.b8fa11e6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.5aa11e61.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/15.f082450d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/HeaderImage.f563a3da.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/PageWithNavigation.4f20535a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.d91a094f.js"><title>Was ist ein Poetry Slam?</title><!-- HEAD_svelte-154dm4l_START --><meta name="description" content="Was erwartet mich und wozu überhaupt?"><!-- HEAD_svelte-154dm4l_END -->
 	</head>
 	<body>
 		<div style="display: contents">
@@ -64,7 +63,7 @@
 		kleineren wie eben Landshut.
 	</p>
 
-	<img src="/_app/immutable/assets/poet-89f44a92.jpg" alt="Poet steht erklärend auf der Bühne" height="3648" width="5472" class="svelte-1k0r911"></main></div></div>
+	<img src="/_app/immutable/assets/poet.89f44a92.jpg" alt="Poet steht erklärend auf der Bühne" height="3648" width="5472" class="svelte-1k0r911"></main></div></div>
 	<footer class="svelte-k6oie8">
 	<div class="columns svelte-k6oie8"><div class="column svelte-k6oie8"><h4 class="svelte-k6oie8">Folgt dem SprechAkt!</h4>
 			<div class="socialIcons svelte-k6oie8"><a href="https://www.facebook.com/SprechAkt" rel="external" class="svelte-k6oie8"><img src="/socials/f_logo_RGB-Black_1024.svg" alt="facebook" class="svelte-k6oie8"></a>
@@ -76,21 +75,31 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1266l27">
-			import { start } from "../_app/immutable/start-bbeaab34.js";
+			
+			<script>
+				{
+					__sveltekit_1mq151u = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1266l27"]').parentNode,
-				version: "1685212494017",
-				hydrate: {
-					node_ids: [0, 15],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.cd193564.js"),
+						import("../_app/immutable/entry/app.b8fa11e6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 15],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

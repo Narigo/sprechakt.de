@@ -4,20 +4,19 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-28da7cc5.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/HeaderImage-bacb2d6b.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/PageWithNavigation-8a91194b.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-bbeaab34.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-5a7f2d14.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-898fd478.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-596fb9f2.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/infos/acts/_page.svelte-9838124c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/HeaderImage-847b430d.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/PageWithNavigation-806c05a9.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores-804186c8.js">
+		
+		<link href="../_app/immutable/assets/0.fa8fc91b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/HeaderImage.bacb2d6b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/PageWithNavigation.8a91194b.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.cd193564.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6e6d21e2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.11ad4343.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.b8fa11e6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.5aa11e61.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/8.71720249.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/HeaderImage.f563a3da.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/PageWithNavigation.4f20535a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.d91a094f.js">
 	</head>
 	<body>
 		<div style="display: contents">
@@ -99,21 +98,31 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="108nvdm">
-			import { start } from "../_app/immutable/start-bbeaab34.js";
+			
+			<script>
+				{
+					__sveltekit_1mq151u = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="108nvdm"]').parentNode,
-				version: "1685212494017",
-				hydrate: {
-					node_ids: [0, 8],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.cd193564.js"),
+						import("../_app/immutable/entry/app.b8fa11e6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

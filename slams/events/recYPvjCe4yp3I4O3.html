@@ -4,26 +4,25 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="../../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../../_app/immutable/assets/_layout-28da7cc5.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/_page-6a9162df.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/ImageGrid-920a150f.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/HeaderImage-bacb2d6b.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/PageWithNavigation-8a91194b.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/start-bbeaab34.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/index-5a7f2d14.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-898fd478.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-596fb9f2.js">
-		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/slams/events/_id_/_page.svelte-97d3c86b.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores-804186c8.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/slams-68dd5a40.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/ImageGrid-7ad27310.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/SvelteMarkdown-03b648f4.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/HeaderImage-847b430d.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/PageWithNavigation-806c05a9.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/events-37fca14d.js"><title>Poetry Slam am 04.03.2023 - SprechAkt</title><!-- HEAD_svelte-cryipf_START -->
+		
+		<link href="../../_app/immutable/assets/0.fa8fc91b.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/17.6a9162df.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/ImageGrid.920a150f.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/HeaderImage.bacb2d6b.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/PageWithNavigation.8a91194b.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.cd193564.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.6e6d21e2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.11ad4343.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.b8fa11e6.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.5aa11e61.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/17.ce931733.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.d91a094f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/slams.68dd5a40.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ImageGrid.9c41b136.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/SvelteMarkdown.5f5e5b8f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/HeaderImage.f563a3da.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PageWithNavigation.4f20535a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/events.04120c8c.js"><title>Poetry Slam am 04.03.2023 - SprechAkt</title><!-- HEAD_svelte-cryipf_START -->
 		<meta name="description" content="Am Samstag, 4. März, findet zum zweiten Mal in Kooperation mit
 [@sausalitos\_beach](https://www.instagram.com/sausalitos_beach/) ein Poetry Slam in den &quot;Drei Tipis am See&quot; im Aquapark Moosburg statt. Beginn ist um 19.30 Uhr, Einlass ab 19 Uhr. Der Eintritt ist frei. Wir empfehlen euch, vorab einen Sitzplatz reservieren. Meldet euch dafür einfach per Direktnachricht über Instagram an [@sausalitos\_beach](https://www.instagram.com/sausalitos_beach/) oder per E-Mail an [info@sausalitos-beach.de](mailto:info@sausalitos-beach.de).
 "><!-- HEAD_svelte-cryipf_END -->
@@ -78,21 +77,31 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1f4xezu">
-			import { start } from "../../_app/immutable/start-bbeaab34.js";
+			
+			<script>
+				{
+					__sveltekit_1mq151u = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1f4xezu"]').parentNode,
-				version: "1685212494017",
-				hydrate: {
-					node_ids: [0, 17],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.cd193564.js"),
+						import("../../_app/immutable/entry/app.b8fa11e6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 17],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>
