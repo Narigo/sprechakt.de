@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { getDate, getEventsById } from '$lib/common/events';
-	import SlamEntry from '$lib/common/slams/SlamEntry.svelte';
+	import SlamEntry from './SlamEntry.svelte';
 	import HeaderImage from '$lib/layout/HeaderImage.svelte';
 	import PageWithNavigation from '$lib/layout/PageWithNavigation.svelte';
 	import events from '$data/slams.json';
