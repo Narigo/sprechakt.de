@@ -24,7 +24,15 @@
 		</li>
 		<li>
 			<strong>Sandra Schörghuber:</strong> Organisatorin im Hintergrund, unter anderem verantwortlich
-			für die Jurys und den Instagram-Kanal des SprechAkts
+			für die Jurys und den Instagram-Kanal des SprechAkts.
+		</li>
+		<li>
+			<strong>Pascal Simon:</strong> Ist Poetryslammer, Autor und Comedian und war schon häufiger als
+			Gast bei uns auf der Bühne. Seit 2022 ist er Teil unseres Teams und übernimmt Moderation und Organisation.
+		</li>
+		<li>
+			<strong>Laura Hybner:</strong> 2022 ist die Poetryslammerin und Autorin Teil unseres Teams geworden.
+			Zusammen mit Sandra schmeißt sie unsere Social Media Auftritte und moderiert.
 		</li>
 		<li>
 			<strong>Chantal Walker:</strong> Das älteste aktive Mitglied des Poetry Slams ist ein Walker-Hut.
