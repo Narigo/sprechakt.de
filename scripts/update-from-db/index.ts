@@ -20,7 +20,7 @@ import type {
 import { createWriteStream } from 'node:fs';
 import { promisify } from 'node:util';
 
-const apiKey = process.env.AIRTABLE_API_KEY as string;
+const apiKey = process.env.AIRTABLE_ACCESS_TOKEN as string;
 const apiBase = process.env.AIRTABLE_API_BASE as string;
 const showDrafts = process.env.SHOW_DRAFTS;
 const includeDrafts = showDrafts === 'true';

@@ -34,7 +34,7 @@ jobs:
         run: |
           pnpm run update-db
         env:
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_ACCESS_TOKEN: ${{ secrets.AIRTABLE_ACCESS_TOKEN }}
           AIRTABLE_API_BASE: ${{ secrets.AIRTABLE_API_BASE }}
       - name: Build 🛠
         run: |
