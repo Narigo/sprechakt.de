@@ -39,7 +39,7 @@
 				<p>
 					Die Gedichte, die Du hier speichern kannst, werden nur auf dem Endgerät gespeichert, auf
 					dem Du den jeweiligen Text verfasst. Sobald ein Titel und ein Text eingegeben wurde, wird
-					es möglich, mit dem "+" Symbol zu speichern. Gespeicherte Gedichte lassen sich mit dem
+					es möglich, mit dem "💾" Symbol zu speichern. Gespeicherte Gedichte lassen sich mit dem
 					Icon neben dem Titel anzeigen und von dort laden. Es besteht an der Stelle auch die
 					Möglichkeit, gespeicherte Gedichte zu löschen.
 				</p>

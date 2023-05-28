@@ -2,7 +2,8 @@
 @import '@fontsource/aileron/100.css';
 @import '@fontsource/belleza';
 @import '@fontsource/fira-mono';
-@import '@fontsource/montserrat';
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/700.css';
 
 @font-face {
 	font-family: 'Aileron Thin';
