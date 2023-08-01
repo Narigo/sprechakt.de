@@ -19,6 +19,12 @@
 				{/if}
 			</WideCard></a
 		>
+	{:else}
+		<p>
+			Es gibt momentan keine anstehenden Termine? Das sollte sich bald wieder ändern! Nervt uns auf
+			unseren Social Media Kanälen, damit wir schnell die nächsten Termine auf unsere Homepage
+			stellen!
+		</p>
 	{/each}
 </section>
 
