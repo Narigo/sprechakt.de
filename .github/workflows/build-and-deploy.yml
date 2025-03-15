@@ -28,7 +28,7 @@ jobs:
           pnpm install
       - name: Retrieve images from cache 🖼
         id: cache-downloaded-images
-        uses: actions/cache@v3.0.11
+        uses: actions/cache@v4.2.0
         with:
           path: static/images/from-db
           key: images-from-db
