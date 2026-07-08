@@ -1,4 +1,35 @@
-function s(e,n){const t=[],a=Math.min(n??1,e.length);for(let i=0;i<a;i++)t.push(e[i]);return t}function d(e,n){let t=0;for(;t<e.length&&n(e[t]);)t++;return e.slice(0,t)}function u(e){return e.reduce((n,t)=>({...n,[t.id]:t}),{})}function l(e){return s(d(e,m),5)}const r=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];function c(e){const n=new Date(e.date);return`${r[n.getDay()%r.length]}, ${n.getDate()}.${n.getMonth()+1}.${n.getFullYear()}`}function h(e){const n=new Date;return n.setHours(0),n.setMinutes(0),n.setSeconds(0),n.setMilliseconds(0),+new Date(e.date)<=+n}function m(e){return!h(e)}const o=[{id:"recKfsctpEVO6VJzl",date:"2026-06-16T17:30:00.000Z",name:"Lesebühne im Rocketclub ",images:[],description:`Lesebühne "Junge Stimmen" am Dienstag, 16. Juni, im Rocketclub Landshut 
+function s(e,n){const t=[],a=Math.min(n??1,e.length);for(let i=0;i<a;i++)t.push(e[i]);return t}function d(e,n){let t=0;for(;t<e.length&&n(e[t]);)t++;return e.slice(0,t)}function u(e){return e.reduce((n,t)=>({...n,[t.id]:t}),{})}function l(e){return s(d(e,m),5)}const r=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];function o(e){const n=new Date(e.date);return`${r[n.getDay()%r.length]}, ${n.getDate()}.${n.getMonth()+1}.${n.getFullYear()}`}function h(e){const n=new Date;return n.setHours(0),n.setMinutes(0),n.setSeconds(0),n.setMilliseconds(0),+new Date(e.date)<=+n}function m(e){return!h(e)}const c=[{id:"recC0Mr4GYnZPuhwY",date:"2026-07-25T13:00:00.000Z",name:"U20 Bayernslam ",images:[{filename:"U20 Bayernslam.jpg",height:770,id:"attjRdzelw1Pp5Is5",pathInAssets:"attjRdzelw1Pp5Is5/U20 Bayernslam.jpg",type:"image/jpeg",width:613}],description:`Wir lüften endlich das lange gehütete Geheimnis und präsentieren euch die Veranstaltung, an der wir die letzten Monate bereits hinter den Kulissen fleißig gearbeitet haben:
+
+🎤 Das große U20 Finale im Poetry Slam - Bayern Slam 26
+
+🎤 zwei Halbfinale und ein Finale bedeuten 3x Poetry Slam an einem Tag
+
+
+Bayerns beste Poetryslammer\\*innen, die den 21. Geburtstag noch nicht hinter sich haben, sind in Landshut zu Gast und kämpfen um die Bayerische U20-Meisterschaft. 
+
+Das Programm im Detail:
+
+➡️Halbfinale 1 um 15:00
+
+➡️Halbfinale 2 um 17:00
+
+➡️Finale um 20:00
+
+🎟️ Tickets für eine der drei oder alle drei Veranstaltungen im Vorverkauf bei der Alten Kaserne: https://altekaserne.reservix.de/events 
+
+
+
+
+`,shortDescription:"Unser Jahreshighlight 2026 in der Alten Kaserne"},{id:"rec0tvmDkSrz2pWcY",date:"2026-07-17T17:30:00.000Z",name:"Dead vs. Alive",images:[{filename:"Dead or Alive.jpg",height:720,id:"atteZZAeTofuSPASC",pathInAssets:"atteZZAeTofuSPASC/Dead or Alive.jpg",type:"image/jpeg",width:584}],description:`Auch 2026 ist der Poetry Slam wieder kreativer Bestandteil der Landshuter Hofmusiktage – dieses Mal mit einem ganz besonderen Twist: „Dead versus Alive“.
+
+In Landshuts erstem Dead-Poets-Slam treffen die großen Stimmen der Literaturgeschichte auf die moderne Slam-Szene. Schauspieler:innen erwecken Dichter wie Goethe, Dante oder Shakespeare zum Leben, während zeitgenössische Slam-Poet:innen mit eigenen Texten dagegenhalten. Wortgewalt, Humor, Tiefgang und Bühnenenergie treffen aufeinander – passend zum Festivalmotto „Tod und Leben“.
+
+Durch den Abend führt erneut die vielfach ausgezeichnete Fee Brembeck @feeministin , die bereits in den vergangenen Hofmusiktagen gezeigt hat, wie mitreißend, klug und unterhaltsam Poetry Slam sein kann. Zwischen den Beiträgen sorgt Musik für zusätzliche Atmosphäre, während die sommerliche Kulisse des SandoraGartens den perfekten Rahmen für diesen besonderen Abend schafft. In Zusammenarbeit mit dem Sprechakt Landshut.
+
+Und wie es sich für einen echten Poetry Slam gehört, entscheidet am Ende das Publikum: Team Dead oder Team Alive?  
+
+Karten gibt es unter https://www.landshuter-hofmusiktage.de. 
+`,shortDescription:"Ein besonderes Slamerlebniss im Zuge der Landshuter Hofmusiktage. "},{id:"recKfsctpEVO6VJzl",date:"2026-06-16T17:30:00.000Z",name:"Lesebühne im Rocketclub ",images:[],description:`Lesebühne "Junge Stimmen" am Dienstag, 16. Juni, im Rocketclub Landshut 
 
 Unsere Lesebühne im Rockeclub hat den Tag gewechselt. Statt am Donnerstag findet sie ab kommender Woche immer dienstags statt. Als kleiner Ausblick auf unseren U20 Bayernslam am 25. Juli ist das Thema dieses Mal "Junge Stimmen". Zwei junge Autor\\*innen sowie Laura Hybner vom Sprechakt Team gestalten einen poetischen Sommerabend. Einlass ist ab 19 Uhr, Beginn um 19.30 Uhr. Der Eintritt ist frei, über Spenden freuen wir uns aber natürlich trotzdem.
 `,shortDescription:'Dieses Mal hören wir "Junge Stimmen"'},{id:"recHQ6jHF3Sx9pKSl",date:"2026-05-07T17:30:00.000Z",name:"Poetry Slam am 7.05.2026",images:[],description:`Der Sprechakt Poetry Slam lädt wieder Dichter\\*Innen, Texter\\*Innen und Interessierte zum Poetry Slam in die Alte Kaserne. Die Teilnehmenden buhlen mit ihren Texten und Gedichten um die Gunst des Publikums und um einen Büchergutschein. Los geht es um 19.30 Uhr, Einlass ist ab 19 Uhr. Der Eintritt ist frei, Spenden werden gerne gesehen.
@@ -153,4 +184,4 @@ PS: Die nächsten Slam-Termine stehen auch schon fest:
 `,shortDescription:"Herbstslam"},{id:"recuo06I24WJJxQp5",date:"2022-07-21T17:30:00.000Z",name:"Sommerslam",images:[{filename:"294917049_1183755625692088_7310822851327779197_n.webp",height:813,id:"attzhvufTRJYNRQg8",pathInAssets:"attzhvufTRJYNRQg8/294917049_1183755625692088_7310822851327779197_n.webp",type:"image/webp",width:1080},{filename:"295583384_131469266245225_7567406754268835725_n.webp",height:1280,id:"attCoVG0iYnj0UNnc",pathInAssets:"attCoVG0iYnj0UNnc/295583384_131469266245225_7567406754268835725_n.webp",type:"image/webp",width:1280},{filename:"295012693_145132371471924_4227883273783831517_n.webp",height:1280,id:"attbNUIf4J7QDG9l7",pathInAssets:"attbNUIf4J7QDG9l7/295012693_145132371471924_4227883273783831517_n.webp",type:"image/webp",width:1280},{filename:"295114885_573384251007134_683858320196486907_n.webp",height:1280,id:"attXnXYm4DR5dU8MI",pathInAssets:"attXnXYm4DR5dU8MI/295114885_573384251007134_683858320196486907_n.webp",type:"image/webp",width:1024}],description:`Nach einem kurzen Ausflug in die Welt des Themenslams sind wir am **Donnerstag, 21. Juli**, wieder mit unserem regulären Poetry Slam in der Alten Kaserne vor Ort. Wenn das Wetter passt, werden wir ihn sogar als Open Air veranstalten können. Wie immer buhlen ab 19.30 Uhr Texter:innen und Dichter:innen um eure Gunst, einen Büchergutschein und ein T-Shirt. Einlass ist ab 18.45 Uhr, der **Eintritt ist frei**, Spenden werden gerne gesehen. Sitzplatzreservierungen braucht ihr keine mehr, wer sich trotzdem einen Stuhl sichern möchte, kann uns gerne anschreiben unter [sprechakt.landshut@gmx.de](mailto:sprechakt.landshut@gmx.de) oder über unsere Social Media Kanäle <https://www.facebook.com/Sprechakt> (Facebook) und [@sprechakt\\_landshut](https://www.instagram.com/sprechakt_landshut/) (Instagram). Es ist aber auch kein Problem, spontan vorbeizuschauen.
 
 Wie immer haben wir bei unserem Sommerslam auch einen musikalischen Gast. Dieses Mal beehrt uns "Sylvenklang". Wenn ihr euch in den Sound der Landshuter Musikerin schonmal reinhören wollt, schaut auf <http://sylvenklang.de/> vorbei. Dort findet ihr auch weitere Infos zur Künstlerin.
-`,shortDescription:"Open Air Sommerslam in der Alten Kaserne - sofern es das Wetter zulässt!"}];export{c as a,u as b,o as e,l as g,m as i,d as t};
+`,shortDescription:"Open Air Sommerslam in der Alten Kaserne - sofern es das Wetter zulässt!"}];export{o as a,u as b,c as e,l as g,m as i,d as t};
