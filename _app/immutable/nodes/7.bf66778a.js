@@ -1,4 +1,4 @@
-import{S as N,i as T,s as V,k as h,a as R,y as C,J,l as c,h as o,c as w,z as K,n as $,G as e,b as S,A as O,g as W,d as j,B as Q,q as m,m as f,r as u,H as q}from"../chunks/index.6e6d21e2.js";import"../chunks/singletons.27ce1824.js";import{P as U}from"../chunks/PageWithNavigation.3446fa3e.js";function X(E){let t,r,a,i,s,l,_,G,k,y,F,g,B,x,p,v,I,L,b,P;return{c(){t=h("div"),r=h("strong"),a=m("SprechAkt Landshut"),i=h("br"),s=m(`
+import{S as N,i as T,s as V,k as h,a as R,y as C,J,l as c,h as o,c as w,z as K,n as $,G as e,b as S,A as O,g as W,d as j,B as Q,q as m,m as f,r as u,H as q}from"../chunks/index.6e6d21e2.js";import"../chunks/singletons.918341f4.js";import{P as U}from"../chunks/PageWithNavigation.47f9d1ab.js";function X(E){let t,r,a,i,s,l,_,G,k,y,F,g,B,x,p,v,I,L,b,P;return{c(){t=h("div"),r=h("strong"),a=m("SprechAkt Landshut"),i=h("br"),s=m(`
 		c/o Sebastian Geiger`),l=h("br"),_=m(`
 		Füttererstr. 53`),G=h("br"),k=m(`
 		84032 Landshut`),y=h("br"),F=m(`
